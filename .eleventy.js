@@ -89,4 +89,9 @@ module.exports = function (config) {
       callback(null, code);
     }
   });
+  return {
+    dir: {
+      output: "docs"
+    }
+  }
 }
