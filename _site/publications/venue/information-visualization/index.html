@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="CA3">
+    <meta property="og:title" content="Center for Anytime Anywhere Analytics">
+    <meta property="og:url" content="https://ca3.au.dk/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:image:url" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta property="og:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:title" content="Center for Anytime Anywhere Analytics">
+    <meta name="twitter:url" content="https://ca3.au.dk/">
+    <meta name="twitter:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta name="twitter:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@ca3">
+    <meta name="twitter:dnt" content="on">
+    <title>Center for Anytime Anywhere Analytics</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="dns-prefetch" href="https://ca3.au.dk/">
+    <link rel="preconnect" href="https://ca3.au.dk/">
+    <link rel="me" href="https://ca3.au.dk/" type="text/html">
+    <link rel="me" href="mailto:elm@cs.au.dk">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/> 
+    <style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003d73;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}.sticky-header.fixed{display:none}}main{margin:auto;margin-top:25px;padding:.25rem;padding-bottom:0;max-width:120em}.sticky-header{left:0;right:0;position:relative;color:#000}.sticky-header.fixed{margin-top:0;position:fixed;top:40px;width:100%;box-sizing:border-box;z-index:0}.sticky-header.fixed.absolute{position:absolute}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}</style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-text">
+        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+      </div>
+      <div class="flexible-space"></div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <nav id="navbar">
+          <a href="/">Home</a>
+          <a href="/members">Members</a>
+          <a href="/publications">Publications</a>
+          <a href="/open-positions">Open positions</a>
+          <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
+      </nav>
+    </header>
+    <main>
+      <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+  <div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+    <h4 style="margin-bottom: 0px; padding-top: 10px">Publications published at</h4>
+    <h2 style="margin-top: 0px; margin-bottom: 0px">Information Visualization</h2>
+  </div>
+  <ul>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Datta2023" onClick="copy('Datta2023')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Datta2023" style="display: none;">
+                      @article{Datta2023,
+title={TimberSleuth: Visual Anomaly Detection with Human Feedback for Mitigating the Illegal Timber Trade},
+author={Debanjan Datta and Nathan Self and John Simeone and Amelia Meadows and Willow Outhwaite and Linda Walker and Niklas Elmqvist and Naren Ramkrishnan},
+url={https://users.umiacs.umd.edu/~elm/projects/timbersleuth/timbersleuth.pdf},
+year={2023},
+date={2023-02-01},
+journal={Information Visualization},
+abstract={Detecting illegal shipments in the global timber trade poses a massive challenge to enforcement agencies. The massive volume and complexity of timber shipments and obfuscations within international trade data, intentional or not, necessitates an automated system to aid in detecting specific shipments that potentially contain illegally harvested wood. To address these requirements we build a novel human-in-the-loop visual analytics system called TIMBERSLEUTH. TimberSleuth uses a novel scoring model reinforced through human feedback to improve upon the relevance of the results of the system while using an off-the-shelf anomaly detection model. Detailed evaluation is performed using real data with synthetic anomalies to test the machine intelligence that drives the system. We design interactive visualizations to enable analysis of pertinent details of anomalous trade records so that analysts can determine if a record is relevant and provide iterative feedback. This feedback is utilized by the machine learning model to improve the precision of the output.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2023">2023</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/timbersleuth/timbersleuth.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">TimberSleuth: Visual Anomaly Detection with Human Feedback for Mitigating the Illegal Timber Trade</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/debanjan-datta/">Debanjan Datta</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/nathan-self/">Nathan Self</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/john-simeone/">John Simeone</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/amelia-meadows/">Amelia Meadows</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/willow-outhwaite/">Willow Outhwaite</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/linda-walker/">Linda Walker</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/naren-ramkrishnan/">Naren Ramkrishnan</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Detecting illegal shipments in the global timber trade poses a massive challenge to enforcement agencies. The massive volume and complexity of timber shipments and obfuscations within international trade data, intentional or not, necessitates an automated system to aid in detecting specific shipments that potentially contain illegally harvested wood. To address these requirements we build a novel human-in-the-loop visual analytics system called TIMBERSLEUTH. TimberSleuth uses a novel scoring model reinforced through human feedback to improve upon the relevance of the results of the system while using an off-the-shelf anomaly detection model. Detailed evaluation is performed using real data with synthetic anomalies to test the machine intelligence that drives the system. We design interactive visualizations to enable analysis of pertinent details of anomalous trade records so that analysts can determine if a record is relevant and provide iterative feedback. This feedback is utilized by the machine learning model to improve the precision of the output.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Chundury2022" onClick="copy('Chundury2022')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Chundury2022" style="display: none;">
+                      @article{Chundury2022,
+title={Contextual In-Situ Help for Visual Data Interfaces},
+author={Pramod Chundury and Mehmet Adil Yalcin and Jonathan Crabtree and Anup Mahurkar and Lisa M. Shulman and Niklas Elmqvist},
+url={https://users.umiacs.umd.edu/~elm/projects/contextual-help/contextual-help.pdf},
+year={2022},
+date={2022-09-09},
+journal={Information Visualization},
+abstract={As the complexity of data analysis increases, even well-designed data interfaces must guide experts in transforming their theoretical knowledge into actual features supported by the tool. This challenge is even greater for casual users who are increasingly turning to data analysis to solve everyday problems. To address this challenge, we propose data-driven, contextual, in-situ help features that can be implemented in visual data interfaces. We introduce five modes of help-seeking: (1) contextual help on selected interface elements, (2) topic listing, (3) overview, (4) guided tour, and (5) notifications. The difference between our work and general user interface help systems is that data visualization provide a unique environment for embedding context-dependent data inside on-screen messaging. We demonstrate the usefulness of such contextual help through two case studies of two visual data interfaces: Keshif and POD-Vis. We implemented and evaluated the help modes with two sets of participants, and found that directly selecting user interface elements was the most useful.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2022">2022</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/contextual-help/contextual-help.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Contextual In-Situ Help for Visual Data Interfaces</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/pramod-chundury/">Pramod Chundury</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/mehmet-adil-yalcin/">Mehmet Adil Yalcin</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/jonathan-crabtree/">Jonathan Crabtree</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/anup-mahurkar/">Anup Mahurkar</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/lisa-m-shulman/">Lisa M. Shulman</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">As the complexity of data analysis increases, even well-designed data interfaces must guide experts in transforming their theoretical knowledge into actual features supported by the tool. This challenge is even greater for casual users who are increasingly turning to data analysis to solve everyday problems. To address this challenge, we propose data-driven, contextual, in-situ help features that can be implemented in visual data interfaces. We introduce five modes of help-seeking: (1) contextual help on selected interface elements, (2) topic listing, (3) overview, (4) guided tour, and (5) notifications. The difference between our work and general user interface help systems is that data visualization provide a unique environment for embedding context-dependent data inside on-screen messaging. We demonstrate the usefulness of such contextual help through two case studies of two visual data interfaces: Keshif and POD-Vis. We implemented and evaluated the help modes with two sets of participants, and found that directly selecting user interface elements was the most useful.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Badam2022" onClick="copy('Badam2022')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Badam2022" style="display: none;">
+                      @article{Badam2022,
+title={Integrating Annotations into Multidimensional Visual Dashboards},
+author={Sriram Karthik Badam and Senthil Chandrasegaran and Niklas Elmqvist},
+url={https://users.umiacs.umd.edu/~elm/projects/facetnotes/facetnotes.pdf},
+year={2022},
+date={2022-05-10},
+journal={Information Visualization},
+volume={21},
+number={3},
+pages={270--284},
+abstract={Multidimensional data is often visualized using coordinated multiple views in an interactive dashboard. However, unlike in infographics where text is often a central part of the presentation, there is currently little knowledge of how to best integrate text and annotations in a visualization dashboard. In this paper, we explore a technique called FacetNotes for presenting these textual annotations on top of any visualization within a dashboard irrespective of the scale of data shown or the design of visual representation itself. FacetNotes does so by grouping and ordering the textual annotations based on properties of (1) the individual data points associated with the annotations, and (2) the target visual representation on which they should be shown. We present this technique along with a set of user interface features and guidelines to apply it to visualization interfaces. We also demonstrate FacetNotes in a custom visual dashboard interface. Finally, results from a user study of FacetNotes show that the technique improves the scope and complexity of insights developed during visual exploration.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2022">2022</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/facetnotes/facetnotes.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Integrating Annotations into Multidimensional Visual Dashboards</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/senthil-chandrasegaran/">Senthil Chandrasegaran</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Multidimensional data is often visualized using coordinated multiple views in an interactive dashboard. However, unlike in infographics where text is often a central part of the presentation, there is currently little knowledge of how to best integrate text and annotations in a visualization dashboard. In this paper, we explore a technique called FacetNotes for presenting these textual annotations on top of any visualization within a dashboard irrespective of the scale of data shown or the design of visual representation itself. FacetNotes does so by grouping and ordering the textual annotations based on properties of (1) the individual data points associated with the annotations, and (2) the target visual representation on which they should be shown. We present this technique along with a set of user interface features and guidelines to apply it to visualization interfaces. We also demonstrate FacetNotes in a custom visual dashboard interface. Finally, results from a user study of FacetNotes show that the technique improves the scope and complexity of insights developed during visual exploration.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Wang2021" onClick="copy('Wang2021')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Wang2021" style="display: none;">
+                      @article{Wang2021,
+title={Topology-Aware Space Distortion for Structured Visualization Spaces},
+author={Weihang Wang and Sriram Karthik Badam and Niklas Elmqvist},
+url={https://users.umiacs.umd.edu/~elm/projects/zoomhalo/zoomhalo.pdf},
+year={2021},
+date={2021-09-29},
+journal={Information Visualization},
+abstract={We propose topology-aware space distortion (TASD), a family of interactive layout techniques for non-linearly distorting geometric space based on user attention and on the structure of the visual representation. TASD seamlessly adapts the visual substrate of any visualization to give more screen real estate to important regions of the representation at the expense of less important regions. In this paper, we present a concrete TASD technique that we call ZoomHalo for interactively distorting a two-dimensional space based on a degree-of-interest (DOI) function defined for the space. Using this DOI function, ZoomHalo derives several areas of interest, computes the available space around each area in relation to other areas and the current viewport extents, and then dynamically expands (or shrinks) each area given user input. We use our prototype to evaluate the technique in two user studies, as well as showcase examples of TASD for node-link diagrams, word clouds, and geographical maps.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2021">2021</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/zoomhalo/zoomhalo.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Topology-Aware Space Distortion for Structured Visualization Spaces</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/weihang-wang/">Weihang Wang</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">We propose topology-aware space distortion (TASD), a family of interactive layout techniques for non-linearly distorting geometric space based on user attention and on the structure of the visual representation. TASD seamlessly adapts the visual substrate of any visualization to give more screen real estate to important regions of the representation at the expense of less important regions. In this paper, we present a concrete TASD technique that we call ZoomHalo for interactively distorting a two-dimensional space based on a degree-of-interest (DOI) function defined for the space. Using this DOI function, ZoomHalo derives several areas of interest, computes the available space around each area in relation to other areas and the current viewport extents, and then dynamically expands (or shrinks) each area given user input. We use our prototype to evaluate the technique in two user studies, as well as showcase examples of TASD for node-link diagrams, word clouds, and geographical maps.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Badam2021" onClick="copy('Badam2021')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Badam2021" style="display: none;">
+                      @article{Badam2021,
+title={Effects of Screen-Responsive Visualization on Data Comprehension},
+author={Sriram Karthik Badam and Niklas Elmqvist},
+url={https://users.umiacs.umd.edu/~elm/projects/touchinsight/touchinsight.pdf},
+year={2021},
+date={2021-09-01},
+journal={Information Visualization},
+volume={20},
+number={4},
+pages={229--244},
+abstract={Visualization interfaces designed for heterogeneous devices such as wall displays and mobile screens must be responsive to varying display dimensions, resolution, and interaction capabilities. In this paper, we report on two user studies of visual representations for large versus small displays. The goal of our experiments was to investigate differences between a large vertical display and a mobile hand-held display in terms of the data comprehension and the quality of resulting insights. To this end, we developed a visual interface with a coordinated multiple view layout for the large display and two alternative designs of the same interface---a space-saving boundary visualization layout and an overview layout---for the mobile condition. The first experiment was a controlled laboratory study designed to evaluate the effect of display size on the perception of changes in a visual representation, and yielded significant correctness differences even while completion time remained similar. The second evaluation was a qualitative study in a practical setting and showed that participants were able to easily associate and work with the responsive visualizations. Based on the results, we conclude the paper by providing new guidelines for screen-responsive visualization interfaces.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2021">2021</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/touchinsight/touchinsight.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Effects of Screen-Responsive Visualization on Data Comprehension</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Visualization interfaces designed for heterogeneous devices such as wall displays and mobile screens must be responsive to varying display dimensions, resolution, and interaction capabilities. In this paper, we report on two user studies of visual representations for large versus small displays. The goal of our experiments was to investigate differences between a large vertical display and a mobile hand-held display in terms of the data comprehension and the quality of resulting insights. To this end, we developed a visual interface with a coordinated multiple view layout for the large display and two alternative designs of the same interface---a space-saving boundary visualization layout and an overview layout---for the mobile condition. The first experiment was a controlled laboratory study designed to evaluate the effect of display size on the perception of changes in a visual representation, and yielded significant correctness differences even while completion time remained similar. The second evaluation was a qualitative study in a practical setting and showed that participants were able to easily associate and work with the responsive visualizations. Based on the results, we conclude the paper by providing new guidelines for screen-responsive visualization interfaces.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Park2021" onClick="copy('Park2021')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Park2021" style="display: none;">
+                      @article{Park2021,
+title={StoryFacets: A Design Study on Storytelling with Visualizations for Collaborative Data Analysis},
+author={Deokgun Park and Mohamed Suhail and Minsheng Zheng and Cody Dunn and Eric Ragan and Niklas Elmqvist},
+url={https://users.umiacs.umd.edu/~elm/projects/storyfacets/storyfacets.pdf},
+year={2021},
+date={2021-08-01},
+journal={Information Visualization},
+abstract={Tracking the sensemaking process is a well-established practice in many data analysis tools, and many visualization tools facilitate overview and recall during and after exploration. However, the resulting communication materials such as presentations or infographics often omit provenance information for the sake of simplicity. This unfortunately limits later viewers from engaging in further collaborative sensemaking or discussion about the analysis. We present a design study where we introduced visual provenance and analytics to urban transportation planning. Maintaining the provenance of all analyses was critical to support collaborative sensemaking among the many and diverse stakeholders. Our system, StoryFacets, exposes several different views of the same analysis session, each view designed for a specific audience: (1) the trail view provides a data flow canvas that supports in-depth exploration+provenance (expert analysts); (2) the dashboard view organizes visualizations and other content into a space-filling layout to support high-level analysis (managers); and (3) the slideshow view supports linear storytelling via interactive step-by-step presentations (laypersons). Views are linked so that when one is changed, provenance is maintained. Visual provenance is available on demand to support iterative sensemaking for any team member.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2021">2021</a></small>
+                  <a href="https://users.umiacs.umd.edu/~elm/projects/storyfacets/storyfacets.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">StoryFacets: A Design Study on Storytelling with Visualizations for Collaborative Data Analysis</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/deokgun-park/">Deokgun Park</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/mohamed-suhail/">Mohamed Suhail</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/minsheng-zheng/">Minsheng Zheng</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/cody-dunn/">Cody Dunn</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/eric-ragan/">Eric Ragan</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Tracking the sensemaking process is a well-established practice in many data analysis tools, and many visualization tools facilitate overview and recall during and after exploration. However, the resulting communication materials such as presentations or infographics often omit provenance information for the sake of simplicity. This unfortunately limits later viewers from engaging in further collaborative sensemaking or discussion about the analysis. We present a design study where we introduced visual provenance and analytics to urban transportation planning. Maintaining the provenance of all analyses was critical to support collaborative sensemaking among the many and diverse stakeholders. Our system, StoryFacets, exposes several different views of the same analysis session, each view designed for a specific audience: (1) the trail view provides a data flow canvas that supports in-depth exploration+provenance (expert analysts); (2) the dashboard view organizes visualizations and other content into a space-filling layout to support high-level analysis (managers); and (3) the slideshow view supports linear storytelling via interactive step-by-step presentations (laypersons). Views are linked so that when one is changed, provenance is maintained. Visual provenance is available on demand to support iterative sensemaking for any team member.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-zcui2018" onClick="copy('zcui2018')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-zcui2018" style="display: none;">
+                      @article{zcui2018,
+title={DataSite: Proactive Visual Data Exploration with Computation of Insight-based Recommendations},
+author={Zhe Cui and Sriram Karthik Badam and Mehmet Adil Yalcin and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/datasite/datasite.pdf},
+year={2019},
+date={2019-01-01},
+journal={Information Visualization},
+volume={18},
+number={2},
+pages={251--267},
+abstract={Effective data analysis ideally requires the analyst to have high expertise as well as high knowledge of the data. Even with such familiarity, manually pursuing all potential hypotheses and exploring all possible views is impractical. We present DataSite, a proactive visual analytics system where the burden of selecting and executing appropriate computations is shared by an automatic server-side computation engine. Salient features identified by these automatic background processes are surfaced as notifications in a feed timeline. DataSite effectively turns data analysis into a conversation between analyst and computer, thereby reducing the cognitive load and domain knowledge requirements. We validate the system with a user study comparing it to a recent visualization recommendation system, yielding significant improvement, particularly for complex analyses that existing analytics systems do not support well.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2019">2019</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/datasite/datasite.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">DataSite: Proactive Visual Data Exploration with Computation of Insight-based Recommendations</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/zhe-cui/">Zhe Cui</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/mehmet-adil-yalcin/">Mehmet Adil Yalcin</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Effective data analysis ideally requires the analyst to have high expertise as well as high knowledge of the data. Even with such familiarity, manually pursuing all potential hypotheses and exploring all possible views is impractical. We present DataSite, a proactive visual analytics system where the burden of selecting and executing appropriate computations is shared by an automatic server-side computation engine. Salient features identified by these automatic background processes are surfaced as notifications in a feed timeline. DataSite effectively turns data analysis into a conversation between analyst and computer, thereby reducing the cognitive load and domain knowledge requirements. We validate the system with a user study comparing it to a recent visualization recommendation system, yielding significant improvement, particularly for complex analyses that existing analytics systems do not support well.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Cui2018" onClick="copy('Cui2018')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Cui2018" style="display: none;">
+                      @article{Cui2018,
+title={VisHive: Supporting Web-based Visualization through Ad-hoc Computational Clusters of Mobile Devices},
+author={Zhe Cui and Shivalik Sen and Sriram Karthik Badam and Niklas Elmqvist },
+url={http://www.umiacs.umd.edu/~elm/projects/vishive/vishive.pdf},
+year={2018},
+date={2018-01-01},
+journal={Information Visualization},
+abstract={Current web-based visualizations are designed for single computers and cannot make use of additional devices on the client side, even if today’s users often have access to several, such as a tablet, a smartphone, and a smartwatch. We present a framework for ad-hoc computational clusters that leverage these local devices for visualization computations. Furthermore, we present an instantiating JavaScript toolkit called VisHive for constructing web-based visualization applications that can transparently connect multiple devices---called cells---into such ad-hoc clusters---called a hive---for local computation. Hives are formed either using a matchmaking service or through manual configuration. Cells are organized into a master-slave architecture, where the master provides the visual interface to the user and controls the slaves, and the slaves perform computation. VisHive is built entirely using current web technologies, runs in the native browser of each cell, and requires no specific software to be downloaded on the involved devices. We demonstrate VisHive using four distributed examples: a text analytics visualization, a database query for exploratory visualization, a},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2018">2018</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/vishive/vishive.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">VisHive: Supporting Web-based Visualization through Ad-hoc Computational Clusters of Mobile Devices</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/zhe-cui/">Zhe Cui</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/shivalik-sen/">Shivalik Sen</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist </span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Current web-based visualizations are designed for single computers and cannot make use of additional devices on the client side, even if today’s users often have access to several, such as a tablet, a smartphone, and a smartwatch. We present a framework for ad-hoc computational clusters that leverage these local devices for visualization computations. Furthermore, we present an instantiating JavaScript toolkit called VisHive for constructing web-based visualization applications that can transparently connect multiple devices---called cells---into such ad-hoc clusters---called a hive---for local computation. Hives are formed either using a matchmaking service or through manual configuration. Cells are organized into a master-slave architecture, where the master provides the visual interface to the user and controls the slaves, and the slaves perform computation. VisHive is built entirely using current web technologies, runs in the native browser of each cell, and requires no specific software to be downloaded on the involved devices. We demonstrate VisHive using four distributed examples: a text analytics visualization, a database query for exploratory visualization, a</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Badam2017bb" onClick="copy('Badam2017bb')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Badam2017bb" style="display: none;">
+                      @article{Badam2017bb,
+title={Visfer: Camera-based Visual Data Transfer for Cross-Device Visualization},
+author={Sriram Karthik Badam and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/qrvis/visfer.pdf},
+year={2017},
+date={2017-09-08},
+journal={Information Visualization},
+abstract={Going beyond the desktop to leverage novel devices—such as smartphones, tablets, or large displays—for visual sensemaking typically requires supporting extraneous operations for device discovery, interaction sharing, and view management. Such operations can be time-consuming and tedious, and distract the user from the actual analysis. Embodied interaction models in these multi-device environments can take advantage of the natural interaction and physicality afforded by multimodal devices and help effectively carry out these operations in visual sensemaking. In this paper, we present cross-device interaction models for visualization spaces, that are embodied in nature, by conducting a user study to elicit actions from participants that could trigger a portrayed effect of sharing visualizations (and therefore information) across devices. We then explore one common interaction style from this design elicitation called Visfer, a technique for effortlessly sharing visualizations across devices using the visual medium. More specifically, this technique involves taking pictures of visualizations, or rather the QR codes augmenting them, on a display using the built-in camera on a handheld device. Our contributions include a conceptual framework for cross-device interaction and the Visfer technique itself, as well as transformation guidelines to exploit the capabilities of each specific device and a web framework for encoding visualization components into animated QR codes, which capture multiple frames of QR codes to embed more information. Beyond this, we also present the results from a performance evaluation for the visual data transfer enabled by Visfer. We end the paper by presenting the application examples of our Visfer framework. },
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2017">2017</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/qrvis/visfer.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Visfer: Camera-based Visual Data Transfer for Cross-Device Visualization</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Going beyond the desktop to leverage novel devices—such as smartphones, tablets, or large displays—for visual sensemaking typically requires supporting extraneous operations for device discovery, interaction sharing, and view management. Such operations can be time-consuming and tedious, and distract the user from the actual analysis. Embodied interaction models in these multi-device environments can take advantage of the natural interaction and physicality afforded by multimodal devices and help effectively carry out these operations in visual sensemaking. In this paper, we present cross-device interaction models for visualization spaces, that are embodied in nature, by conducting a user study to elicit actions from participants that could trigger a portrayed effect of sharing visualizations (and therefore information) across devices. We then explore one common interaction style from this design elicitation called Visfer, a technique for effortlessly sharing visualizations across devices using the visual medium. More specifically, this technique involves taking pictures of visualizations, or rather the QR codes augmenting them, on a display using the built-in camera on a handheld device. Our contributions include a conceptual framework for cross-device interaction and the Visfer technique itself, as well as transformation guidelines to exploit the capabilities of each specific device and a web framework for encoding visualization components into animated QR codes, which capture multiple frames of QR codes to embed more information. Beyond this, we also present the results from a performance evaluation for the visual data transfer enabled by Visfer. We end the paper by presenting the application examples of our Visfer framework. </p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Elmqvist2015" onClick="copy('Elmqvist2015')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Elmqvist2015" style="display: none;">
+                      @article{Elmqvist2015,
+title={Patterns for Visualization Evaluation},
+author={Niklas Elmqvist and Ji Soo Yi},
+url={http://www.umiacs.umd.edu/~elm/projects/eval-patterns/eval-patterns.pdf},
+year={2015},
+date={2015-07-01},
+journal={Information Visualization},
+volume={14},
+number={3},
+pages={250--269},
+abstract={We propose a pattern-based approach to evaluating data visualization: a set of general and reusable solutions to commonly occurring problems in evaluating visualization tools, techniques, and systems. Patterns have had significant impact in a wide array of disciplines, particularly software engineering, and we believe that they provide a powerful lens for characterizing visualization evaluation practices by offering practical, tried-and-tested tips, and tricks that can be adopted immediately. The 20 patterns presented here have also been added to a freely editable Wiki repository. The motivation for creating this evaluation pattern language is to (a) capture and formalize &quot;dark&quot; practices for visualization evaluation not currently recorded in the literature, (b) disseminate these hard-won experiences to researchers and practitioners alike, (c) provide a standardized vocabulary for designing visualization evaluation, and (d) invite the community to add new evaluation patterns to a growing repository of patterns.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/eval-patterns/eval-patterns.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Patterns for Visualization Evaluation</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/ji-soo-yi/">Ji Soo Yi</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">We propose a pattern-based approach to evaluating data visualization: a set of general and reusable solutions to commonly occurring problems in evaluating visualization tools, techniques, and systems. Patterns have had significant impact in a wide array of disciplines, particularly software engineering, and we believe that they provide a powerful lens for characterizing visualization evaluation practices by offering practical, tried-and-tested tips, and tricks that can be adopted immediately. The 20 patterns presented here have also been added to a freely editable Wiki repository. The motivation for creating this evaluation pattern language is to (a) capture and formalize &quot;dark&quot; practices for visualization evaluation not currently recorded in the literature, (b) disseminate these hard-won experiences to researchers and practitioners alike, (c) provide a standardized vocabulary for designing visualization evaluation, and (d) invite the community to add new evaluation patterns to a growing repository of patterns.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Kim2012" onClick="copy('Kim2012')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Kim2012" style="display: none;">
+                      @article{Kim2012,
+title={Embodied Lenses for Collaborative Visual Queries on Tabletop Displays},
+author={KyungTae Kim and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/emblens/emblens.pdf},
+year={2012},
+date={2012-01-01},
+journal={Information Visualization},
+volume={11},
+number={4},
+pages={336--355},
+abstract={We introduce embodied lenses for visual queries on tabletop surfaces using physical interaction. The lenses are simply thin sheets of paper or transparent foil decorated with fiducial markers, allowing them to be tracked by a diffuse illumination tabletop display. The physical affordance of these embodied lenses allow them to be overlapped, causing composition in the underlying virtual space. We perform a formative evaluation to study users’ conceptual models for overlapping physical lenses. This is followed by a quantitative user study comparing performance for embodied versus purely virtual lenses. Results show that embodied lenses are equally efficient compared to purely virtual lenses, and also support tactile and eyes-free interaction. We then present several examples of the technique, including image layers, map layers, image manipulation, and multidimensional data visualization. The technique is simple, cheap, and can be integrated into many existing tabletop displays.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2012">2012</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/emblens/emblens.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Embodied Lenses for Collaborative Visual Queries on Tabletop Displays</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/kyungtae-kim/">KyungTae Kim</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">We introduce embodied lenses for visual queries on tabletop surfaces using physical interaction. The lenses are simply thin sheets of paper or transparent foil decorated with fiducial markers, allowing them to be tracked by a diffuse illumination tabletop display. The physical affordance of these embodied lenses allow them to be overlapped, causing composition in the underlying virtual space. We perform a formative evaluation to study users’ conceptual models for overlapping physical lenses. This is followed by a quantitative user study comparing performance for embodied versus purely virtual lenses. Results show that embodied lenses are equally efficient compared to purely virtual lenses, and also support tactile and eyes-free interaction. We then present several examples of the technique, including image layers, map layers, image manipulation, and multidimensional data visualization. The technique is simple, cheap, and can be integrated into many existing tabletop displays.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Elmqvist2011" onClick="copy('Elmqvist2011')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Elmqvist2011" style="display: none;">
+                      @article{Elmqvist2011,
+title={Fluid Interaction for Information Visualization},
+author={Niklas Elmqvist and Andrew Vande Moere and Hans-Christian Jetter and Daniel Cernea and Harald Reiterer and T.J. Jankun-Kelly},
+url={http://www.umiacs.umd.edu/~elm/projects/fluidity/fluidity.pdf},
+year={2011},
+date={2011-01-01},
+journal={Information Visualization},
+volume={10},
+number={4},
+pages={327-340},
+abstract={Despite typically receiving little emphasis in visualization research, interaction in visualization is the catalyst for the user&#39;s dialogue with the data, and, ultimately, the user’s actual understanding and insight into this data. There are many possible reasons for this skewed balance between the visual and interactive aspects of a visualization. One reason is that interaction is an intangible concept that is difficult to design, quantify, and evaluate. Unlike for visual design, there are few examples that show visualization practitioners and researchers how to best design the interaction for a new visualization. In this paper, we attempt to address this issue by collecting examples of visualizations with &quot;best-in-class&quot; interaction and using them to extract practical design guidelines for future designers and researchers. We call this concept fluid interaction, and we propose an operational definition in terms of the direct manipulation and embodied interaction paradigms, the psychological concept of &quot;flow&quot;, and Norman’s gulfs of execution and evaluation.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/fluidity/fluidity.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Fluid Interaction for Information Visualization</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/andrew-vande-moere/">Andrew Vande Moere</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/hans-christian-jetter/">Hans-Christian Jetter</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/daniel-cernea/">Daniel Cernea</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/harald-reiterer/">Harald Reiterer</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/t-j-jankun-kelly/">T.J. Jankun-Kelly</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Despite typically receiving little emphasis in visualization research, interaction in visualization is the catalyst for the user&#39;s dialogue with the data, and, ultimately, the user’s actual understanding and insight into this data. There are many possible reasons for this skewed balance between the visual and interactive aspects of a visualization. One reason is that interaction is an intangible concept that is difficult to design, quantify, and evaluate. Unlike for visual design, there are few examples that show visualization practitioners and researchers how to best design the interaction for a new visualization. In this paper, we attempt to address this issue by collecting examples of visualizations with &quot;best-in-class&quot; interaction and using them to extract practical design guidelines for future designers and researchers. We call this concept fluid interaction, and we propose an operational definition in terms of the direct manipulation and embodied interaction paradigms, the psychological concept of &quot;flow&quot;, and Norman’s gulfs of execution and evaluation.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Isenberg2011" onClick="copy('Isenberg2011')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Isenberg2011" style="display: none;">
+                      @article{Isenberg2011,
+title={Collaborative Visualization: Definition, Challenges, and Research Agenda},
+author={Petra Isenberg and Niklas Elmqvist and Daniel Cernea and Jean Scholtz and Kwan-Liu Ma and Hans Hagen},
+url={http://www.umiacs.umd.edu/~elm/projects/collabvis/collabvis.pdf},
+year={2011},
+date={2011-01-01},
+journal={Information Visualization},
+volume={10},
+number={4},
+pages={310-326},
+abstract={The conflux of two growing areas of technology---collaboration and visualization---into a new research direction, collaborative visualization, provides new research challenges. Technology now allows us to easily connect and collaborate with one another---in settings as diverse as over networked computers, across mobile devices, or using shared displays such as interactive walls and tabletop surfaces. Digital information is now regularly accessed by multiple people in order to share information, to view it together, to analyze it, or to form decisions. Visualizations are used to deal more effectively with large amounts of information while interactive visualizations allow users to explore the underlying data. While researchers face many challenges in collaboration and in visualization, the emergence of collaborative visualization poses additional challenges but is also an exciting opportunity to reach new audiences and applications for visualization tools and techniques.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/collabvis/collabvis.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Collaborative Visualization: Definition, Challenges, and Research Agenda</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/petra-isenberg/">Petra Isenberg</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/daniel-cernea/">Daniel Cernea</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/jean-scholtz/">Jean Scholtz</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/kwan-liu-ma/">Kwan-Liu Ma</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/hans-hagen/">Hans Hagen</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">The conflux of two growing areas of technology---collaboration and visualization---into a new research direction, collaborative visualization, provides new research challenges. Technology now allows us to easily connect and collaborate with one another---in settings as diverse as over networked computers, across mobile devices, or using shared displays such as interactive walls and tabletop surfaces. Digital information is now regularly accessed by multiple people in order to share information, to view it together, to analyze it, or to form decisions. Visualizations are used to deal more effectively with large amounts of information while interactive visualizations allow users to explore the underlying data. While researchers face many challenges in collaboration and in visualization, the emergence of collaborative visualization poses additional challenges but is also an exciting opportunity to reach new audiences and applications for visualization tools and techniques.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Elmqvist2008a" onClick="copy('Elmqvist2008a')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Elmqvist2008a" style="display: none;">
+                      @article{Elmqvist2008a,
+title={DataMeadow: A Visual Canvas for Analysis of Large-Scale Multivariate Data},
+author={Niklas Elmqvist and John Stasko and Philippas Tsigas},
+url={http://www.umiacs.umd.edu/~elm/projects/datameadow/datameadow-journal.pdf},
+video={https://www.youtube.com/watch?v=FO2MsmtWX_4},
+year={2008},
+date={2008-01-01},
+journal={Information Visualization},
+volume={7},
+number={1},
+pages={18--33},
+abstract={Supporting visual analytics of multiple large-scale multidimensional datasets requires a high degree of interactivity and user control beyond the conventional challenges of visualizing such datasets. We present the DataMeadow, a visual canvas providing rich interaction for constructing visual queries using graphical set representations called DataRoses. A DataRose is essentially a starplot of selected columns in a dataset displayed as multivariate visualizations with dynamic query sliders integrated into each axis. The purpose of the DataMeadow is to allow users to create advanced visual queries by iteratively selecting and filtering into the multidimensional data. Furthermore, the canvas provides a clear history of the analysis that can be annotated to facilitate dissemination of analytical results to stakeholders. A powerful direct manipulation interface allows for selection, filtering, and creation of sets, subsets, and data dependencies. We have evaluated our system using a qualitative expert review involving two visualization researchers. Results from this review are favorable for the new method.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2008">2008</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/datameadow/datameadow-journal.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">DataMeadow: A Visual Canvas for Analysis of Large-Scale Multivariate Data</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/john-stasko/">John Stasko</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/philippas-tsigas/">Philippas Tsigas</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Supporting visual analytics of multiple large-scale multidimensional datasets requires a high degree of interactivity and user control beyond the conventional challenges of visualizing such datasets. We present the DataMeadow, a visual canvas providing rich interaction for constructing visual queries using graphical set representations called DataRoses. A DataRose is essentially a starplot of selected columns in a dataset displayed as multivariate visualizations with dynamic query sliders integrated into each axis. The purpose of the DataMeadow is to allow users to create advanced visual queries by iteratively selecting and filtering into the multidimensional data. Furthermore, the canvas provides a clear history of the analysis that can be annotated to facilitate dissemination of analytical results to stakeholders. A powerful direct manipulation interface allows for selection, filtering, and creation of sets, subsets, and data dependencies. We have evaluated our system using a qualitative expert review involving two visualization researchers. Results from this review are favorable for the new method.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=FO2MsmtWX_4" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Elmqvist2007c" onClick="copy('Elmqvist2007c')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Elmqvist2007c" style="display: none;">
+                      @article{Elmqvist2007c,
+title={CiteWiz: A Tool for the Visualization of Scientific Citation Networks},
+author={Niklas Elmqvist and Philippas Tsigas},
+url={http://www.umiacs.umd.edu/~elm/projects/citewiz/citewiz.pdf},
+year={2007},
+date={2007-01-01},
+journal={Information Visualization},
+volume={6},
+number={3},
+pages={215--232},
+abstract={We present CiteWiz, an extensible framework for visualization of scientific citation networks. The system is based on a taxonomy of citation database usage for researchers, and provides a timeline visualization for overviews and an influence visualization for detailed views. The timeline displays the general chronology and importance of authors and articles in a citation database, whereas the influence visualization is implemented using the Growing Polygons technique, suitably modified to the context of browsing citation data. Using the latter technique, hierarchies of articles with potentially very long citation chains can be graphically represented. The visualization is augmented with mechanisms for parent-child visualization and suitable interaction techniques for interacting with the view hierarchy and the individual articles in the dataset. We also provide an interactive concept map for keywords and co-authorship using a basic force-directed graph layout scheme. A formal user study indicates that CiteWiz is significantly more efficient than traditional database interfaces for high-level analysis tasks relating to influence and overviews, and equally efficient for low-level tasks such as finding a paper and correlating bibliographical data.},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2007">2007</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/citewiz/citewiz.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">CiteWiz: A Tool for the Visualization of Scientific Citation Networks</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/philippas-tsigas/">Philippas Tsigas</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">We present CiteWiz, an extensible framework for visualization of scientific citation networks. The system is based on a taxonomy of citation database usage for researchers, and provides a timeline visualization for overviews and an influence visualization for detailed views. The timeline displays the general chronology and importance of authors and articles in a citation database, whereas the influence visualization is implemented using the Growing Polygons technique, suitably modified to the context of browsing citation data. Using the latter technique, hierarchies of articles with potentially very long citation chains can be graphically represented. The visualization is augmented with mechanisms for parent-child visualization and suitable interaction techniques for interacting with the view hierarchy and the individual articles in the dataset. We also provide an interactive concept map for keywords and co-authorship using a basic force-directed graph layout scheme. A formal user study indicates that CiteWiz is significantly more efficient than traditional database interfaces for high-level analysis tasks relating to influence and overviews, and equally efficient for low-level tasks such as finding a paper and correlating bibliographical data.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-Elmqvist2004a" onClick="copy('Elmqvist2004a')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-Elmqvist2004a" style="display: none;">
+                      @article{Elmqvist2004a,
+title={Animated Visualization of Causal Relations Through Growing 2D Geometry},
+author={Niklas Elmqvist and Philippas Tsigas},
+url={http://www.umiacs.umd.edu/~elm/projects/causality/causality.pdf},
+year={2004},
+date={2004-01-01},
+journal={Information Visualization},
+volume={3},
+number={3},
+pages={154--172},
+abstract={Causality visualization is an important tool for many scientific domains that involve complex interactions between multiple entities (examples include parallel and distributed systems in computer science). However, traditional visualization techniques such as Hasse diagrams are not well-suited to large system executions, and users often have difficulties answering even basic questions using them, or have to spend inordinate amounts of time to do so. In this paper we present the Growing Squares and Growing Polygons methods, two sibling visualization techniques that were designed to solve this problem by providing efficient 2D causality visualization through the use of color, texture, and animation. Both techniques have abandoned the traditional linear timeline and instead map the time parameter to the size of geometrical primitives representing the processes; in the Growing Squares case, each process is a color-coded square that receives color influences from other process squares as messages reach it; in the Growing Polygons case, each process is instead an n-sided polygon consisting of triangular sectors showing color-coded influences from the other processes. We have performed user studies of both techniques, comparing them with Hasse diagrams, and they have been shown to be significantly more efficient than old techniques, both in terms of objective performance as well as the subjective opinion of the test subjects (the Growing Squares technique is, however, only significantly more efficient for small},
+keywords={},
+}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2004">2004</a></small>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/causality/causality.pdf"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">Animated Visualization of Causal Relations Through Growing 2D Geometry</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a>
+                      
+                    
+                      
+                        <a class="badge" style="font-weight: 500" href="/publications/members/philippas-tsigas/">Philippas Tsigas</span></a>
+                      
+                    
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">Causality visualization is an important tool for many scientific domains that involve complex interactions between multiple entities (examples include parallel and distributed systems in computer science). However, traditional visualization techniques such as Hasse diagrams are not well-suited to large system executions, and users often have difficulties answering even basic questions using them, or have to spend inordinate amounts of time to do so. In this paper we present the Growing Squares and Growing Polygons methods, two sibling visualization techniques that were designed to solve this problem by providing efficient 2D causality visualization through the use of color, texture, and animation. Both techniques have abandoned the traditional linear timeline and instead map the time parameter to the size of geometrical primitives representing the processes; in the Growing Squares case, each process is a color-coded square that receives color influences from other process squares as messages reach it; in the Growing Polygons case, each process is instead an n-sided polygon consisting of triangular sectors showing color-coded influences from the other processes. We have performed user studies of both techniques, comparing them with Hasse diagrams, and they have been shown to be significantly more efficient than old techniques, both in terms of objective performance as well as the subjective opinion of the test subjects (the Growing Squares technique is, however, only significantly more efficient for small</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+</ul>
+</div>
+    </main>
+    
+    <script>
+      const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),o=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(o).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}var stickyHeaders=function(){var e,t=function(){Array.from(e).forEach((function(t,o){if(t.originalPosition<=window.scrollY){t.classList.add("fixed"),t.style.color="white",t.style.zIndex=1e3,t.style.fontSize="0.8rem",t.style.padding="0.25rem",t.style.paddingLeft="1rem",t.style.paddingBottom="0.4rem",t.style.backgroundColor="#0273A8";var n=e[o+1];if(n){var i=n.originalPosition-t.originalHeight;t.offsetTop>=i&&(t.classList.add("absolute"),t.style.top=i+"px")}}else{t.classList.remove("fixed"),t.style.color="black",t.style.zIndex=-1e3,t.style.fontSize="1.2rem",t.style.padding="0px",t.style.backgroundColor="transparent";var r=e[o-1];r&&window.scrollY<=t.originalPosition-t.originalHeight&&(r.classList.remove("absolute"),r.style.removeProperty("top"))}}))};return{load:function(o){(e=document.querySelectorAll(o)).length>0&&(Array.from(e).forEach((function(e){var t=document.createElement("div");t.className="followWrap",e.parentNode.insertBefore(t,e),t.appendChild(e),e.originalPosition=e.offsetTop,e.originalHeight=e.offsetHeight,t.style.height=e.offsetHeight+"px"})),window.removeEventListener("scroll",t),window.addEventListener("scroll",t))}}}();document.addEventListener("DOMContentLoaded",(function(){stickyHeaders.load(".sticky-header")}));</script>
+  </body>
+</html>

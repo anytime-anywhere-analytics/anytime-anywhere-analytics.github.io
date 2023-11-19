@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="CA3">
+    <meta property="og:title" content="Center for Anytime Anywhere Analytics">
+    <meta property="og:url" content="https://ca3.au.dk/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:image:url" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta property="og:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:title" content="Center for Anytime Anywhere Analytics">
+    <meta name="twitter:url" content="https://ca3.au.dk/">
+    <meta name="twitter:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta name="twitter:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@ca3">
+    <meta name="twitter:dnt" content="on">
+    <title>Center for Anytime Anywhere Analytics</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="dns-prefetch" href="https://ca3.au.dk/">
+    <link rel="preconnect" href="https://ca3.au.dk/">
+    <link rel="me" href="https://ca3.au.dk/" type="text/html">
+    <link rel="me" href="mailto:elm@cs.au.dk">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/> 
+    <style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003d73;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}.sticky-header.fixed{display:none}}main{margin:auto;margin-top:25px;padding:.25rem;padding-bottom:0;max-width:120em}.sticky-header{left:0;right:0;position:relative;color:#000}.sticky-header.fixed{margin-top:0;position:fixed;top:40px;width:100%;box-sizing:border-box;z-index:0}.sticky-header.fixed.absolute{position:absolute}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}</style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-text">
+        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+      </div>
+      <div class="flexible-space"></div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <nav id="navbar">
+          <a href="/">Home</a>
+          <a href="/members">Members</a>
+          <a href="/publications">Publications</a>
+          <a href="/open-positions">Open positions</a>
+          <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
+      </nav>
+    </header>
+    <main>
+      <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+<div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 13px">
+<h2 style="margin-bottom: 0px; padding-top 10px;">People</h2>
+</div>
+<h3 class="sticky-header">Faculty</h3>
+<div>
+    
+        
+    
+        
+    
+        
+        <div class="person-member" style="margin-top: 0.8rem;">
+            <img style="width: 80px; height: 80px" src="/assets/members/niklas.jpg" alt="Niklas Elmqvist">
+            <div class="person-info">
+                
+                    <h3 style="margin-bottom: 0px; margin-top: 0px"><a href="https://cs.au.dk/~elm/" target="_blank">Niklas Elmqvist <sup style="opacity: 0.5">↗</sup></a></h3>
+                
+                <small>
+                    
+                    
+                        <p style="margin-bottom: 0.45rem;">Contributed to 
+                            <a href="/publications/members/niklas-elmqvist/">147
+                                
+                                    publications <span style="opacity: 0.5">→</span> 
+                                
+                            </a>
+                        </p>
+                    
+                    <p style="font-weight: 500">Villium Investigator, Professor of Computer Science and Director of the Center for Anytime Anywhere Analytics</p>
+                    <p>Aarhus University</p>
+                </small>
+            </div>
+        </div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+<h3 class="sticky-header">Current Members</h3>
+<div class="person-container">
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/arvind.png" alt="Arvind Srinivasan">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://arvind.one/" target="_blank">Arvind Srinivasan <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                <p style="font-weight: 500">Ph.D. Student in Computer Science</p>
+                <p>Aarhus University</p>
+                <p></p>
+                
+                    <p><em>January 2024</em></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/marcel.jpg" alt="Marcel Borowski">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.marcelborowski.de/" target="_blank">Marcel Borowski <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                <p style="font-weight: 500">Postdoctoral Researcher at the CA3 Lab</p>
+                <p>Aarhus University</p>
+                <p></p>
+                
+                    <p><em>September 2023</em></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/biswaksen.png" alt="Biswaksen Patnaik">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.biswaksenpatnaik.design/" target="_blank">Biswaksen Patnaik <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/biswaksen-patnaik/">4
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                <p style="font-weight: 500">Ph.D Student in Computer Science</p>
+                <p>University of Maryland College Park</p>
+                <p></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/sungbok.jpg" alt="Sungbok Shin">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://sites.google.com/view/sungbokshin" target="_blank">Sungbok Shin <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/sungbok-shin/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                <p style="font-weight: 500">Ph.D Student in Computer Science</p>
+                <p>University of Maryland College Park</p>
+                <p></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/pramod.jpg" alt="Pramod Chundury">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://scholar.google.com/citations?user=tfT5Jw4AAAAJ&amp;hl=en" target="_blank">Pramod Chundury <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/pramod-chundury/">3
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                <p style="font-weight: 500">Ph.D Student in the College of Information Studies</p>
+                <p>University of Maryland College Park</p>
+                <p></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/naimul.jpeg" alt="Md Naimul Hoque">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://naimulh0que.github.io" target="_blank">Md Naimul Hoque <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small>
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/md-naimul-hoque/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                <p style="font-weight: 500">Ph.D Student in the College of Information Studies</p>
+                <p>University of Maryland College Park</p>
+                <p></p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+<h3 class="sticky-header">Alumni</h3>
+<div class="person-container">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/dhanoa.jpg" alt="Vaishali Dhanoa">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://jku-vds-lab.at/persons/dhanoa/" target="_blank">Vaishali Dhanoa <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                <p style="margin-bottom: 0.4rem">Johannes Kepler University, Linz, Austria</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/caroline.jpeg" alt="Caroline Berger">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://carolineberger.github.io/" target="_blank">Caroline Berger <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2023 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Ph.D. Student in Computer Science</p>
+                    <p>Aarhus University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/eric.jpeg" alt="Eric Newburger">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://scholar.google.com/citations?user=6z_KRnAAAAAJ&amp;hl=en" target="_blank">Eric Newburger <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/eric-newburger/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2023 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/deepthi.jpg" alt="Deepthi Raghunandan">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.cs.umd.edu/~draghun1/" target="_blank">Deepthi Raghunandan <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/deepthi-raghunandan/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2023 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/andrea.jpg" alt="Andrea Batch">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://scholar.google.com/citations?user=s_yGvwEAAAAJ&amp;hl=en" target="_blank">Andrea Batch <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/andrea-batch/">9
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2021 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>MM</span></div>
+        
+        <div class="person-info">
+            
+            <h4>Merlyn Mangalath</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/brian.png" alt="Brian Ondov">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://ondovb.github.io" target="_blank">Brian Ondov <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/brian-ondov/">3
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2021 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/sigfried.jpg" alt="Sigfried Gold">
+        
+        <div class="person-info">
+            
+            <h4><a href="http://sigfried.org" target="_blank">Sigfried Gold <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/sigfried-gold/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2022 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Data Research Analyst in Biomedical Informatics</p>
+                    <p>Johns Hopkins University School of Medicine</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/pranathi.png" alt="Pranathi Mylavarapu">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.pranathimylavarapu.com" target="_blank">Pranathi Mylavarapu <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/pranathi-mylavarapu/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2018 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Senior Product Designer</p>
+                    <p>Adobe</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>ZZ</span></div>
+        
+        <div class="person-info">
+            
+            <h4><a href="https://orcid.org/0000-0002-5153-3865" target="_blank">Zehua Zheng <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/zehua-zheng/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2022 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/zhenpeng.jpeg" alt="Zhenpeng Zhao">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/jameszhenpengzhao/" target="_blank">Zhenpeng Zhao <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/zhenpeng-zhao/">4
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2019 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Machine Learning Engineer</p>
+                    <p>Apple</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>JW</span></div>
+        
+        <div class="person-info">
+            
+            <h4>Justin Wagner</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/justin-wagner/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/zhe.jpg" alt="Zhe Cui">
+        
+        <div class="person-info">
+            
+            <h4>Zhe Cui</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/zhe-cui/">5
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2016 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/karthik.jpg" alt="Sriram Karthik Badam">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://karthikbadam.github.io" target="_blank">Sriram Karthik Badam <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/sriram-karthik-badam/">22
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2019 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Data Scientist</p>
+                    <p>Apple</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/adil.png" alt="Mehmet Adil Yalcin">
+        
+        <div class="person-info">
+            
+            <h4><a href="http://adilyalcin.me" target="_blank">Mehmet Adil Yalcin <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/mehmet-adil-yalcin/">6
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2016 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Founder and CEO</p>
+                    <p>Keshif</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/udayan.jpeg" alt="Udayan Umapathi">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/udayanu/" target="_blank">Udayan Umapathi <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/udayan-umapathi/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2014 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Founder and CEO</p>
+                    <p>Volta Labs Inc.</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/brian.gif" alt="Brian Bowman">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://ieeexplore.ieee.org/author/37063516200" target="_blank">Brian Bowman <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/brian-bowman/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/ankur.jpeg" alt="Ankur Chakraborty">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/ankurchakraborty/" target="_blank">Ankur Chakraborty <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2012 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Consumer Devices Security and Privacy leader</p>
+                    <p>Google</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/senthil.jpg" alt="Senthil Chandrasegaran">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://senthilchandrasegaran.github.io" target="_blank">Senthil Chandrasegaran <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/senthil-chandrasegaran/">10
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2017 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">University of Maryland College Park</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Assistant Professor in Faculty of Industrial Design and Engineering</p>
+                    <p>Technische Universiteit Delft, Netherlands</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/eli.jpeg" alt="Eli Raymond Fisher">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/eli-fisher-21a9885b/" target="_blank">Eli Raymond Fisher <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/eli-raymond-fisher/">3
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2012 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Senior Manager in Product Management at OpenSearch</p>
+                    <p>Amazon Web Services</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/sohaib.jpeg" alt="Sohaib Ghani">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/sohaibghani/" target="_blank">Sohaib Ghani <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/sohaib-ghani/">9
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2013 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Lead Research Scientist, Visualization Core Lab</p>
+                    <p>King Abdullah University of Science &amp; Technology, KSA</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>SJ</span></div>
+        
+        <div class="person-info">
+            
+            <h4>Salman Javed</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/waqas.jpeg" alt="Waqas Javed">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/wajaved/" target="_blank">Waqas Javed <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/waqas-javed/">13
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2013 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Senior Vice President</p>
+                    <p>The Bank of Punjab, Lahore</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/kyungtae.jpeg" alt="KyungTae Kim">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/kyungtae-ted-kim/" target="_blank">KyungTae Kim <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/kyungtae-kim/">5
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2010 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Founder and CEO</p>
+                    <p>Treasurer, South Korea</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/sungahn.jpeg" alt="Sungahn Ko">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/sungahn/" target="_blank">Sungahn Ko <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/sungahn-ko/">4
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2014 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Associate Professor in Computer Science and Engineering</p>
+                    <p>Ulsan National Institute of Technology, South Korea</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/tejas.jpeg" alt="Tejas Kulkarni">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/tejas-kulkarni-56042214/" target="_blank">Tejas Kulkarni <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/tejas-kulkarni/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2010 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Founder and CEO</p>
+                    <p>Common Sense Machines</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>BL</span></div>
+        
+        <div class="person-info">
+            
+            <h4>Bharat Lavania</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2009 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/bryan.jpeg" alt="Bryan McDonnel">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/bryan-mcdonnel-58675535/" target="_blank">Bryan McDonnel <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/bryan-mcdonnel/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2009 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Senior Software Engineer</p>
+                    <p>SpaceX</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/will.jpeg" alt="Will McGrath">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/will-mcgrath/" target="_blank">Will McGrath <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/will-mcgrath/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2012 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Software Engineer</p>
+                    <p>Google</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/stephen.jpeg" alt="Stephen MacNeil">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/stevemacn1/" target="_blank">Stephen MacNeil <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/stephen-macneil/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2011 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Assistant Professor</p>
+                    <p>Temple University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/deokgun.jpeg" alt="Deok Gun Park">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/deokgun-park-42a1a756/" target="_blank">Deok Gun Park <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/deok-gun-park/">6
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2014 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Assistant Professor</p>
+                    <p>University of Texas at Arlington</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/yuetling.jpeg" alt="Yuetling Wong">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/yuetling-wong/" target="_blank">Yuetling Wong <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/yuetling-wong/">3
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Role as of 2018 ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Software Engineer</p>
+                    <p>Apple</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <div class="small avatar text-avatar"><span>BZ</span></div>
+        
+        <div class="person-info">
+            
+            <h4>Bowen Zhou</h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                
+                    
+                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+<h3 class="sticky-header">External Collaborators</h3>
+<div class="person-container">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/anastasia.jpg" alt="Anastasia Bezerianos">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.lri.fr/~anab/" target="_blank">Anastasia Bezerianos <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/anastasia-bezerianos/">2
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="opacity: 80%; font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                <p style="font-weight: 500;">Assistant Professor</p>
+                <p style="margin-bottom: 0.4rem">Ecole de Centrale Paris, France</p>
+                
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/pierre.jpg" alt="Pierre Dragicevic">
+        
+        <div class="person-info">
+            
+            <h4><a href="http://dragice.fr" target="_blank">Pierre Dragicevic <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/pierre-dragicevic/">4
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Tenured Research Scientist</p>
+                    <p>INRIA, France</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/david.jpg" alt="David S. Ebert">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/david-ebert-1885235/" target="_blank">David S. Ebert <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/david-s-ebert/">11
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                    
+                        <span style="opacity: 80%; font-weight: 600; color: #0273A8">Then role ⤵</span>
+                    
+                <p style="font-weight: 500;">Silicon Valley Professor of ECE</p>
+                <p style="margin-bottom: 0.4rem">Purdue University</p>
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Director of Data Institute for Societal Challenges</p>
+                    <p>University of Oklahoma</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/jean.jpeg" alt="Jean-Daniel Fekete">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.linkedin.com/in/jfekete/" target="_blank">Jean-Daniel Fekete <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/jean-daniel-fekete/">12
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Senior Research Scientist</p>
+                    <p>INRIA, France</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/pourang.jpg" alt="Pourang Irani">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://hci.cs.umanitoba.ca/people/bio/pourang-irani" target="_blank">Pourang Irani <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/pourang-irani/">4
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Professor of Computer Science</p>
+                    <p>University of Manitoba, Canada</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/bum.png" alt="Bum Chul Kwon">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://bckwon.com" target="_blank">Bum Chul Kwon <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/bum-chul-kwon/">1
+                            
+                                publication <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Research Scientist</p>
+                    <p>IBM Research</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/ross.png" alt="Ross Maciejewski">
+        
+        <div class="person-info">
+            
+            <h4><a href="http://rmaciejewski.faculty.asu.edu" target="_blank">Ross Maciejewski <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/ross-maciejewski/">5
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">School of Computing and Augmented Intelligence</p>
+                    <p>Arizona State University</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/nathalie.jpg" alt="Nathalie Henry Riche">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://www.microsoft.com/en-us/research/people/nath/" target="_blank">Nathalie Henry Riche <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/nathalie-henry-riche/">6
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Principal Researcher in Extended Perception, Interaction &amp; Cognition Group</p>
+                    <p>Microsoft Research</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+    
+      <div class="person-member">
+        
+            <img style="width: 80px; height: 80px" src="/assets/members/yijisoo.png" alt="Ji Soo Yi">
+        
+        <div class="person-info">
+            
+            <h4><a href="https://yijisoo.github.io/about/" target="_blank">Ji Soo Yi <sup style="opacity: 0.5">↗</sup></a></h4>
+            
+            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                
+                
+                    <p style="margin-bottom: 0.45rem;">Contributed to 
+                        <a href="/publications/members/ji-soo-yi/">6
+                            
+                                publications <span style="opacity: 0.5">→</span>
+                            
+                        </a>
+                    </p>
+                
+                
+                
+                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                    <p style="font-weight: 500">Vice President of CX Insight Group</p>
+                    <p>Samsung Electronics</p>
+                
+            </small>
+        </div>
+    </div>
+    
+
+</div>
+</div>
+
+    </main>
+    
+    <script>
+      const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),o=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(o).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}var stickyHeaders=function(){var e,t=function(){Array.from(e).forEach((function(t,o){if(t.originalPosition<=window.scrollY){t.classList.add("fixed"),t.style.color="white",t.style.zIndex=1e3,t.style.fontSize="0.8rem",t.style.padding="0.25rem",t.style.paddingLeft="1rem",t.style.paddingBottom="0.4rem",t.style.backgroundColor="#0273A8";var n=e[o+1];if(n){var i=n.originalPosition-t.originalHeight;t.offsetTop>=i&&(t.classList.add("absolute"),t.style.top=i+"px")}}else{t.classList.remove("fixed"),t.style.color="black",t.style.zIndex=-1e3,t.style.fontSize="1.2rem",t.style.padding="0px",t.style.backgroundColor="transparent";var r=e[o-1];r&&window.scrollY<=t.originalPosition-t.originalHeight&&(r.classList.remove("absolute"),r.style.removeProperty("top"))}}))};return{load:function(o){(e=document.querySelectorAll(o)).length>0&&(Array.from(e).forEach((function(e){var t=document.createElement("div");t.className="followWrap",e.parentNode.insertBefore(t,e),t.appendChild(e),e.originalPosition=e.offsetTop,e.originalHeight=e.offsetHeight,t.style.height=e.offsetHeight+"px"})),window.removeEventListener("scroll",t),window.addEventListener("scroll",t))}}}();document.addEventListener("DOMContentLoaded",(function(){stickyHeaders.load(".sticky-header")}));</script>
+  </body>
+</html>
