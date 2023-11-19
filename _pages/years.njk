@@ -1,0 +1,48 @@
+---
+layout: base.njk
+pagination:
+  data: collections.publicationYears
+  size: 1
+  alias: year
+permalink: "/publications/year/{{ year }}/"
+---
+<div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+  <div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+    <h4 style="margin-bottom: 0px; padding-top: 10px">Publications published in</h4>
+    <h2 style="margin-top: 0px; margin-bottom: 0px">Year {{year}}</h2>
+  </div>
+<ul>
+    {% for record in collections.publicationsByYear[year] %}
+        <li style="display: flex; margin-bottom: 1rem;">
+              <div style="padding: 0.5rem;">
+                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-{{record.id}}" onClick="copy('{{record.id}}')">
+                    Copy BibTeX
+                </button>
+                  <div id="bibtex-{{record.id}}" style="display: none;">
+                      {{ record | bibify }}
+                  </div>
+                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/{{ record.journal | replace("&","and") | slugify }}">{{ record.journal }} • <a class="secondary" style="font-weight: 500" href="/publications/year/{{record.year}}">{{ record.year }}</a></small>
+                  <a href="{{ record.url }}"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">{{ record.title }}</h3></a>
+                  <p style="margin: 0.15rem; line-height: 1.9">
+                    {% for author in record.author %}
+                      {% if author === person or  collections.publicationsByAuthor[author].length < 1 %}
+                        <span class="badge" style="font-weight: 500;">{{author}}</span>
+                      {% else %}
+                        <a class="badge" style="font-weight: 500" href="/publications/members/{{ author | slugify }}/">{{author}}</span></a>
+                      {% endif %}
+                    {% endfor %}
+                  </p>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">{{ record.abstract }}</p>
+                      </details>
+                      {% if record.video %}
+                          <a href="{{record.video}}" style="font-weight: 500"><small>📺 Video</small></a>
+                      {% endif %}
+                  </div>
+              </div>
+          </li>
+    {% endfor %}
+</ul>
+</div>

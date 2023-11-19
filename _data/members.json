@@ -1,0 +1,477 @@
+[
+    {
+        "group": "members",
+        "name": "Arvind Srinivasan",
+        "now_role": "Ph.D. Student in Computer Science",
+        "now_at": "Aarhus University",
+        "since": "January 2024",
+        "photo": "arvind.png",
+        "url": "https://arvind.one/",
+        "phone": "+1-240-726-8257"
+    },
+    {
+        "group": "members",
+        "name": "Marcel Borowski",
+        "now_role": "Postdoctoral Researcher at the CA3 Lab",
+        "now_at": "Aarhus University",
+        "since": "September 2023",
+        "photo": "marcel.jpg",
+        "url": "https://www.marcelborowski.de/"
+    },
+    {
+        "group": "faculty",
+        "name": "Niklas Elmqvist",
+        "photo": "niklas.jpg",
+        "url": "https://cs.au.dk/~elm/",
+        "now_role": "Villium Investigator, Professor of Computer Science and Director of the Center for Anytime Anywhere Analytics",
+        "now_at": "Aarhus University",
+        "office": "Hopper (Building 5346), Room 122",
+        "phone": "+45-21-77-79-00"
+    },
+    {
+        "group": "members",
+        "name": "Biswaksen Patnaik",
+        "now_role": "Ph.D Student in Computer Science",
+        "now_at": "University of Maryland College Park",
+        "photo": "biswaksen.png",
+        "url": "https://www.biswaksenpatnaik.design/",
+        "phone": "+1-301-312-7264"
+    },
+    {
+        "group": "members",
+        "name": "Sungbok Shin",
+        "now_role": "Ph.D Student in Computer Science",
+        "now_at": "University of Maryland College Park",
+        "photo": "sungbok.jpg",
+        "url": "https://sites.google.com/view/sungbokshin",
+        "phone": "+1-301-204-1990"
+    },
+    {
+        "group": "members",
+        "name": "Pramod Chundury",
+        "now_role": "Ph.D Student in the College of Information Studies",
+        "now_at": "University of Maryland College Park",
+        "photo": "pramod.jpg",
+        "url": "https://scholar.google.com/citations?user=tfT5Jw4AAAAJ&hl=en"
+    },
+    {
+        "group": "members",
+        "name": "Md Naimul Hoque",
+        "now_role": "Ph.D Student in the College of Information Studies",
+        "now_at": "University of Maryland College Park",
+        "photo": "naimul.jpeg",
+        "url": "https://naimulh0que.github.io"
+    },
+    {
+        "group": "alumni",
+        "name": "Vaishali Dhanoa",
+        "then_at": "Johannes Kepler University, Linz, Austria",
+        "photo": "dhanoa.jpg",
+        "url": "https://jku-vds-lab.at/persons/dhanoa/"
+    },
+    {
+        "group": "alumni",
+        "name": "Caroline Berger",
+        "then_role": "Masters Student in Human Computer Interaction",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2023,
+        "now_role": "Ph.D. Student in Computer Science",
+        "now_at": "Aarhus University",
+        "photo": "caroline.jpeg",
+        "url": "https://carolineberger.github.io/",
+        "phone": "+1-617-981-9479"
+    },
+    {
+        "group": "alumni",
+        "name": "Eric Newburger",
+        "then_role": "Ph.D. Student in the College of Information Sciences",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2023,
+        "photo": "eric.jpeg",
+        "url": "https://scholar.google.com/citations?user=6z_KRnAAAAAJ&hl=en",
+        "phone": "+1-301-602-6616"
+    },
+    {
+        "group": "alumni",
+        "name": "Deepthi Raghunandan",
+        "photo": "deepthi.jpg",
+        "url": "https://www.cs.umd.edu/~draghun1/",
+        "then_year": 2023,
+        "then_role": "Ph.D. Student in the College of Information Sciences",
+        "then_at": "University of Maryland College Park"
+    },
+    {
+        "group": "alumni",
+        "name": "Andrea Batch",
+        "then_role": "Ph.D. Student in the College of Information Sciences",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2021,
+        "photo": "andrea.jpg",
+        "url": "https://scholar.google.com/citations?user=s_yGvwEAAAAJ&hl=en",
+        "office": "HCIL",
+        "phone": "+1-202-907-6157"
+    },
+    {
+        "group": "alumni",
+        "name": "Merlyn Mangalath",
+        "then_role": "Masters Student in Business school",
+        "then_at": "University of Maryland College Park"
+    },
+    {
+        "group": "alumni",
+        "name": "Brian Ondov",
+        "photo": "brian.png",
+        "url": "https://ondovb.github.io",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2021
+    },
+    {
+        "group": "alumni",
+        "name": "Sigfried Gold",
+        "now_role": "Data Research Analyst in Biomedical Informatics",
+        "now_at": "Johns Hopkins University School of Medicine",
+        "then_role": "Ph.D. Student in the College of Information Sciences",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2022,
+        "photo": "sigfried.jpg",
+        "url": "http://sigfried.org",
+        "office": "HCIL",
+        "phone": "+1-301-775-3339"
+    },
+    {
+        "group": "alumni",
+        "name": "Pranathi Mylavarapu",
+        "photo": "pranathi.png",
+        "url": "https://www.pranathimylavarapu.com",
+        "now_role": "Senior Product Designer",
+        "now_at": "Adobe",
+        "then_role": "Masters Student in Human Computer Interaction",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2018
+    },
+    {
+        "group": "alumni",
+        "name": "Zehua Zheng",
+        "url": "https://orcid.org/0000-0002-5153-3865",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2022
+    },
+    {
+        "group": "alumni",
+        "name": "Zhenpeng Zhao",
+        "photo": "zhenpeng.jpeg",
+        "url": "https://www.linkedin.com/in/jameszhenpengzhao/",
+        "now_role": "Machine Learning Engineer",
+        "now_at": "Apple",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2019,
+        "office": "HCIL",
+        "phone": "+1-219-577-5793"
+    },
+    {
+        "group": "alumni",
+        "name": "Justin Wagner",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park"
+    },
+    {
+        "group": "alumni",
+        "name": "Zhe Cui",
+        "photo": "zhe.jpg",
+        "then_role": "Ph.D. student in Electrical and Computer Engineering",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2016,
+        "office": "HCIL",
+        "phone": "+1-301-275-7708"
+    },
+    {
+        "group": "alumni",
+        "name": "Sriram Karthik Badam",
+        "now_role": "Data Scientist",
+        "now_at": "Apple",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2019,
+        "office": "HCIL",
+        "photo": "karthik.jpg",
+        "url": "https://karthikbadam.github.io",
+        "phone": "+1-765-491-1767"
+    },
+    {
+        "group": "alumni",
+        "name": "Mehmet Adil Yalcin",
+        "photo": "adil.png",
+        "url": "http://adilyalcin.me",
+        "now_role": "Founder and CEO",
+        "now_at": "Keshif",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2016
+    },
+    {
+        "group": "alumni",
+        "name": "Udayan Umapathi",
+        "now_role": "Founder and CEO",
+        "now_at": "Volta Labs Inc.",
+        "then_role": "Masters Student in Computer Engineering",
+        "then_at": "Purdue University",
+        "then_year": 2014,
+        "photo": "udayan.jpeg",
+        "url": "https://www.linkedin.com/in/udayanu/",
+        "phone": "+1-765-409-7656"
+    },
+    {
+        "group": "alumni",
+        "name": "Brian Bowman",
+        "photo": "brian.gif",
+        "url": "https://ieeexplore.ieee.org/author/37063516200",
+        "then_role": "Undergraduate Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Ankur Chakraborty",
+        "photo": "ankur.jpeg",
+        "url": "https://www.linkedin.com/in/ankurchakraborty/",
+        "now_role": "Consumer Devices Security and Privacy leader",
+        "now_at": "Google",
+        "then_year": 2012,
+        "then_role": "Masters Student in Information Security",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Senthil Chandrasegaran",
+        "now_role": "Assistant Professor in Faculty of Industrial Design and Engineering",
+        "now_at": "Technische Universiteit Delft, Netherlands",
+        "then_role": "Postdoctoral Scholar at the Human Computer Interaction Lab",
+        "then_at": "University of Maryland College Park",
+        "then_year": 2017,
+        "photo": "senthil.jpg",
+        "url": "https://senthilchandrasegaran.github.io",
+        "office": "HCIL/remote",
+        "phone": "+1-765-337-8411"
+    },
+    {
+        "group": "alumni",
+        "name": "Eli Raymond Fisher",
+        "photo": "eli.jpeg",
+        "url": "https://www.linkedin.com/in/eli-fisher-21a9885b/",
+        "then_year": 2012,
+        "now_role": "Senior Manager in Product Management at OpenSearch",
+        "now_at": "Amazon Web Services",
+        "then_role": "Undergraduate Student in Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Sohaib Ghani",
+        "photo": "sohaib.jpeg",
+        "url": "https://www.linkedin.com/in/sohaibghani/",
+        "then_year": 2013,
+        "now_role": "Lead Research Scientist, Visualization Core Lab",
+        "now_at": "King Abdullah University of Science & Technology, KSA",
+        "then_role": "Ph.D. Student in Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Salman Javed",
+        "then_role": "Masters Student in Electrical & Computer Engineering",
+        "then_at":"Purdue University",
+        "year": 2014
+    },
+    {
+        "group": "alumni",
+        "name": "Waqas Javed",
+        "photo": "waqas.jpeg",
+        "url": "https://www.linkedin.com/in/wajaved/",
+        "then_year": 2013,
+        "now_role": "Senior Vice President",
+        "now_at": "The Bank of Punjab, Lahore",
+        "then_role": "Ph.D. Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "KyungTae Kim",
+        "photo": "kyungtae.jpeg",
+        "url": "https://www.linkedin.com/in/kyungtae-ted-kim/",
+        "then_year": 2010,
+        "now_role": "Founder and CEO",
+        "now_at": "Treasurer, South Korea",
+        "then_role": "Masters Student in Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Sungahn Ko",
+        "photo": "sungahn.jpeg",
+        "url": "https://www.linkedin.com/in/sungahn/",
+        "then_year": 2014,
+        "now_role": "Associate Professor in Computer Science and Engineering",
+        "now_at": "Ulsan National Institute of Technology, South Korea",
+        "then_role": "Ph.D. Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Tejas Kulkarni",
+        "photo": "tejas.jpeg",
+        "url": "https://www.linkedin.com/in/tejas-kulkarni-56042214/",
+        "then_year": 2010,
+        "now_role": "Founder and CEO",
+        "now_at": "Common Sense Machines",
+        "then_role": "Undergraduate Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Bharat Lavania",
+        "then_year": 2009,
+        "then_role": "Undergraduate Student in Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Bryan McDonnel",
+        "photo": "bryan.jpeg",
+        "then_year": 2009,
+        "url": "https://www.linkedin.com/in/bryan-mcdonnel-58675535/",
+        "now_role": "Senior Software Engineer",
+        "now_at": "SpaceX",
+        "then_role": "Undergraduate Student in Computer Engineering",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "alumni",
+        "name": "Will McGrath",
+        "then_year": 2012,
+        "photo": "will.jpeg",
+        "now_role": "Software Engineer",
+        "now_at": "Google",
+        "then_role": "Undergraduate Student in Computer Engineering",
+        "then_at": "Purdue University",
+        "url": "https://www.linkedin.com/in/will-mcgrath/"
+    },
+    {
+        "group": "alumni",
+        "name": "Stephen MacNeil",
+        "then_year": 2011,
+        "photo": "stephen.jpeg",
+        "url": "https://www.linkedin.com/in/stevemacn1/",
+        "now_role": "Assistant Professor",
+        "now_at": "Temple University",
+        "then_role": "Undergraduate Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University",
+        "phone": "+1-908-500-4515"
+    },
+    {
+        "group": "alumni",
+        "name": "Deok Gun Park",
+        "photo": "deokgun.jpeg",
+        "url": "https://www.linkedin.com/in/deokgun-park-42a1a756/",
+        "then_year": 2014,
+        "now_role": "Assistant Professor",
+        "now_at": "University of Texas at Arlington",
+        "then_role": "Masters Student in Interdisciplinary Engineering",
+        "then_at": "Purdue University",
+        "phone": "+1-765-426-7448"
+    },
+    {
+        "group": "alumni",
+        "name": "Yuetling Wong",
+        "then_year": 2018,
+        "photo": "yuetling.jpeg",
+        "url": "https://www.linkedin.com/in/yuetling-wong/",
+        "then_role": "Ph.D. Student in Electrical and Computer Engineering",
+        "then_at": "Purdue University",
+        "now_role": "Software Engineer",
+        "now_at": "Apple",
+        "phone": "+1-765-421-5822"
+    },
+    {
+        "group": "alumni",
+        "name": "Bowen Zhou",
+        "then_role": "Ph.D. Student in Computer Science",
+        "then_at": "Purdue University"
+    },
+    {
+        "group": "collaborators",
+        "name": "Anastasia Bezerianos",
+        "photo": "anastasia.jpg",
+        "url": "https://www.lri.fr/~anab/",
+        "then_role": "Assistant Professor",
+        "then_at": "Ecole de Centrale Paris, France"
+    },
+    {
+        "group": "collaborators",
+        "name": "Pierre Dragicevic",
+        "photo": "pierre.jpg",
+        "url": "http://dragice.fr",
+        "now_role": "Tenured Research Scientist",
+        "now_at": "INRIA, France"
+    },
+    {
+        "group": "collaborators",
+        "name": "David S. Ebert",
+        "photo": "david.jpg",
+        "url": "https://www.linkedin.com/in/david-ebert-1885235/",
+        "then_role": "Silicon Valley Professor of ECE",
+        "then_at": "Purdue University",
+        "now_role": "Director of Data Institute for Societal Challenges",
+        "now_at": "University of Oklahoma"
+    },
+    {
+        "group": "collaborators",
+        "name": "Jean-Daniel Fekete",
+        "photo": "jean.jpeg",
+        "url": "https://www.linkedin.com/in/jfekete/",
+        "now_role": "Senior Research Scientist",
+        "now_at": "INRIA, France"
+    },
+    {
+        "group": "collaborators",
+        "name": "Pourang Irani",
+        "photo": "pourang.jpg",
+        "url": "https://hci.cs.umanitoba.ca/people/bio/pourang-irani",
+        "now_role": "Professor of Computer Science",
+        "now_at": "University of Manitoba, Canada"
+    },
+    {
+        "group": "collaborators",
+        "name": "Bum Chul Kwon",
+        "photo": "bum.png",
+        "url": "https://bckwon.com",
+        "now_role": "Research Scientist",
+        "now_at": "IBM Research"
+    },
+    {
+        "group": "collaborators",
+        "name": "Ross Maciejewski",
+        "photo": "ross.png",
+        "url": "http://rmaciejewski.faculty.asu.edu",
+        "now_role": "School of Computing and Augmented Intelligence",
+        "now_at": "Arizona State University"
+    },
+    {
+        "group": "collaborators",
+        "name": "Nathalie Henry Riche",
+        "photo": "nathalie.jpg",
+        "url": "https://www.microsoft.com/en-us/research/people/nath/",
+        "now_role": "Principal Researcher in Extended Perception, Interaction & Cognition Group",
+        "now_at": "Microsoft Research"
+    },
+    {
+        "group": "collaborators",
+        "name": "Ji Soo Yi",
+        "photo": "yijisoo.png",
+        "url": "https://yijisoo.github.io/about/",
+        "now_role": "Vice President of CX Insight Group",
+        "now_at": "Samsung Electronics"
+    }
+
+]

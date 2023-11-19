@@ -1,0 +1,26 @@
+{
+  "name": "ca3-lab-site-external",
+  "version": "1.0.0",
+  "description": "Website of the Center for Anytime Anywhere Analytics",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy --dryrun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ca3/lab-site-external.git"
+  },
+  "author": "Arvind Srinivasan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ca3/lab-site-external/issues"
+  },
+  "homepage": "https://github.com/ca3/lab-site-external#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "clean-css": "^4.2.3",
+    "terser": "^5.6.0-beta"
+  }
+}
