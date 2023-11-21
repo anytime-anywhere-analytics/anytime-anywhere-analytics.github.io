@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="CA3">
+    <meta property="og:title" content="Center for Anytime Anywhere Analytics">
+    <meta property="og:url" content="https://ca3.au.dk/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:image:url" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta property="og:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:title" content="Center for Anytime Anywhere Analytics">
+    <meta name="twitter:url" content="https://ca3.au.dk/">
+    <meta name="twitter:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta name="twitter:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@ca3">
+    <meta name="twitter:dnt" content="on">
+    <title>Center for Anytime Anywhere Analytics</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="dns-prefetch" href="https://ca3.au.dk/">
+    <link rel="preconnect" href="https://ca3.au.dk/">
+    <link rel="me" href="https://ca3.au.dk/" type="text/html">
+    <link rel="me" href="mailto:elm@cs.au.dk">
+    
+    <style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003d73;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}}main{margin:auto;padding:.25rem;padding-bottom:0;max-width:120em}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}</style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-text">
+        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+      </div>
+      <div class="flexible-space"></div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <nav id="navbar">
+          <a href="/">Home</a>
+          <a href="/members">Members</a>
+          <a href="/publications">Publications</a>
+          <a href="/open-positions">Open positions</a>
+          <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
+      </nav>
+    </header>
+    
+        <div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; padding-left: 20px; padding-right: 20px; padding-bottom: 13px; margin-top: 30px; margin-bottom: 0px">
+        
+            <h4 style="margin-bottom: 0px; padding-top 10px;">Publications coauthored by</h4>
+            <h2 style="margin-bottom: 0px; margin-top: 10px;">Sohaib Ghani</h2>
+        
+        </div>
+    
+    <main>
+      <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+  <ul>
+      
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #37&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Gad2015" onClick="copy('Gad2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Gad2015" style="display: none;">
+                        @article{Gad2015,
+title={ThemeDelta: Dynamic Segmentations over Temporal Topic Models},
+author={Samah Gad and Waqas Javed and Sohaib Ghani and Niklas Elmqvist and Tom Ewing and Keith N. Hampton and Naren Ramakrishnan},
+url={http://www.umiacs.umd.edu/~elm/projects/theme-delta/theme-delta.pdf},
+year={2015},
+date={2015-02-17},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={21},
+number={5},
+pages={672--685},
+abstract={We present ThemeDelta, a visual analytics system for extracting and visualizing temporal trends, clustering, and reorganization in time-indexed textual datasets. ThemeDelta is supported by a dynamic temporal segmentation algorithm that integrates with topic modeling algorithms to identify change points where significant shifts in topics occur. This algorithm detects not only the clustering and associations of keywords in a time period, but also their convergence into topics (groups of keywords) that may later diverge into new groups. The visual representation of ThemeDelta uses sinuous, variable-width lines to show this evolution on a timeline, utilizing color for categories, and line width for keyword strength. We demonstrate how interaction with ThemeDelta helps capture the rise and fall of topics by analyzing archives of historical newspapers, of U.S. presidential campaign speeches, and of social messages collected through iNeighbors, a web-based social website. ThemeDelta was evaluated using a qualitative expert user study involving three researchers from rhetoric and history using the historical newspapers corpus.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/theme-delta/theme-delta.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> ThemeDelta: Dynamic Segmentations over Temporal Topic Models<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/samah-gad/">Samah Gad</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/tom-ewing/">Tom Ewing</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/keith-n-hampton/">Keith N. Hampton</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/naren-ramakrishnan/">Naren Ramakrishnan</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present ThemeDelta, a visual analytics system for extracting and visualizing temporal trends, clustering, and reorganization in time-indexed textual datasets. ThemeDelta is supported by a dynamic temporal segmentation algorithm that integrates with topic modeling algorithms to identify change points where significant shifts in topics occur. This algorithm detects not only the clustering and associations of keywords in a time period, but also their convergence into topics (groups of keywords) that may later diverge into new groups. The visual representation of ThemeDelta uses sinuous, variable-width lines to show this evolution on a timeline, utilizing color for categories, and line width for keyword strength. We demonstrate how interaction with ThemeDelta helps capture the rise and fall of topics by analyzing archives of historical newspapers, of U.S. presidential campaign speeches, and of social messages collected through iNeighbors, a web-based social website. ThemeDelta was evaluated using a qualitative expert user study involving three researchers from rhetoric and history using the historical newspapers corpus.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #29&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Ghani2013" onClick="copy('Ghani2013')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Ghani2013" style="display: none;">
+                        @article{Ghani2013,
+title={Visual Analytics for Multimodal Social Network Analysis: A Design Study with Social Scientists},
+author={Sohaib Ghani and Bumchul Kwon and Seungyoon Lee and Ji Soo Yi and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/mmgraph/mmgraph.pdf},
+year={2013},
+date={2013-01-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={19},
+number={12},
+pages={2032--2041},
+abstract={Social network analysis (SNA) is becoming increasingly concerned not only with actors and their relations, but also with distinguishing between different types of such entities. For example, social scientists may want to investigate asymmetric relations in organizations with strict chains of command, or incorporate non-actors such as conferences and projects when analyzing co-authorship patterns. Multimodal social networks are those where actors and relations belong to different types, or modes, and multimodal social network analysis (mSNA) is accordingly SNA for such networks. In this paper, we present a design study that we conducted with several social scientist collaborators on how to support mSNA using visual analytics tools. Based on an open-ended, formative design process, we devised a visual representation called parallel node-link bands (PNLBs) that splits modes into separate bands and renders connections between adjacent ones, similar to the list view in Jigsaw. We then used the tool in a qualitative evaluation involving five social scientists whose feedback informed a second design phase that incorporated additional network metrics. Finally, we conducted a second qualitative evaluation with our social scientist collaborators that provided further insights on the utility of the PNLBs representation and the potential of visual analytics for mSNA.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2013">2013</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/mmgraph/mmgraph.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Visual Analytics for Multimodal Social Network Analysis: A Design Study with Social Scientists<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/bumchul-kwon/">Bumchul Kwon</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/seungyoon-lee/">Seungyoon Lee</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/ji-soo-yi/">Ji Soo Yi</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Social network analysis (SNA) is becoming increasingly concerned not only with actors and their relations, but also with distinguishing between different types of such entities. For example, social scientists may want to investigate asymmetric relations in organizations with strict chains of command, or incorporate non-actors such as conferences and projects when analyzing co-authorship patterns. Multimodal social networks are those where actors and relations belong to different types, or modes, and multimodal social network analysis (mSNA) is accordingly SNA for such networks. In this paper, we present a design study that we conducted with several social scientist collaborators on how to support mSNA using visual analytics tools. Based on an open-ended, formative design process, we devised a visual representation called parallel node-link bands (PNLBs) that splits modes into separate bands and renders connections between adjacent ones, similar to the list view in Jigsaw. We then used the tool in a qualitative evaluation involving five social scientists whose feedback informed a second design phase that incorporated additional network metrics. Finally, we conducted a second qualitative evaluation with our social scientist collaborators that provided further insights on the utility of the PNLBs representation and the potential of visual analytics for mSNA.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #30&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Javed2012c" onClick="copy('Javed2012c')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Javed2012c" style="display: none;">
+                        @inproceedings{Javed2012c,
+title={GravNav: Using a Gravity Model for Multi-Scale Navigation},
+author={Waqas Javed and Sohaib Ghani and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/gravnav/gravnav.pdf},
+year={2012},
+date={2012-01-01},
+journal={Proceedings of the ACM Conference on Advanced Visual Interfaces},
+booktitle={Proceedings of the ACM Conference on Advanced Visual Interfaces},
+pages={217--224},
+abstract={We present gravity navigation (GravNav), a family of multi-scale navigation techniques that use a gravity-inspired model for assisting navigation in large visual 2D spaces based on the interest and salience of visual objects in the space. GravNav is an instance of topology-aware navigation, which makes use of the structure of the visual space to aid navigation. We have performed a controlled study comparing GravNav to standard zoom and pan navigation, with and without variable-rate zoom control. Our results show a significant improvement for GravNav over standard navigation, particularly when coupled with variable-rate zoom. We also report findings on user behavior in multi-scale navigation.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-advanced-visual-interfaces">Proceedings of the ACM Conference on Advanced Visual Interfaces • <a class="secondary" style="font-weight: 500" href="/publications/year/2012">2012</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/gravnav/gravnav.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> GravNav: Using a Gravity Model for Multi-Scale Navigation<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present gravity navigation (GravNav), a family of multi-scale navigation techniques that use a gravity-inspired model for assisting navigation in large visual 2D spaces based on the interest and salience of visual objects in the space. GravNav is an instance of topology-aware navigation, which makes use of the structure of the visual space to aid navigation. We have performed a controlled study comparing GravNav to standard zoom and pan navigation, with and without variable-rate zoom control. Our results show a significant improvement for GravNav over standard navigation, particularly when coupled with variable-rate zoom. We also report findings on user behavior in multi-scale navigation.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #29&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Javed2012b" onClick="copy('Javed2012b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Javed2012b" style="display: none;">
+                        @inproceedings{Javed2012b,
+title={PolyZoom: Multiscale and Multifocus Exploration in 2D Visual Spaces},
+author={Waqas Javed and Sohaib Ghani and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/polyzoom/polyzoom.pdf},
+year={2012},
+date={2012-01-01},
+booktitle={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+journal={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+pages={287--296},
+abstract={The most common techniques for navigating in multiscale visual spaces are pan, zoom, and bird’s eye views. However, these techniques are often tedious and cumbersome to use, especially when objects of interest are located far apart. We present the PolyZoom technique where users progressively build hierarchies of focus regions, stacked on each other such that each subsequent level shows a higher magnification. Correlation graphics show the relation between parent and child viewports in the hierarchy. To validate the new technique, we compare it to standard navigation techniques in two user studies, one on multiscale visual search and the other on multifocus interaction. Results show that PolyZoom performs better than current standard techniques. },
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-human-factors-in-computing-systems">Proceedings of the ACM Conference on Human Factors in Computing Systems • <a class="secondary" style="font-weight: 500" href="/publications/year/2012">2012</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/polyzoom/polyzoom.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> PolyZoom: Multiscale and Multifocus Exploration in 2D Visual Spaces<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">The most common techniques for navigating in multiscale visual spaces are pan, zoom, and bird’s eye views. However, these techniques are often tedious and cumbersome to use, especially when objects of interest are located far apart. We present the PolyZoom technique where users progressively build hierarchies of focus regions, stacked on each other such that each subsequent level shows a higher magnification. Correlation graphics show the relation between parent and child viewports in the hierarchy. To validate the new technique, we compare it to standard navigation techniques in two user studies, one on multiscale visual search and the other on multifocus interaction. Results show that PolyZoom performs better than current standard techniques. </p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #23&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-3Ghani2012" onClick="copy('3Ghani2012')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-3Ghani2012" style="display: none;">
+                        @article{3Ghani2012,
+title={Perception of Animated Node-Link Diagrams for Dynamic Graphs},
+author={Sohaib Ghani and Niklas Elmqvist and Ji Soo Yi},
+url={http://www.umiacs.umd.edu/~elm/projects/dyngraph/dyngraph.pdf},
+year={2012},
+date={2012-01-01},
+journal={Computer Graphics Forum},
+volume={31},
+number={3},
+pages={1205--1214},
+abstract={Effective visualization of dynamic graphs remains an open research topic, and many state-of-the-art tools use animated node-link diagrams for this purpose. Despite its intuitiveness, the effectiveness of animation in node-link diagrams has been questioned, and several empirical studies have shown that animation is not necessarily superior to static visualizations. However, the exact mechanics of perceiving animated node-link diagrams are still unclear. In this paper, we study the impact of different dynamic graph metrics on user perception of the animation. After deriving candidate visual graph metrics, we perform an exploratory user study where participants are asked to reconstruct the event sequence in animated node-link diagrams. Based on these findings, we conduct a second user study where we investigate the most important visual metrics in depth. Our findings show that node speed and target separation are prominent visual metrics to predict the performance of event sequencing tasks.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/computer-graphics-forum">Computer Graphics Forum • <a class="secondary" style="font-weight: 500" href="/publications/year/2012">2012</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/dyngraph/dyngraph.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Perception of Animated Node-Link Diagrams for Dynamic Graphs<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/ji-soo-yi/">Ji Soo Yi</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Effective visualization of dynamic graphs remains an open research topic, and many state-of-the-art tools use animated node-link diagrams for this purpose. Despite its intuitiveness, the effectiveness of animation in node-link diagrams has been questioned, and several empirical studies have shown that animation is not necessarily superior to static visualizations. However, the exact mechanics of perceiving animated node-link diagrams are still unclear. In this paper, we study the impact of different dynamic graph metrics on user perception of the animation. After deriving candidate visual graph metrics, we perform an exploratory user study where participants are asked to reconstruct the event sequence in animated node-link diagrams. Based on these findings, we conduct a second user study where we investigate the most important visual metrics in depth. Our findings show that node speed and target separation are prominent visual metrics to predict the performance of event sequencing tasks.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #21&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Kwon2012" onClick="copy('Kwon2012')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Kwon2012" style="display: none;">
+                        @article{Kwon2012,
+title={Evaluating the Role of Time in Investigative Analysis of Document Collections},
+author={Bumchul Kwon and Waqas Javed and Sohaib Ghani and Niklas Elmqvist and Ji Soo Yi and David S. Ebert},
+url={http://www.umiacs.umd.edu/~elm/projects/time-analysis/time-analysis.pdf},
+year={2012},
+date={2012-01-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={18},
+number={11},
+pages={199--2004},
+abstract={Time is a universal and essential aspect of data in any investigative analysis. It helps analysts establish causality, build storylines from evidence, and reject infeasible hypotheses. For this reason, many investigative analysis tools provide visual representations designed for making sense of temporal data. However, the field of visual analytics still needs more evidence explaining how temporal visualization actually aids the analysis process, as well as design recommendations for how to build these visualizations. To fill this gap, we conducted an insight-based qualitative study to investigate the influence of temporal visualization on investigative analysis. We found that visualizing temporal information helped participants externalize chains of events. Another contribution of our work is the lightweight evaluation approach used to collect, visualize, and analyze insight.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2012">2012</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/time-analysis/time-analysis.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Evaluating the Role of Time in Investigative Analysis of Document Collections<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/bumchul-kwon/">Bumchul Kwon</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/ji-soo-yi/">Ji Soo Yi</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/david-s-ebert/">David S. Ebert</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Time is a universal and essential aspect of data in any investigative analysis. It helps analysts establish causality, build storylines from evidence, and reject infeasible hypotheses. For this reason, many investigative analysis tools provide visual representations designed for making sense of temporal data. However, the field of visual analytics still needs more evidence explaining how temporal visualization actually aids the analysis process, as well as design recommendations for how to build these visualizations. To fill this gap, we conducted an insight-based qualitative study to investigate the influence of temporal visualization on investigative analysis. We found that visualizing temporal information helped participants externalize chains of events. Another contribution of our work is the lightweight evaluation approach used to collect, visualize, and analyze insight.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #18&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Ghani2011" onClick="copy('Ghani2011')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Ghani2011" style="display: none;">
+                        @article{Ghani2011,
+title={Dynamic Insets for Context-Aware Graph Navigation},
+author={Sohaib Ghani and Nathalie Henry Riche and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/dyninsets/dyninsets.pdf},
+year={2011},
+date={2011-06-01},
+journal={Computer Graphics Forum},
+volume={30},
+number={3},
+pages={861-870},
+abstract={Maintaining both overview and detail while navigating in graphs, such as road networks, airline route maps, or social networks, is difficult, especially when targets of interest are located far apart. We present a navigation technique called Dynamic Insets that provides context awareness for graph navigation. Dynamic insets utilize the topological structure of the network to draw a visual inset for off-screen nodes that shows a portion of the surrounding area for links leaving the edge of the screen. We implement dynamic insets for general graph navigation as well as geographical maps. We also present results from a set of user studies that show that our technique is more efficient than most of the existing techniques for graph navigation in different networks.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/computer-graphics-forum">Computer Graphics Forum • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/dyninsets/dyninsets.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Dynamic Insets for Context-Aware Graph Navigation<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/nathalie-henry-riche/">Nathalie Henry Riche</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Maintaining both overview and detail while navigating in graphs, such as road networks, airline route maps, or social networks, is difficult, especially when targets of interest are located far apart. We present a navigation technique called Dynamic Insets that provides context awareness for graph navigation. Dynamic insets utilize the topological structure of the network to draw a visual inset for off-screen nodes that shows a portion of the surrounding area for links leaving the edge of the screen. We implement dynamic insets for general graph navigation as well as geographical maps. We also present results from a set of user studies that show that our technique is more efficient than most of the existing techniques for graph navigation in different networks.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #23&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Ghani2011b" onClick="copy('Ghani2011b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Ghani2011b" style="display: none;">
+                        @inproceedings{Ghani2011b,
+title={Improving Revisitation in Graphs through Static Spatial Features},
+author={Sohaib Ghani and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/ssgf/ssgf.pdf},
+year={2011},
+date={2011-01-01},
+journal={Proceedings of Graphics Interface},
+booktitle={Proceedings of Graphics Interface},
+pages={175-182},
+abstract={People generally remember locations in visual spaces with respect to spatial features and landmarks. Geographical maps provide many spatial features and hence are easy to remember. However, graphs are often visualized as node-link diagrams with few spatial features. We evaluate whether adding static spatial features to node-link diagrams will help in graph revisitation. We discuss three strategies for embellishing a graph and evaluate each in a user study. In our first study, we evaluate how to best add background features to a graph. In the second, we encode position using node size and color. In the third and final study, we take the best techniques from the first and second study, as well as shapes added to the graph as virtual landmarks, to find the best combination of spatial features for graph revisitation. We discuss the user study results and give our recommendations for design of graph visualization software.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-graphics-interface">Proceedings of Graphics Interface • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/ssgf/ssgf.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Improving Revisitation in Graphs through Static Spatial Features<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">People generally remember locations in visual spaces with respect to spatial features and landmarks. Geographical maps provide many spatial features and hence are easy to remember. However, graphs are often visualized as node-link diagrams with few spatial features. We evaluate whether adding static spatial features to node-link diagrams will help in graph revisitation. We discuss three strategies for embellishing a graph and evaluate each in a user study. In our first study, we evaluate how to best add background features to a graph. In the second, we encode position using node size and color. In the third and final study, we take the best techniques from the first and second study, as well as shapes added to the graph as virtual landmarks, to find the best combination of spatial features for graph revisitation. We discuss the user study results and give our recommendations for design of graph visualization software.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #22&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Javed2011" onClick="copy('Javed2011')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Javed2011" style="display: none;">
+                        @inproceedings{Javed2011,
+title={Evaluating Physical/Virtual Occlusion Management Techniques for Horizontal Displays},
+author={Waqas Javed and KyungTae Kim and Sohaib Ghani and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/occtable/occtable.pdf},
+year={2011},
+date={2011-01-01},
+journal={Proceedings of INTERACT},
+booktitle={Proceedings of INTERACT},
+pages={391-408},
+abstract={We evaluate unguided and guided visual search performance for a set of techniques that mitigate occlusion between physical and virtual objects on a tabletop display. The techniques are derived from a general model of hybrid physical/virtual occlusion, and take increasingly drastic measures to make the user aware of, identify, and access hidden objects---but with increasingly space-consuming and disruptive impact on the display. Performance is different depending on the visual display, suggesting a tradeoff between management strength and visual space deformation.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-interact">Proceedings of INTERACT • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/occtable/occtable.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Evaluating Physical/Virtual Occlusion Management Techniques for Horizontal Displays<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/kyungtae-kim/">KyungTae Kim</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Sohaib Ghani</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We evaluate unguided and guided visual search performance for a set of techniques that mitigate occlusion between physical and virtual objects on a tabletop display. The techniques are derived from a general model of hybrid physical/virtual occlusion, and take increasingly drastic measures to make the user aware of, identify, and access hidden objects---but with increasingly space-consuming and disruptive impact on the display. Performance is different depending on the visual display, suggesting a tradeoff between management strength and visual space deformation.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+  </ul>
+</div>
+
+    </main>
+    
+    <script>const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),n=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(n).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}</script>
+  </body>
+</html>

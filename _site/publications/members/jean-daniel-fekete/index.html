@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="CA3">
+    <meta property="og:title" content="Center for Anytime Anywhere Analytics">
+    <meta property="og:url" content="https://ca3.au.dk/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:image:url" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta property="og:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:title" content="Center for Anytime Anywhere Analytics">
+    <meta name="twitter:url" content="https://ca3.au.dk/">
+    <meta name="twitter:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta name="twitter:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@ca3">
+    <meta name="twitter:dnt" content="on">
+    <title>Center for Anytime Anywhere Analytics</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="dns-prefetch" href="https://ca3.au.dk/">
+    <link rel="preconnect" href="https://ca3.au.dk/">
+    <link rel="me" href="https://ca3.au.dk/" type="text/html">
+    <link rel="me" href="mailto:elm@cs.au.dk">
+    
+    <style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003d73;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}}main{margin:auto;padding:.25rem;padding-bottom:0;max-width:120em}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}</style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-text">
+        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+      </div>
+      <div class="flexible-space"></div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <nav id="navbar">
+          <a href="/">Home</a>
+          <a href="/members">Members</a>
+          <a href="/publications">Publications</a>
+          <a href="/open-positions">Open positions</a>
+          <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
+      </nav>
+    </header>
+    
+        <div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; padding-left: 20px; padding-right: 20px; padding-bottom: 13px; margin-top: 30px; margin-bottom: 0px">
+        
+            <h4 style="margin-bottom: 0px; padding-top 10px;">Publications coauthored by</h4>
+            <h2 style="margin-bottom: 0px; margin-top: 10px;">Jean-Daniel Fekete</h2>
+        
+        </div>
+    
+    <main>
+      <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+  <ul>
+      
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #49&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Badam2017b" onClick="copy('Badam2017b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Badam2017b" style="display: none;">
+                        @article{Badam2017b,
+title={Steering the Craft: UI Elements and Visualizations for Supporting Progressive Visual Analytics},
+author={Sriram Karthik Badam and Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/insightsfeed/insightsfeed.pdf},
+year={2017},
+date={2017-05-15},
+journal={Computer Graphics Forum},
+volume={36},
+abstract={Progressive visual analytics (PVA) has emerged in recent years to manage the latency of data analysis systems. When analysis is performed progressively, rough estimates of the results are generated quickly and are then improved over time. Analysts can therefore monitor the progression of the results, steer the analysis algorithms, and make early decisions if the estimates provide a convincing picture. In this article, we describe interface design guidelines for helping users understand progressively updating results and make early decisions based on progressive estimates. To illustrate our ideas, we present a prototype PVA tool called InsightsFeed for exploring Twitter data at scale. As validation, we investigate the tradeoffs of our tool when exploring a Twitter dataset in a user study. We report the usage patterns in making early decisions using the user interface, guiding computational methods, and exploring different subsets of the dataset, compared to sequential analysis without progression.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/computer-graphics-forum">Computer Graphics Forum • <a class="secondary" style="font-weight: 500" href="/publications/year/2017">2017</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/insightsfeed/insightsfeed.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Steering the Craft: UI Elements and Visualizations for Supporting Progressive Visual Analytics<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Progressive visual analytics (PVA) has emerged in recent years to manage the latency of data analysis systems. When analysis is performed progressively, rough estimates of the results are generated quickly and are then improved over time. Analysts can therefore monitor the progression of the results, steer the analysis algorithms, and make early decisions if the estimates provide a convincing picture. In this article, we describe interface design guidelines for helping users understand progressively updating results and make early decisions based on progressive estimates. To illustrate our ideas, we present a prototype PVA tool called InsightsFeed for exploring Twitter data at scale. As validation, we investigate the tradeoffs of our tool when exploring a Twitter dataset in a user study. We report the usage patterns in making early decisions using the user interface, guiding computational methods, and exploring different subsets of the dataset, compared to sequential analysis without progression.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #19&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2011b" onClick="copy('Elmqvist2011b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2011b" style="display: none;">
+                        @article{Elmqvist2011b,
+title={Color Lens: Adaptive Color Scale Optimization for Visual Exploration},
+author={Niklas Elmqvist and Pierre Dragicevic and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/colorlens/colorlens.pdf},
+year={2011},
+date={2011-06-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={17},
+number={6},
+pages={795-807},
+abstract={Visualization applications routinely map quantitative attributes to color using color scales. Although color is an effective visualization channel, it is limited by both display hardware and the human visual system. We propose a new interaction technique that overcomes these limitations by dynamically optimizing color scales based on a set of sampling lenses. The technique inspects the lens contents in data space, optimizes the initial color scale, and then renders the contents of the lens to the screen using the modified color scale. We present two prototype implementations of this pipeline and describe several case studies involving both information visualization and image inspection applications. We validate our approach with two mutually linked and complementary user studies comparing the Color Lens with explicit contrast control for visual search.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/colorlens/colorlens.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Color Lens: Adaptive Color Scale Optimization for Visual Exploration<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/pierre-dragicevic/">Pierre Dragicevic</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Visualization applications routinely map quantitative attributes to color using color scales. Although color is an effective visualization channel, it is limited by both display hardware and the human visual system. We propose a new interaction technique that overcomes these limitations by dynamically optimizing color scales based on a set of sampling lenses. The technique inspects the lens contents in data space, optimizes the initial color scale, and then renders the contents of the lens to the screen using the modified color scale. We present two prototype implementations of this pipeline and describe several case studies involving both information visualization and image inspection applications. We validate our approach with two mutually linked and complementary user studies comparing the Color Lens with explicit contrast control for visual search.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #24&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Dragicevic2011" onClick="copy('Dragicevic2011')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Dragicevic2011" style="display: none;">
+                        @inproceedings{Dragicevic2011,
+title={Temporal Distortion for Animated Transitions},
+author={Pierre Dragicevic and Anastasia Bezerianos and Waqas Javed and Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/timedistort/timedistort.pdf},
+year={2011},
+date={2011-01-01},
+booktitle={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+journal={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+pages={2009-2018},
+abstract={Animated transitions are popular in many visual applications but they can be difficult to follow, especially when many objects move at the same time. One informal design guideline for creating effective animated transitions has long been the use of slow-in/slow-out pacing, but no empirical data exist to support this practice. We remedy this by studying object tracking performance under different conditions of temporal distortion, i.e., constant speed transitions, slow-in/slow-out, fast-in/fast-out, and an adaptive technique that slows down the visually complex parts of the animation. Slow-in/slow-out outperformed other techniques, but we saw technique differences depending on the type of visual transition.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-human-factors-in-computing-systems">Proceedings of the ACM Conference on Human Factors in Computing Systems • <a class="secondary" style="font-weight: 500" href="/publications/year/2011">2011</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/timedistort/timedistort.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Temporal Distortion for Animated Transitions<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/pierre-dragicevic/">Pierre Dragicevic</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/anastasia-bezerianos/">Anastasia Bezerianos</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Animated transitions are popular in many visual applications but they can be difficult to follow, especially when many objects move at the same time. One informal design guideline for creating effective animated transitions has long been the use of slow-in/slow-out pacing, but no empirical data exist to support this practice. We remedy this by studying object tracking performance under different conditions of temporal distortion, i.e., constant speed transitions, slow-in/slow-out, fast-in/fast-out, and an adaptive technique that slows down the visually complex parts of the animation. Slow-in/slow-out outperformed other techniques, but we saw technique differences depending on the type of visual transition.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #15&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Bezerianos2010" onClick="copy('Bezerianos2010')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Bezerianos2010" style="display: none;">
+                        @article{Bezerianos2010,
+title={GraphDice: A System for Exploring Multivariate Social Networks},
+author={Anastasia Bezerianos and Fanny Chevalier and Pierre Dragicevic and Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/graphdice/graphdice.pdf},
+year={2010},
+date={2010-01-01},
+journal={Computer Graphics Forum},
+volume={29},
+number={3},
+pages={863--872},
+abstract={Social networks collected by historians or sociologists typically have a large number of actors and edge attributes. Applying social network analysis (SNA) algorithms to these networks produces additional attributes such as degree, centrality, and clustering coefficients. Understanding the effects of this plethora of attributes is one of the main challenges of multivariate SNA. We present the design of GraphDice, a multivariate network visualization system for exploring the attribute space of edges and actors. GraphDice builds upon the ScatterDice system for its main multidimensional navigation paradigm, and extends it with novel mechanisms to support network exploration in general and SNA tasks in particular. Novel mechanisms include visualization of attributes of interval type and projection of numerical edge attributes to node attributes. We show how these extensions to the original ScatterDice system allow to support complex visual analysis tasks on networks with hundreds of actors and up to 30 attributes, while providing a simple and consistent interface for interacting with network data.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/computer-graphics-forum">Computer Graphics Forum • <a class="secondary" style="font-weight: 500" href="/publications/year/2010">2010</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/graphdice/graphdice.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> GraphDice: A System for Exploring Multivariate Social Networks<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/anastasia-bezerianos/">Anastasia Bezerianos</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/fanny-chevalier/">Fanny Chevalier</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/pierre-dragicevic/">Pierre Dragicevic</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Social networks collected by historians or sociologists typically have a large number of actors and edge attributes. Applying social network analysis (SNA) algorithms to these networks produces additional attributes such as degree, centrality, and clustering coefficients. Understanding the effects of this plethora of attributes is one of the main challenges of multivariate SNA. We present the design of GraphDice, a multivariate network visualization system for exploring the attribute space of edges and actors. GraphDice builds upon the ScatterDice system for its main multidimensional navigation paradigm, and extends it with novel mechanisms to support network exploration in general and SNA tasks in particular. Novel mechanisms include visualization of attributes of interval type and projection of numerical edge attributes to node attributes. We show how these extensions to the original ScatterDice system allow to support complex visual analysis tasks on networks with hundreds of actors and up to 30 attributes, while providing a simple and consistent interface for interacting with network data.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #14&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2010a" onClick="copy('Elmqvist2010a')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2010a" style="display: none;">
+                        @article{Elmqvist2010a,
+title={Mélange: Space Folding for Visual Exploration},
+author={Niklas Elmqvist and Nathalie Henry Riche and Yann Riche and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/melange/melange-journal.pdf},
+year={2010},
+date={2010-01-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={16},
+number={3},
+pages={468--483},
+abstract={Navigating in large geometric spaces---such as maps, social networks, or long documents---typically require a sequence of pan and zoom actions. However, this strategy is often ineffective and cumbersome, especially when trying to study and compare several distant objects. We propose a new distortion technique that folds the intervening space to guarantee visibility of multiple focus regions. The folds themselves show contextual information and support unfolding and paging interactions. We conducted a study comparing the space-folding technique to existing approaches, and found that participants performed significantly better with the new technique. We also describe how to implement this distortion technique, and give an in-depth case study on how to apply it to the visualization of large-scale 1D time-series data.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2010">2010</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/melange/melange-journal.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Mélange: Space Folding for Visual Exploration<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/nathalie-henry-riche/">Nathalie Henry Riche</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/yann-riche/">Yann Riche</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Navigating in large geometric spaces---such as maps, social networks, or long documents---typically require a sequence of pan and zoom actions. However, this strategy is often ineffective and cumbersome, especially when trying to study and compare several distant objects. We propose a new distortion technique that folds the intervening space to guarantee visibility of multiple focus regions. The folds themselves show contextual information and support unfolding and paging interactions. We conducted a study comparing the space-folding technique to existing approaches, and found that participants performed significantly better with the new technique. We also describe how to implement this distortion technique, and give an in-depth case study on how to apply it to the visualization of large-scale 1D time-series data.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #13&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2010b" onClick="copy('Elmqvist2010b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2010b" style="display: none;">
+                        @article{Elmqvist2010b,
+title={Hierarchical Aggregation for Information Visualization: Overview, Techniques and Design Guidelines},
+author={Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/hieragg/hieragg.pdf},
+year={2010},
+date={2010-01-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={16},
+number={3},
+pages={439--454},
+abstract={We present a model for building, visualizing, and interacting with multiscale representations of information visualization techniques using hierarchical aggregation. The motivation for this work is to make visual representations more visually scalable and less cluttered. The model allows for augmenting existing techniques with multiscale functionality, as well as for designing new visualization and interaction techniques that conform to this new class of visual representations. We give some examples of how to use the model for standard information visualization techniques such as scatterplots, parallel coordinates, and node-link diagrams, and discuss existing techniques that are based on hierarchical aggregation. This yields a set of design guidelines for aggregated visualizations. We also present a basic vocabulary of interaction techniques suitable for navigating these multiscale visualizations.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2010">2010</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/hieragg/hieragg.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Hierarchical Aggregation for Information Visualization: Overview, Techniques and Design Guidelines<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present a model for building, visualizing, and interacting with multiscale representations of information visualization techniques using hierarchical aggregation. The motivation for this work is to make visual representations more visually scalable and less cluttered. The model allows for augmenting existing techniques with multiscale functionality, as well as for designing new visualization and interaction techniques that conform to this new class of visual representations. We give some examples of how to use the model for standard information visualization techniques such as scatterplots, parallel coordinates, and node-link diagrams, and discuss existing techniques that are based on hierarchical aggregation. This yields a set of design guidelines for aggregated visualizations. We also present a basic vocabulary of interaction techniques suitable for navigating these multiscale visualizations.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #16&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2009a" onClick="copy('Elmqvist2009a')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2009a" style="display: none;">
+                        @inproceedings{Elmqvist2009a,
+title={Motion-Pointing: Target Selection using Elliptical Motions},
+author={Jean-Daniel Fekete and Niklas Elmqvist and Yves Guiard},
+url={http://www.umiacs.umd.edu/~elm/projects/motionpointing/motionpointing.pdf},
+year={2009},
+date={2009-01-01},
+booktitle={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+journal={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+pages={289--298},
+abstract={We present a novel method called motion-pointing for selecting a set of visual items, such as push-buttons or radio-buttons, without actually pointing to them. Instead, each potential target displays an animated point we call the driver. To select a specific item, the user only has to imitate the motion of its driver using the input device. Once the motion has been recognized by the system, the user can confirm the selection to trigger the action. We consider cyclic motions on an elliptic trajectory with a specific period, and study the most effective methods for real-time matching such a trajectory, as well as the range of parameters a human can reliably reproduce. We then show how to implement motion-pointing in real applications using an interaction technique we call move-and-stroke. Finally, we measure the input throughput and error rate of move-and-stroke in a controlled experiment. We show that the selection time is linearly proportional to the number of input bits conveyed up to 6 bits, confirming that motion-pointing is a practical input method.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-human-factors-in-computing-systems">Proceedings of the ACM Conference on Human Factors in Computing Systems • <a class="secondary" style="font-weight: 500" href="/publications/year/2009">2009</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/motionpointing/motionpointing.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Motion-Pointing: Target Selection using Elliptical Motions<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/yves-guiard/">Yves Guiard</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present a novel method called motion-pointing for selecting a set of visual items, such as push-buttons or radio-buttons, without actually pointing to them. Instead, each potential target displays an animated point we call the driver. To select a specific item, the user only has to imitate the motion of its driver using the input device. Once the motion has been recognized by the system, the user can confirm the selection to trigger the action. We consider cyclic motions on an elliptic trajectory with a specific period, and study the most effective methods for real-time matching such a trajectory, as well as the range of parameters a human can reliably reproduce. We then show how to implement motion-pointing in real applications using an interaction technique we call move-and-stroke. Finally, we measure the input throughput and error rate of move-and-stroke in a controlled experiment. We show that the selection time is linearly proportional to the number of input bits conveyed up to 6 bits, confirming that motion-pointing is a practical input method.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #15&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2008f" onClick="copy('Elmqvist2008f')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2008f" style="display: none;">
+                        @inproceedings{Elmqvist2008f,
+title={Semantic Pointing for Object Picking in Complex 3D Environments},
+author={Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/sempoint3d/sempoint3d.pdf},
+video={https://www.youtube.com/watch?v=Ebv7QG0Z6lM},
+year={2008},
+date={2008-01-01},
+journal={Proceedings of Graphics Interface},
+booktitle={Proceedings of Graphics Interface},
+pages={243--250},
+abstract={Today&#39;s large and high-resolution displays coupled with powerful graphics hardware offer the potential for highly realistic 3D virtual environments, but also cause increased target acquisition difficulty for users interacting with these environments. We present an adaptation of semantic pointing to object picking in 3D environments. Essentially, semantic picking shrinks empty space and expands potential targets on the screen by dynamically adjusting the ratio between movement in visual space and motor space for relative input devices such as the mouse. Our implementation operates in the image-space using a hierarchical representation of the standard stencil buffer to allow for real-time calculation of the closest targets for all positions on the screen. An informal user study indicates that subjects perform more accurate pointing with semantic 3D pointing than without.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-graphics-interface">Proceedings of Graphics Interface • <a class="secondary" style="font-weight: 500" href="/publications/year/2008">2008</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/sempoint3d/sempoint3d.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Semantic Pointing for Object Picking in Complex 3D Environments<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Today&#39;s large and high-resolution displays coupled with powerful graphics hardware offer the potential for highly realistic 3D virtual environments, but also cause increased target acquisition difficulty for users interacting with these environments. We present an adaptation of semantic pointing to object picking in 3D environments. Essentially, semantic picking shrinks empty space and expands potential targets on the screen by dynamically adjusting the ratio between movement in visual space and motor space for relative input devices such as the mouse. Our implementation operates in the image-space using a hierarchical representation of the standard stencil buffer to allow for real-time calculation of the closest targets for all positions on the screen. An informal user study indicates that subjects perform more accurate pointing with semantic 3D pointing than without.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=Ebv7QG0Z6lM" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #14&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2008d" onClick="copy('Elmqvist2008d')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2008d" style="display: none;">
+                        @inproceedings{Elmqvist2008d,
+title={Mélange: Space Folding for Multi-Focus Interaction},
+author={Niklas Elmqvist and Nathalie Henry Riche and Yann Riche and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/melange/melange.pdf},
+video={https://www.youtube.com/watch?v=I1KiO1iZ1DI},
+year={2008},
+date={2008-01-01},
+booktitle={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+journal={Proceedings of the ACM Conference on Human Factors in Computing Systems},
+pages={1333--1342},
+abstract={Interaction and navigation in large geometric spaces typically require a sequence of pan and zoom actions. This strategy is often ineffective and cumbersome, especially when trying to study several distant objects. We propose a new distortion technique that folds the intervening space to guarantee visibility of multiple focus regions. The folds themselves show contextual information and support unfolding and paging interactions. Compared to previous work, our method provides more context and distance awareness. We conducted a study comparing the space-folding technique to existing approaches, and found that participants performed significantly better with the new technique.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-human-factors-in-computing-systems">Proceedings of the ACM Conference on Human Factors in Computing Systems • <a class="secondary" style="font-weight: 500" href="/publications/year/2008">2008</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/melange/melange.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Mélange: Space Folding for Multi-Focus Interaction<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/nathalie-henry-riche/">Nathalie Henry Riche</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/yann-riche/">Yann Riche</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Interaction and navigation in large geometric spaces typically require a sequence of pan and zoom actions. This strategy is often ineffective and cumbersome, especially when trying to study several distant objects. We propose a new distortion technique that folds the intervening space to guarantee visibility of multiple focus regions. The folds themselves show contextual information and support unfolding and paging interactions. Compared to previous work, our method provides more context and distance awareness. We conducted a study comparing the space-folding technique to existing approaches, and found that participants performed significantly better with the new technique.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=I1KiO1iZ1DI" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #12&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2008b" onClick="copy('Elmqvist2008b')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2008b" style="display: none;">
+                        @inproceedings{Elmqvist2008b,
+title={ZAME: Interactive Large-Scale Graph Visualization},
+author={Niklas Elmqvist and Thanh-Nghi Do and Howard Goodell and Nathalie Henry Riche and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/zame/zame.pdf},
+video={https://www.youtube.com/watch?v=Zr25Lt_pmfw},
+year={2008},
+date={2008-01-01},
+journal={Proceedings of the IEEE Pacific Symposium on Visualization},
+booktitle={Proceedings of the IEEE Pacific Symposium on Visualization},
+pages={215--222},
+abstract={We present the Zoomable Adjacency Matrix Explorer (ZAME), a visualization tool for exploring graphs at a scale of millions of nodes and edges. ZAME is based on an adjacency matrix graph representation aggregated at multiple scales. It allows analysts to explore a graph at many levels, zooming and panning with interactive performance from an overview to the most detailed views. Several components work together in the ZAME tool to make this possible. Efficient matrix ordering algorithms group related elements. Individual data cases are aggregated into higher-order meta representations. Aggregates are arranged into a pyramid hierarchy that allows for on-demand paging to GPU shader programs to support smooth multiscale browsing. Using ZAME, we are able to explore the entire French Wikipedia---over 500,000 articles and 6,000,000 links---with interactive performance on standard consumer-level computer hardware.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-ieee-pacific-symposium-on-visualization">Proceedings of the IEEE Pacific Symposium on Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2008">2008</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/zame/zame.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> ZAME: Interactive Large-Scale Graph Visualization<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/thanh-nghi-do/">Thanh-Nghi Do</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/howard-goodell/">Howard Goodell</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/nathalie-henry-riche/">Nathalie Henry Riche</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present the Zoomable Adjacency Matrix Explorer (ZAME), a visualization tool for exploring graphs at a scale of millions of nodes and edges. ZAME is based on an adjacency matrix graph representation aggregated at multiple scales. It allows analysts to explore a graph at many levels, zooming and panning with interactive performance from an overview to the most detailed views. Several components work together in the ZAME tool to make this possible. Efficient matrix ordering algorithms group related elements. Individual data cases are aggregated into higher-order meta representations. Aggregates are arranged into a pyramid hierarchy that allows for on-demand paging to GPU shader programs to support smooth multiscale browsing. Using ZAME, we are able to explore the entire French Wikipedia---over 500,000 articles and 6,000,000 links---with interactive performance on standard consumer-level computer hardware.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=Zr25Lt_pmfw" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #8&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2008g" onClick="copy('Elmqvist2008g')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2008g" style="display: none;">
+                        @article{Elmqvist2008g,
+title={Rolling the Dice: Multidimensional Visual Exploration using Scatterplot Matrix Navigation},
+author={Niklas Elmqvist and Pierre Dragicevic and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/scatterdice/scatterdice.pdf},
+video={https://www.youtube.com/watch?v=E1birsp9iYk},
+year={2008},
+date={2008-01-01},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={14},
+number={6},
+pages={1141--1148},
+abstract={Scatterplots remain one of the most popular and widely-used visual representations for multidimensional data due to their simplicity, familiarity and visual clarity, even if they lack some of the flexibility and visual expressiveness of newer multidimensional visualization techniques. This paper presents new interactive methods to explore multidimensional data using scatterplots. This exploration is performed using a matrix of scatterplots that gives an overview of the possible configurations, thumbnails of the scatterplots, and support for interactive navigation in the multidimensional space. Transitions between scatterplots are performed as animated rotations in 3D space, somewhat akin to rolling dice. Users can iteratively build queries using bounding volumes in the dataset, sculpting the query from different viewpoints to become more and more refined. Furthermore, the dimensions in the navigation space can be reordered, manually or automatically, to highlight salient correlations and differences among them. An example scenario presents the interaction techniques supporting smooth and effortless visual exploration of multidimensional datasets.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2008">2008</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/scatterdice/scatterdice.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Rolling the Dice: Multidimensional Visual Exploration using Scatterplot Matrix Navigation<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/pierre-dragicevic/">Pierre Dragicevic</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Scatterplots remain one of the most popular and widely-used visual representations for multidimensional data due to their simplicity, familiarity and visual clarity, even if they lack some of the flexibility and visual expressiveness of newer multidimensional visualization techniques. This paper presents new interactive methods to explore multidimensional data using scatterplots. This exploration is performed using a matrix of scatterplots that gives an overview of the possible configurations, thumbnails of the scatterplots, and support for interactive navigation in the multidimensional space. Transitions between scatterplots are performed as animated rotations in 3D space, somewhat akin to rolling dice. Users can iteratively build queries using bounding volumes in the dataset, sculpting the query from different viewpoints to become more and more refined. Furthermore, the dimensions in the navigation space can be reordered, manually or automatically, to highlight salient correlations and differences among them. An example scenario presents the interaction techniques supporting smooth and effortless visual exploration of multidimensional datasets.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=E1birsp9iYk" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+          <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #2&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Henry2007" onClick="copy('Henry2007')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Henry2007" style="display: none;">
+                        @article{Henry2007,
+title={20 Years of Four HCI Conferences: A Visual Exploration},
+author={Nathalie Henry Riche and Howard Goodell and Niklas Elmqvist and Jean-Daniel Fekete},
+url={http://www.umiacs.umd.edu/~elm/projects/20yearshci/20yearshci.pdf},
+year={2007},
+date={2007-01-01},
+journal={International Journal of Human-Computer Interaction},
+volume={23},
+number={3},
+pages={239--285},
+abstract={We present a visual exploration of the field of human–computer interaction (HCI) through the author and article metadata of four of its major conferences: the ACM conferences on Computer-Human Interaction (CHI), User Interface Software and Technology, and Advanced Visual Interfaces and the IEEE Symposium on Information Visualization. This article describes many global and local patterns we discovered in this data set, together with the exploration process that produced them. Some expected patterns emerged, such as that---like most social networks---coauthorship and citation networks exhibit a power-law degree distribution, with a few widely collaborating authors and highly cited articles. Also, the prestigious and long-established CHI conference has the highest impact (citations by the others). Unexpected insights included that the years when a given conference was most selective are not correlated with those that produced its most highly referenced articles and that influential authors have distinct patterns of collaboration. An interesting sidelight is that methods from the HCI field---exploratory data analysis by information visualization and direct-manipulation interaction---proved useful for this analysis. They allowed us to take an open-ended, exploratory approach, guided by the data itself. As we answered our original questions, new ones arose; as we confirmed patterns we expected, we discovered refinements, exceptions, and fascinating new ones.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/international-journal-of-human-computer-interaction">International Journal of Human-Computer Interaction • <a class="secondary" style="font-weight: 500" href="/publications/year/2007">2007</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/20yearshci/20yearshci.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> 20 Years of Four HCI Conferences: A Visual Exploration<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/nathalie-henry-riche/">Nathalie Henry Riche</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/howard-goodell/">Howard Goodell</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div class="badge" style="display: flex; font-weight: 500;">Jean-Daniel Fekete</div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present a visual exploration of the field of human–computer interaction (HCI) through the author and article metadata of four of its major conferences: the ACM conferences on Computer-Human Interaction (CHI), User Interface Software and Technology, and Advanced Visual Interfaces and the IEEE Symposium on Information Visualization. This article describes many global and local patterns we discovered in this data set, together with the exploration process that produced them. Some expected patterns emerged, such as that---like most social networks---coauthorship and citation networks exhibit a power-law degree distribution, with a few widely collaborating authors and highly cited articles. Also, the prestigious and long-established CHI conference has the highest impact (citations by the others). Unexpected insights included that the years when a given conference was most selective are not correlated with those that produced its most highly referenced articles and that influential authors have distinct patterns of collaboration. An interesting sidelight is that methods from the HCI field---exploratory data analysis by information visualization and direct-manipulation interaction---proved useful for this analysis. They allowed us to take an open-ended, exploratory approach, guided by the data itself. As we answered our original questions, new ones arose; as we confirmed patterns we expected, we discovered refinements, exceptions, and fascinating new ones.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+    
+      
+  </ul>
+</div>
+
+    </main>
+    
+    <script>const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),n=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(n).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}</script>
+  </body>
+</html>

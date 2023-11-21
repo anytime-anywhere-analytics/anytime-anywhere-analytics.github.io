@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="CA3">
+    <meta property="og:title" content="Center for Anytime Anywhere Analytics">
+    <meta property="og:url" content="https://ca3.au.dk/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta property="og:image:url" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta property="og:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:title" content="Center for Anytime Anywhere Analytics">
+    <meta name="twitter:url" content="https://ca3.au.dk/">
+    <meta name="twitter:description" content="Home of the Center for Anytime Anywhere Analytics in the Web">
+    <meta name="twitter:image" content="https://ca3.au.dk//assets/share-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@@ca3">
+    <meta name="twitter:dnt" content="on">
+    <title>Center for Anytime Anywhere Analytics</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="dns-prefetch" href="https://ca3.au.dk/">
+    <link rel="preconnect" href="https://ca3.au.dk/">
+    <link rel="me" href="https://ca3.au.dk/" type="text/html">
+    <link rel="me" href="mailto:elm@cs.au.dk">
+    
+    <style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003d73;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}}main{margin:auto;padding:.25rem;padding-bottom:0;max-width:120em}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}</style>
+  </head>
+  <body>
+    <header>
+      <div class="brand-text">
+        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+      </div>
+      <div class="flexible-space"></div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <nav id="navbar">
+          <a href="/">Home</a>
+          <a href="/members">Members</a>
+          <a href="/publications">Publications</a>
+          <a href="/open-positions">Open positions</a>
+          <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
+      </nav>
+    </header>
+    
+        <div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; padding-left: 20px; padding-right: 20px; padding-bottom: 13px; margin-top: 30px; margin-bottom: 0px">
+        
+            <h4 style="margin-bottom: 0px; padding-top 10px;">Publications published in</h4>
+            <h2 style="margin-bottom: 0px; margin-top: 10px;">Year 2015</h2>
+        
+        </div>
+    
+    <main>
+      <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
+<ul>
+    
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #44&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Bernstein2015" onClick="copy('Bernstein2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Bernstein2015" style="display: none;">
+                        @article{Bernstein2015,
+title={Mutually Coordinated Visualization of Product and Supply Chain Metadata for Sustainable Design},
+author={William Z. Bernstein and Devarajan Ramanujan and Devadatta M. Kulkarni and Jeffrey Tew and Niklas Elmqvist and Fu Zhao and Karthik Ramani},
+url={http://doi.org/10.1115/1.4031293},
+year={2015},
+date={2015-10-01},
+journal={Journal of Mechanical Design},
+volume={137},
+number={12},
+pages={121101},
+abstract={In this paper, we present a novel visualization framework for product and supply chain metadata in the context of redesign-related decision scenarios. Our framework is based on the idea of overlaying product-related metadata onto the interactive graph representations of a supply chain and its associated product architecture. By coupling environmental data with graph-based visualizations of product architecture, our framework provides a novel decision platform for expert designers. Here, the user can balance the advantages of a redesign opportunity and manage the associated risk on the product and supply chain. For demonstration, we present ViSER, an interactive visualization tool that provides an interface consisting of different mutually coordinated views providing multiple perspectives on a particular supply chain presentation. To explore the utility of ViSER, we conduct a domain expert exploration using a case study of peripheral computer equipment. Results indicate that ViSER enables new affordances within the decision making process for supply chain redesign.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/journal-of-mechanical-design">Journal of Mechanical Design • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://doi.org/10.1115/1.4031293" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #FCB425 ; color:  black ;">doi&nbsp;</span> Mutually Coordinated Visualization of Product and Supply Chain Metadata for Sustainable Design<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/william-z-bernstein/">William Z. Bernstein</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/devarajan-ramanujan/">Devarajan Ramanujan</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/devadatta-m-kulkarni/">Devadatta M. Kulkarni</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/jeffrey-tew/">Jeffrey Tew</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/fu-zhao/">Fu Zhao</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/karthik-ramani/">Karthik Ramani</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">In this paper, we present a novel visualization framework for product and supply chain metadata in the context of redesign-related decision scenarios. Our framework is based on the idea of overlaying product-related metadata onto the interactive graph representations of a supply chain and its associated product architecture. By coupling environmental data with graph-based visualizations of product architecture, our framework provides a novel decision platform for expert designers. Here, the user can balance the advantages of a redesign opportunity and manage the associated risk on the product and supply chain. For demonstration, we present ViSER, an interactive visualization tool that provides an interface consisting of different mutually coordinated views providing multiple perspectives on a particular supply chain presentation. To explore the utility of ViSER, we conduct a domain expert exploration using a case study of peripheral computer equipment. Results indicate that ViSER enables new affordances within the decision making process for supply chain redesign.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #43&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Jang2015" onClick="copy('Jang2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Jang2015" style="display: none;">
+                        @article{Jang2015,
+title={MotionFlow: Visual Abstraction and Aggregation of Sequential Patterns in Human Motion Tracking Data},
+author={Sujin Jang and Niklas Elmqvist and Karthik Ramani},
+url={http://www.umiacs.umd.edu/~elm/projects/motionflow/motionflow.pdf},
+year={2015},
+date={2015-08-14},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={21},
+number={1},
+pages={21--30},
+abstract={Pattern analysis of human motions, which is useful in many research areas, requires understanding and comparison of different styles of motion patterns. However, working with human motion tracking data to support such analysis poses great challenges. In this paper, we propose MotionFlow, a visual analytics system that provides an effective overview of various motion patterns based on an interactive flow visualization. This visualization formulates a motion sequence as transitions between static poses, and aggregates these sequences into a tree diagram to construct a set of motion patterns. The system also allows the users to directly reflect the context of data and their perception of pose similarities in generating representative pose states. We provide local and global controls over the partition-based clustering process. To support the users in organizing unstructured motion data into pattern groups, we designed a set of interactions that enables searching for similar motion sequences from the data, detailed exploration of data subsets, and creating and modifying the group of motion patterns. To evaluate the usability of MotionFlow, we conducted a user study with six researchers with expertise in gesture-based interaction design. They used MotionFlow to explore and organize unstructured motion tracking data. Results show that the researchers were able to easily learn how to use MotionFlow, and the system effectively supported their pattern analysis activities, including leveraging their perception and domain knowledge.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/motionflow/motionflow.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> MotionFlow: Visual Abstraction and Aggregation of Sequential Patterns in Human Motion Tracking Data<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/sujin-jang/">Sujin Jang</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/karthik-ramani/">Karthik Ramani</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Pattern analysis of human motions, which is useful in many research areas, requires understanding and comparison of different styles of motion patterns. However, working with human motion tracking data to support such analysis poses great challenges. In this paper, we propose MotionFlow, a visual analytics system that provides an effective overview of various motion patterns based on an interactive flow visualization. This visualization formulates a motion sequence as transitions between static poses, and aggregates these sequences into a tree diagram to construct a set of motion patterns. The system also allows the users to directly reflect the context of data and their perception of pose similarities in generating representative pose states. We provide local and global controls over the partition-based clustering process. To support the users in organizing unstructured motion data into pattern groups, we designed a set of interactions that enables searching for similar motion sequences from the data, detailed exploration of data subsets, and creating and modifying the group of motion patterns. To evaluate the usability of MotionFlow, we conducted a user study with six researchers with expertise in gesture-based interaction design. They used MotionFlow to explore and organize unstructured motion tracking data. Results show that the researchers were able to easily learn how to use MotionFlow, and the system effectively supported their pattern analysis activities, including leveraging their perception and domain knowledge.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #42&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Yalcin2015" onClick="copy('Yalcin2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Yalcin2015" style="display: none;">
+                        @article{Yalcin2015,
+title={AggreSet: Rich and Scalable Set Exploration using Visualizations of Element Aggregations},
+author={Mehmet Adil Yalcin and Niklas Elmqvist and Benjamin B. Bederson},
+url={http://www.umiacs.umd.edu/~elm/projects/aggreset/aggreset.pdf},
+year={2015},
+date={2015-08-14},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={21},
+number={1},
+pages={688--697},
+abstract={Datasets commonly include multi-value (set-typed) attributes that describe set memberships over elements, such as genres per movie or courses taken per student. Set-typed attributes describe rich relations across elements, sets, and the set intersections. Increasing the number of sets results in a combinatorial growth of relations and creates scalability challenges. Exploratory tasks (e.g. selection, comparison) have commonly been designed in separation for set-typed attributes, which reduces interface consistency. To improve on scalability and to support rich, contextual exploration of set-typed data, we present AggreSet. AggreSet creates aggregations for each data dimension: sets, set-degrees, set-pair intersections, and other attributes. It visualizes the element count per aggregate using a matrix plot for set-pair intersections, and histograms for set lists, set-degrees and other attributes. Its non-overlapping visual design is scalable to numerous and large sets. AggreSet supports selection, filtering, and comparison as core exploratory tasks. It allows analysis of set relations inluding subsets, disjoint sets and set intersection strength, and also features perceptual set ordering for detecting patterns in set matrices. Its interaction is designed for rich and rapid data exploration. We demonstrate results on a wide range of datasets from different domains with varying characteristics, and report on expert reviews and a case study using student enrollment and degree data with assistant deans at a major public university.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/aggreset/aggreset.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> AggreSet: Rich and Scalable Set Exploration using Visualizations of Element Aggregations<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/mehmet-adil-yalcin/">Mehmet Adil Yalcin</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/benjamin-b-bederson/">Benjamin B. Bederson</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Datasets commonly include multi-value (set-typed) attributes that describe set memberships over elements, such as genres per movie or courses taken per student. Set-typed attributes describe rich relations across elements, sets, and the set intersections. Increasing the number of sets results in a combinatorial growth of relations and creates scalability challenges. Exploratory tasks (e.g. selection, comparison) have commonly been designed in separation for set-typed attributes, which reduces interface consistency. To improve on scalability and to support rich, contextual exploration of set-typed data, we present AggreSet. AggreSet creates aggregations for each data dimension: sets, set-degrees, set-pair intersections, and other attributes. It visualizes the element count per aggregate using a matrix plot for set-pair intersections, and histograms for set lists, set-degrees and other attributes. Its non-overlapping visual design is scalable to numerous and large sets. AggreSet supports selection, filtering, and comparison as core exploratory tasks. It allows analysis of set relations inluding subsets, disjoint sets and set intersection strength, and also features perceptual set ordering for detecting patterns in set matrices. Its interaction is designed for rich and rapid data exploration. We demonstrate results on a wide range of datasets from different domains with varying characteristics, and report on expert reviews and a case study using student enrollment and degree data with assistant deans at a major public university.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #41&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Elmqvist2015" onClick="copy('Elmqvist2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Elmqvist2015" style="display: none;">
+                        @article{Elmqvist2015,
+title={Patterns for Visualization Evaluation},
+author={Niklas Elmqvist and Ji Soo Yi},
+url={http://www.umiacs.umd.edu/~elm/projects/eval-patterns/eval-patterns.pdf},
+year={2015},
+date={2015-07-01},
+journal={Information Visualization},
+volume={14},
+number={3},
+pages={250--269},
+abstract={We propose a pattern-based approach to evaluating data visualization: a set of general and reusable solutions to commonly occurring problems in evaluating visualization tools, techniques, and systems. Patterns have had significant impact in a wide array of disciplines, particularly software engineering, and we believe that they provide a powerful lens for characterizing visualization evaluation practices by offering practical, tried-and-tested tips, and tricks that can be adopted immediately. The 20 patterns presented here have also been added to a freely editable Wiki repository. The motivation for creating this evaluation pattern language is to (a) capture and formalize &quot;dark&quot; practices for visualization evaluation not currently recorded in the literature, (b) disseminate these hard-won experiences to researchers and practitioners alike, (c) provide a standardized vocabulary for designing visualization evaluation, and (d) invite the community to add new evaluation patterns to a growing repository of patterns.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/information-visualization">Information Visualization • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/eval-patterns/eval-patterns.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Patterns for Visualization Evaluation<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/ji-soo-yi/">Ji Soo Yi</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We propose a pattern-based approach to evaluating data visualization: a set of general and reusable solutions to commonly occurring problems in evaluating visualization tools, techniques, and systems. Patterns have had significant impact in a wide array of disciplines, particularly software engineering, and we believe that they provide a powerful lens for characterizing visualization evaluation practices by offering practical, tried-and-tested tips, and tricks that can be adopted immediately. The 20 patterns presented here have also been added to a freely editable Wiki repository. The motivation for creating this evaluation pattern language is to (a) capture and formalize &quot;dark&quot; practices for visualization evaluation not currently recorded in the literature, (b) disseminate these hard-won experiences to researchers and practitioners alike, (c) provide a standardized vocabulary for designing visualization evaluation, and (d) invite the community to add new evaluation patterns to a growing repository of patterns.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Conference Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #37&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Dancu2015" onClick="copy('Dancu2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Dancu2015" style="display: none;">
+                        @inproceedings{Dancu2015,
+title={Map Navigation Using a Wearable Mid-air Display},
+author={Alexandru Dancu and Mickael Fourgeaud and Mohammad Obaid and Morten Fjeld and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/midairmap/midairmap.pdf},
+video={https://www.youtube.com/watch?v=yswf1bJafp8},
+year={2015},
+date={2015-07-01},
+booktitle={Proceedings of the ACM Conference on Human-Computer Interaction with Mobile Devices and Services},
+journal={Proceedings of the ACM Conference on Human-Computer Interaction with Mobile Devices and Services},
+pages={71--76},
+abstract={Advances in display technologies will soon make wearable mid-air displays---devices that project dynamic images floating in mid-air relative to a mobile user---widely available. This kind of device will offer new input and output modalities compared to current mobile devices, and display information on the go. In this paper, we present a functional prototype for the purpose of understanding these modalities in more detail, including suitable applications and device placement. We first collected results from an online survey that identified map navigation as one of the most desirable applications and suggested placement preferences. Based on these rankings, we built a physical mid-air display prototype consisting of mobile phone, pico projector, and a holder frame, mountable in two different configurations: wrist and chest. We then designed a user study, asking participants to navigate different physical routes using map navigation displayed in midair. Participants considered the wrist mount to be three times safer in map navigation than the chest mount. The study results validate the use of a mid-air display for map navigation. Based on both our online survey and user study, we derive implications for the design of wearable mid-air displays.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/proceedings-of-the-acm-conference-on-human-computer-interaction-with-mobile-devices-and-services">Proceedings of the ACM Conference on Human-Computer Interaction with Mobile Devices and Services • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/midairmap/midairmap.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Map Navigation Using a Wearable Mid-air Display<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/alexandru-dancu/">Alexandru Dancu</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/mickael-fourgeaud/">Mickael Fourgeaud</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/mohammad-obaid/">Mohammad Obaid</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/morten-fjeld/">Morten Fjeld</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Advances in display technologies will soon make wearable mid-air displays---devices that project dynamic images floating in mid-air relative to a mobile user---widely available. This kind of device will offer new input and output modalities compared to current mobile devices, and display information on the go. In this paper, we present a functional prototype for the purpose of understanding these modalities in more detail, including suitable applications and device placement. We first collected results from an online survey that identified map navigation as one of the most desirable applications and suggested placement preferences. Based on these rankings, we built a physical mid-air display prototype consisting of mobile phone, pico projector, and a holder frame, mountable in two different configurations: wrist and chest. We then designed a user study, asking participants to navigate different physical routes using map navigation displayed in midair. Participants considered the wrist mount to be three times safer in map navigation than the chest mount. The study results validate the use of a mid-air display for map navigation. Based on both our online survey and user study, we derive implications for the design of wearable mid-air displays.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=yswf1bJafp8" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #40&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Zhao2015" onClick="copy('Zhao2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Zhao2015" style="display: none;">
+                        @article{Zhao2015,
+title={Sketcholution: Interaction Histories for Sketching},
+author={Zhenpeng Zhao and William Benjamin and Niklas Elmqvist and K. Ramani},
+url={http://www.umiacs.umd.edu/~elm/projects/sketcholution/sketcholution.pdf},
+video={https://www.youtube.com/watch?v=SYvkidJQtEk},
+year={2015},
+date={2015-05-16},
+journal={International Journal of Human-Computer Studies},
+volume={82},
+pages={11--20},
+abstract={We present Sketcholution, a method for automatically creating visual histories of hand-drawn sketches. Such visual histories are useful for a designer to reflect on a sketch, communicate ideas to others, and fork from or revert to an earlier point in the creative process. Our approach uses a bottom-up agglomerative clustering mechanism that groups adjacent frames based on their perceptual similarity while maintaining the causality of how a sketch was constructed. The resulting aggregation dendrogram can be cut at any level depending on available display space, and can be used to create a visual history consisting of either a comic strip of highlights, or a single annotated summary frame. We conducted a user study comparing the speed and accuracy of participants recovering causality in a sketch history using comic strips, summary frames, and simple animations. Although animations with interaction may seem better than static graphics, our results show that both comic strip and summary frame significantly outperform animation.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/international-journal-of-human-computer-studies">International Journal of Human-Computer Studies • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/sketcholution/sketcholution.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Sketcholution: Interaction Histories for Sketching<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/zhenpeng-zhao/">Zhenpeng Zhao</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/william-benjamin/">William Benjamin</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/k-ramani/">K. Ramani</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present Sketcholution, a method for automatically creating visual histories of hand-drawn sketches. Such visual histories are useful for a designer to reflect on a sketch, communicate ideas to others, and fork from or revert to an earlier point in the creative process. Our approach uses a bottom-up agglomerative clustering mechanism that groups adjacent frames based on their perceptual similarity while maintaining the causality of how a sketch was constructed. The resulting aggregation dendrogram can be cut at any level depending on available display space, and can be used to create a visual history consisting of either a comic strip of highlights, or a single annotated summary frame. We conducted a user study comparing the speed and accuracy of participants recovering causality in a sketch history using comic strips, summary frames, and simple animations. Although animations with interaction may seem better than static graphics, our results show that both comic strip and summary frame significantly outperform animation.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=SYvkidJQtEk" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #39&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Choi2015" onClick="copy('Choi2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Choi2015" style="display: none;">
+                        @article{Choi2015,
+title={VisDock: A Toolkit for Cross-Cutting Interactions in Visualization},
+author={Jungu Choi and Deok Gun Park and Yuetling Wong and Eli Raymond Fisher and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/visdock/visdock.pdf},
+video={https://www.youtube.com/watch?v=LUC-nGR-fOk},
+year={2015},
+date={2015-03-21},
+journal={IEEE Transactions on Visualization &amp; Computer Graphics},
+volume={21},
+number={9},
+pages={1087--1100},
+abstract={Standard user applications provide a range of cross-cutting interaction techniques that are common to virtually all such tools: selection, filtering, navigation, layer management, and cut-and-paste.We present VisDock, a JavaScript mixin library that provides a core set of these cross-cutting interaction techniques for visualization, including selection (lasso, paths, shape selection, etc), layer management (visibility, transparency, set operations, etc), navigation (pan, zoom, overview, magnifying lenses, etc), and annotation (point-based, region-based, data-space based, etc). To showcase the utility of the library, we have released it as Open Source and integrated it with a large number of existing web-based visualizations. Furthermore, we have evaluated VisDock using qualitative studies with both developers utilizing the toolkit to build new web-based visualizations, as well as with end-users utilizing it to explore movie ratings data. Results from these studies highlight the usability and effectiveness of the toolkit from both developer and end-user perspectives.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization &amp; Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/visdock/visdock.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> VisDock: A Toolkit for Cross-Cutting Interactions in Visualization<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/jungu-choi/">Jungu Choi</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/deok-gun-park/">Deok Gun Park</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/yuetling-wong/">Yuetling Wong</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/eli-raymond-fisher/">Eli Raymond Fisher</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Standard user applications provide a range of cross-cutting interaction techniques that are common to virtually all such tools: selection, filtering, navigation, layer management, and cut-and-paste.We present VisDock, a JavaScript mixin library that provides a core set of these cross-cutting interaction techniques for visualization, including selection (lasso, paths, shape selection, etc), layer management (visibility, transparency, set operations, etc), navigation (pan, zoom, overview, magnifying lenses, etc), and annotation (point-based, region-based, data-space based, etc). To showcase the utility of the library, we have released it as Open Source and integrated it with a large number of existing web-based visualizations. Furthermore, we have evaluated VisDock using qualitative studies with both developers utilizing the toolkit to build new web-based visualizations, as well as with end-users utilizing it to explore movie ratings data. Results from these studies highlight the usability and effectiveness of the toolkit from both developer and end-user perspectives.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=LUC-nGR-fOk" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #38&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Wong2015" onClick="copy('Wong2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Wong2015" style="display: none;">
+                        @article{Wong2015,
+title={Evaluating Social Navigation Visualization in Online Geographic Maps},
+author={Yuetling Wong and Jieqiong Zhao and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/socnav-eval/socnav-eval.pdf},
+year={2015},
+date={2015-02-22},
+journal={International Journal of Human-Computer Interaction},
+volume={31},
+number={2},
+pages={118--127},
+abstract={Social navigation enables emergent collaboration between independent collaborators by exposing the behavior of each individual. This is a powerful idea for web-based visualization, where the work of one user can inform other users interacting with the same visualization. We present results from a crowdsourced user study evaluating the value of such social navigation cues for a geographic map service. Our results show significantly improved performance for participants who interacted with the map when the visual footprints of previous users were visible.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/international-journal-of-human-computer-interaction">International Journal of Human-Computer Interaction • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/socnav-eval/socnav-eval.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Evaluating Social Navigation Visualization in Online Geographic Maps<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/yuetling-wong/">Yuetling Wong</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/jieqiong-zhao/">Jieqiong Zhao</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">Social navigation enables emergent collaboration between independent collaborators by exposing the behavior of each individual. This is a powerful idea for web-based visualization, where the work of one user can inform other users interacting with the same visualization. We present results from a crowdsourced user study evaluating the value of such social navigation cues for a geographic map service. Our results show significantly improved performance for participants who interacted with the map when the visual footprints of previous users were visible.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #37&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Gad2015" onClick="copy('Gad2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Gad2015" style="display: none;">
+                        @article{Gad2015,
+title={ThemeDelta: Dynamic Segmentations over Temporal Topic Models},
+author={Samah Gad and Waqas Javed and Sohaib Ghani and Niklas Elmqvist and Tom Ewing and Keith N. Hampton and Naren Ramakrishnan},
+url={http://www.umiacs.umd.edu/~elm/projects/theme-delta/theme-delta.pdf},
+year={2015},
+date={2015-02-17},
+journal={IEEE Transactions on Visualization and Computer Graphics},
+volume={21},
+number={5},
+pages={672--685},
+abstract={We present ThemeDelta, a visual analytics system for extracting and visualizing temporal trends, clustering, and reorganization in time-indexed textual datasets. ThemeDelta is supported by a dynamic temporal segmentation algorithm that integrates with topic modeling algorithms to identify change points where significant shifts in topics occur. This algorithm detects not only the clustering and associations of keywords in a time period, but also their convergence into topics (groups of keywords) that may later diverge into new groups. The visual representation of ThemeDelta uses sinuous, variable-width lines to show this evolution on a timeline, utilizing color for categories, and line width for keyword strength. We demonstrate how interaction with ThemeDelta helps capture the rise and fall of topics by analyzing archives of historical newspapers, of U.S. presidential campaign speeches, and of social messages collected through iNeighbors, a web-based social website. ThemeDelta was evaluated using a qualitative expert user study involving three researchers from rhetoric and history using the historical newspapers corpus.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization and Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/theme-delta/theme-delta.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> ThemeDelta: Dynamic Segmentations over Temporal Topic Models<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/samah-gad/">Samah Gad</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/waqas-javed/">Waqas Javed</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/sohaib-ghani/">Sohaib Ghani</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/tom-ewing/">Tom Ewing</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/keith-n-hampton/">Keith N. Hampton</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/naren-ramakrishnan/">Naren Ramakrishnan</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present ThemeDelta, a visual analytics system for extracting and visualizing temporal trends, clustering, and reorganization in time-indexed textual datasets. ThemeDelta is supported by a dynamic temporal segmentation algorithm that integrates with topic modeling algorithms to identify change points where significant shifts in topics occur. This algorithm detects not only the clustering and associations of keywords in a time period, but also their convergence into topics (groups of keywords) that may later diverge into new groups. The visual representation of ThemeDelta uses sinuous, variable-width lines to show this evolution on a timeline, utilizing color for categories, and line width for keyword strength. We demonstrate how interaction with ThemeDelta helps capture the rise and fall of topics by analyzing archives of historical newspapers, of U.S. presidential campaign speeches, and of social messages collected through iNeighbors, a web-based social website. ThemeDelta was evaluated using a qualitative expert user study involving three researchers from rhetoric and history using the historical newspapers corpus.</p>
+                      </details>
+                      
+                  </div>
+              </div>
+          </li>
+       
+     <li style="display: flex; margin-bottom: 1rem;">
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        Journal Paper
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #36&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-Badam2015" onClick="copy('Badam2015')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-Badam2015" style="display: none;">
+                        @article{Badam2015,
+title={Munin: A Peer-to-Peer Middleware for Ubiquitous Analytics and Visualization Spaces},
+author={Sriram Karthik Badam and Eli Raymond Fisher and Niklas Elmqvist},
+url={http://www.umiacs.umd.edu/~elm/projects/munin/munin.pdf},
+video={https://www.youtube.com/watch?v=ZKIXSdUm6-s},
+year={2015},
+date={2015-02-01},
+journal={IEEE Transactions on Visualization &amp; Computer Graphics},
+volume={21},
+number={2},
+pages={215--228},
+abstract={We present Munin, a software framework for building ubiquitous analytics environments consisting of multiple input and output surfaces, such as tabletop displays, wall-mounted displays, and mobile devices. Munin utilizes a service-based model where each device provides one or more dynamically loaded services for input, display, or computation. Using a peer-to-peer model for communication, it leverages IP multicast to replicate the shared state among the peers. Input is handled through a shared event channel that lets input and output devices be fully decoupled. It also provides a data-driven scene graph to delegate rendering to peers, thus creating a robust, fault-tolerant, decentralized system. In this paper, we describe Munin&#39;s general design and architecture, provide several examples of how we are using the framework for ubiquitous analytics and visualization, and present a case study on building a Munin assembly for multidimensional visualization. We also present performance results and anecdotal user feedback for the framework that suggests that combining a service-oriented, data-driven model with middleware support for data sharing and event handling eases the design and execution of high performance distributed visualizations.},
+keywords={},
+}
+                    </div>
+
+                  </div>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/ieee-transactions-on-visualization-and-computer-graphics">IEEE Transactions on Visualization &amp; Computer Graphics • <a class="secondary" style="font-weight: 500" href="/publications/year/2015">2015</a></small>
+                  </div>
+                  <a href="http://www.umiacs.umd.edu/~elm/projects/munin/munin.pdf" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color:  #F40F02 ; color:  white ;">pdf&nbsp;</span> Munin: A Peer-to-Peer Middleware for Ubiquitous Analytics and Visualization Spaces<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
+                  <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/sriram-karthik-badam/">Sriram Karthik Badam</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/eli-raymond-fisher/">Eli Raymond Fisher</span></a></div>
+                      
+                    
+                      
+                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/niklas-elmqvist/">Niklas Elmqvist</span></a></div>
+                      
+                    
+                  </div>
+                  <div style="display: inline-flex; gap: 1rem;">
+                      <details>
+                          <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">We present Munin, a software framework for building ubiquitous analytics environments consisting of multiple input and output surfaces, such as tabletop displays, wall-mounted displays, and mobile devices. Munin utilizes a service-based model where each device provides one or more dynamically loaded services for input, display, or computation. Using a peer-to-peer model for communication, it leverages IP multicast to replicate the shared state among the peers. Input is handled through a shared event channel that lets input and output devices be fully decoupled. It also provides a data-driven scene graph to delegate rendering to peers, thus creating a robust, fault-tolerant, decentralized system. In this paper, we describe Munin&#39;s general design and architecture, provide several examples of how we are using the framework for ubiquitous analytics and visualization, and present a case study on building a Munin assembly for multidimensional visualization. We also present performance results and anecdotal user feedback for the framework that suggests that combining a service-oriented, data-driven model with middleware support for data sharing and event handling eases the design and execution of high performance distributed visualizations.</p>
+                      </details>
+                      
+                          <a href="https://www.youtube.com/watch?v=ZKIXSdUm6-s" style="font-weight: 500"><small>📺 Video</small></a>
+                      
+                  </div>
+              </div>
+          </li>
+       
+</ul>
+</div>
+    </main>
+    
+    <script>const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),n=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(n).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}</script>
+  </body>
+</html>

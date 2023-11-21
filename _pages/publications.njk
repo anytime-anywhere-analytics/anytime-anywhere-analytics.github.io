@@ -4,21 +4,31 @@ title: Publications
 permalink: /publications/
 ---
 <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
-<div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 13px">
-<h2 style="margin-bottom: 0px; padding-top 10px;">Publications</h2>
-</div>
 <ul>
     {% for record in collections.allPublications %}
         <li style="display: flex; margin-bottom: 1rem;">
-              <div style="padding: 0.5rem;">
-                  <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem;" class="clickable badge inverted" id="bibtex-button-{{record.id}}" onClick="copy('{{record.id}}')">
-                    Copy BibTeX
-                </button>
-                  <div id="bibtex-{{record.id}}" style="display: none;">
-                      {{ record | bibify }}
+                <div>
+                  <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
+                    <div style="display: flex; flex-direction: row; gap: 0.25rem;">
+                      <div style="display: flex; font-weight: 600">
+                        {% if record.type === "inproceedings" %}Conference Paper{% else %}Journal Paper{% endif %}
+                      </div>
+                      <div style="display: flex; font-weight: 600">
+                      #{{record._type_counter}}&nbsp;
+                      </div>
+                                          <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-{{record.id}}" onClick="copy('{{record.id}}')">
+                      Copy BibTeX
+                    </button>
+                    <div id="bibtex-{{record.id}}" style="display: none;">
+                        {{ record | bibify }}
+                    </div>
+
                   </div>
-                <small><a class="secondary" style="font-weight: 500" href="/publications/venue/{{ record.journal | replace("&","and") | slugify }}">{{ record.journal }} • <a class="secondary" style="font-weight: 500" href="/publications/year/{{record.year}}">{{ record.year }}</a></small>
-                  <a href="{{ record.url }}"><h3 style="margin: 0.15rem; margin-bottom: 0.3rem">{{ record.title }}</h3></a>
+                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/{{ record.journal | replace("&","and") | slugify }}">{{ record.journal }} • <a class="secondary" style="font-weight: 500" href="/publications/year/{{record.year}}">{{ record.year }}</a></small>
+                  </div>
+                  <a href="{{ record.url }}" style="display: inline-flex; flex-direction: row;">
+                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color: {% if record._url_type === "pdf" %} #F40F02 {% else %} #FCB425 {% endif %}; color: {% if record._url_type === "pdf" %} white {% else %} black {% endif %};">{{record._url_type}}&nbsp;</span> {{ record.title | trim }}<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                  </a>
                   <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
                     {% for author in record.author %}
                       {% if author === person or  collections.publicationsByAuthor[author].length < 1 %}
@@ -31,7 +41,7 @@ permalink: /publications/
                   <div style="display: inline-flex; gap: 1rem;">
                       <details>
                           <summary style="margin-top:1px"><small style="text-decoration: underline; text-decoration-color: rgba(0,0,0,0.15); text-underline-offset: 3px;">Click to read abstract</small></summary>
-                          <p class="badge" style="font-size: 0.9rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725">{{ record.abstract }}</p>
+                          <p class="badge" style="font-size: 0.95rem; background-color: hsla(208, 100%, 23%, 0.0625); border-color: hsla(208, 100%, 23%, 0.125); padding: 2rem; margin-top: 6px; border-radius: 0px; margin-left: -2rem; margin-right: -2rem; line-height: 1.725;">{{ record.abstract }}</p>
                       </details>
                       {% if record.video %}
                           <a href="{{record.video}}" style="font-weight: 500"><small>📺 Video</small></a>

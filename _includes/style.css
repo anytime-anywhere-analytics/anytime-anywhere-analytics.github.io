@@ -512,36 +512,13 @@ nav > a:hover, a:active, a:focus {
     width: 100%;
     text-align: center;
   }
-
-  .sticky-header.fixed {
-    display: none;
-  }
 }
 
 main {
   margin: auto; 
-  margin-top: 25px; 
   padding: 0.25rem; 
   padding-bottom: 0px;
   max-width: 120em;
-}
-
-.sticky-header {
-  left: 0;
-  right: 0;
-  position: relative;
-  color: #000;
-}
-.sticky-header.fixed {
-  margin-top: 0px;
-  position: fixed;
-  top: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 0;
-}
-.sticky-header.fixed.absolute {
-  position: absolute;
 }
 
 .hero-jumbotron {

@@ -4,10 +4,7 @@ title: Members
 permalink: /members/
 ---
 <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
-<div style="display: flex; flex-direction: column; background-color: #0273A8; color: white; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 13px">
-<h2 style="margin-bottom: 0px; padding-top 10px;">People</h2>
-</div>
-<h3 class="sticky-header">Faculty</h3>
+<h3>Faculty</h3>
 <div>
     {% for member in members %}
         {% if member.group === "faculty" %}
@@ -38,7 +35,7 @@ permalink: /members/
         {% endif %}
     {% endfor %}
 </div>
-<h3 class="sticky-header">Current Members</h3>
+<h3>Current Members</h3>
 <div class="person-container">
 {% for member in members %}
     {% if member.group === "members" %}
@@ -79,7 +76,7 @@ permalink: /members/
     {% endif %}
 {% endfor %}
 </div>
-<h3 class="sticky-header">Alumni</h3>
+<h3>Alumni</h3>
 <div class="person-container">
 {% for member in members %}
     {% if member.group === "alumni" %}
@@ -127,7 +124,7 @@ permalink: /members/
     {% endif %}
 {% endfor %}
 </div>
-<h3 class="sticky-header">External Collaborators</h3>
+<h3>External Collaborators</h3>
 <div class="person-container">
 {% for member in members %}
     {% if member.group === "collaborators" %}

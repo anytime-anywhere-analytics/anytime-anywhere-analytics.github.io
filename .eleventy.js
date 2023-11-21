@@ -1,5 +1,6 @@
 const CleanCSS = require("clean-css");
 const { minify } = require("terser");
+const { readFileSync } = require("fs");
 module.exports = function (config) {
   config.addCollection("allPublications", (collectionApi) => {
     const dataName = "publications";
@@ -20,14 +21,14 @@ module.exports = function (config) {
   });
   config.addCollection("publicationVenues", (collectionApi) => {
     const allPublications = collectionApi.getAll()[0].data.publications;
-    return [...new Set(allPublications.map(item => item.journal.replace('&','and')))];
+    return [...new Set(allPublications.map(item => item.journal.replace('&', 'and')))];
   });
   config.addCollection("publicationsByVenue", (collectionApi) => {
     const allPublications = collectionApi.getAll()[0].data.publications;
     let byVenue = {};
-    const venues = [...new Set(allPublications.map(item => item.journal.replace('&','and')))];
+    const venues = [...new Set(allPublications.map(item => item.journal.replace('&', 'and')))];
     for (const venue of venues) {
-      byVenue[venue] = allPublications.filter(item => item['journal'].replace('&','and') === venue);
+      byVenue[venue] = allPublications.filter(item => item['journal'].replace('&', 'and') === venue);
     }
     return byVenue;
   });
@@ -45,11 +46,11 @@ module.exports = function (config) {
     }
     return byAuthor;
   });
-  config.addFilter('initials', function(name) {
+  config.addFilter('initials', function (name) {
     return name.split(' ')
-               .map(word => word.charAt(0).toUpperCase())
-               .join('');
-});
+      .map(word => word.charAt(0).toUpperCase())
+      .join('');
+  });
   config.addFilter("unique", function (array, property) {
     return [...new Set(array.map(item => item[property]))];
   });
@@ -66,7 +67,7 @@ module.exports = function (config) {
       return `${key}={${value}},\n`;
     }
     for (const key in jsonObject) {
-      if (jsonObject.hasOwnProperty(key) && key !== 'type' && key !== 'id') {
+      if (jsonObject.hasOwnProperty(key) && key !== 'type' && key !== 'id' && !key.startsWith("_")) {
         bibtex += formatBibtexField(key, jsonObject[key]);
       }
     }
@@ -76,6 +77,17 @@ module.exports = function (config) {
   config.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
+  let getSvgContent = function (file) {
+    let relativeFilePath = `./assets/${file}.svg`;
+    let data = readFileSync(relativeFilePath,
+      function (err, contents) {
+        if (err) return err
+        return contents
+      });
+
+    return data.toString('utf8');
+  }
+  config.addShortcode("svg", getSvgContent);
   config.addPassthroughCopy("assets");
   config.addNunjucksAsyncFilter("jsmin", async function (
     code,
@@ -89,9 +101,4 @@ module.exports = function (config) {
       callback(null, code);
     }
   });
-  return {
-    dir: {
-      output: "docs"
-    }
-  }
 }
