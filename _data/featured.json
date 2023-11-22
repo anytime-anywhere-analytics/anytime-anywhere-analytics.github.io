@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Wizualization: A “Hard Magic” Visualization System for Immersive and Ubiquitous Analytics",
+        "description": "What if magic could be used as an effective metaphor to perform data visualization and analysis using speech and gestures while mobile and on-the-go? In this paper, we introduce WIZUALIZATION, a visual analytics system for eXtended Reality (XR) that enables an analyst to author and interact with visualizations using such a magic system through gestures, speech commands, and touch interaction. Wizualization is a rendering system for current XR headsets that comprises several components: a cross-device (or ARCANE FOCUSES) infrastructure for signalling and view control (WEAVE), a code notebook (SPELLBOOK), and a grammar of graphics for XR (OPTOMANCY). The system offers users three modes of input: gestures, spoken commands, and materials. We demonstrate Wizualization and its components using a motivating scenario on collaborative data analysis of pandemic data across time and space.",
+        "image": "",
+        "authors": ["Andrea Batch", "Peter W. S. Butcher" , "Panagiotis D. Ritsos" , "Niklas Elmqvist"],
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/wizualization/wizualization.pdf",
+        "video": "https://www.youtube.com/watch?v=a5cKFPINHXs"
+    }
+]
