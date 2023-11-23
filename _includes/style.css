@@ -642,9 +642,8 @@ main {
   text-align: center;
   background-color: #003D73;
   box-shadow:
-  0px 5.1px 5.3px rgba(0, 0, 0, 0.008),
-  0px 17px 17.9px rgba(0, 0, 0, 0.012),
-  0px 76px 80px rgba(0, 0, 0, 0.02);
+  0px 0.8px 10px rgba(0, 0, 0, 0.025),
+  0px 6px 80px rgba(0, 0, 0, 0.05);
   color: white;
 }
 
@@ -659,4 +658,69 @@ main {
   .grid-item {
       max-width: calc(100% - 20px); /* Full width on smaller screens */
   }
+}
+
+.card-container:nth-of-type(odd) {
+  display: flex; 
+  flex-direction: row; 
+  width: 100%; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  align-items: flex-start; 
+  align-content: flex-start; 
+  border: solid 1px rgba(0, 0, 0, 0.17); 
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow:
+  0px 0.8px 10px rgba(0, 0, 0, 0.025),
+  0px 6px 80px rgba(0, 0, 0, 0.05);
+}
+
+.card-container:nth-of-type(even) {
+  display: flex; 
+  flex-direction: row-reverse; 
+  width: 100%; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  align-items: flex-start; 
+  align-content: flex-start; 
+  border: solid 1px rgba(0, 0, 0, 0.17); 
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow:
+  0px 0.8px 10px rgba(0, 0, 0, 0.025),
+  0px 6px 80px rgba(0, 0, 0, 0.05);
+}
+
+.card-container-image {
+  width: 50%; 
+  min-width: 600px; 
+  flex-grow: 1;
+  align-self: flex-start;
+}
+
+.card-container-detail {
+  width: 50%; 
+  flex-grow: 1; 
+  align-self: flex-start;
+}
+
+.card-detail-layout {
+  padding-left: 20px;
+}
+
+.card-detail-content {
+  margin-left: 0px;
+}
+
+.card-content-title {
+  padding-right: 20px;
+}
+
+.card-content-description {
+  font-size: 1.25rem;
+  padding-right: 20px;
+
 }

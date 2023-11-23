@@ -1,10 +1,42 @@
 [
     {
         "title": "Wizualization: A “Hard Magic” Visualization System for Immersive and Ubiquitous Analytics",
-        "description": "What if magic could be used as an effective metaphor to perform data visualization and analysis using speech and gestures while mobile and on-the-go? In this paper, we introduce WIZUALIZATION, a visual analytics system for eXtended Reality (XR) that enables an analyst to author and interact with visualizations using such a magic system through gestures, speech commands, and touch interaction. Wizualization is a rendering system for current XR headsets that comprises several components: a cross-device (or ARCANE FOCUSES) infrastructure for signalling and view control (WEAVE), a code notebook (SPELLBOOK), and a grammar of graphics for XR (OPTOMANCY). The system offers users three modes of input: gestures, spoken commands, and materials. We demonstrate Wizualization and its components using a motivating scenario on collaborative data analysis of pandemic data across time and space.",
-        "image": "",
-        "authors": ["Andrea Batch", "Peter W. S. Butcher" , "Panagiotis D. Ritsos" , "Niklas Elmqvist"],
+        "description": "What if magic could be used as an effective metaphor to perform data visualization and analysis using speech and gestures while mobile and on-the-go?",
+        "image": "wizualization.png",
         "pdf": "https://users.umiacs.umd.edu/~elm/projects/wizualization/wizualization.pdf",
         "video": "https://www.youtube.com/watch?v=a5cKFPINHXs"
+    },
+    {
+        "title": "ReLive: Bridging In-Situ and Ex-Situ Visual Analytics for Analyzing Mixed Reality User Studies",
+        "description": "Immersive analytics tools have recently emerged to support such analysis in situ, yet the complexity of the data also warrants an ex-situ analysis using more traditional non-immersive visual analytics setups. What if we can bridge these approaches?",
+        "image": "relive.png",
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/relive/relive.pdf",
+        "video": "https://www.youtube.com/watch?v=BaNZ02QkZ_k"
+    },
+    {
+        "title": "Through Their Eyes and In Their Shoes: Providing Group Awareness During Collaboration Across Virtual Reality and Desktop Platforms",
+        "description": "Many collaborative data analysis situations benefit from collaborators utilizing different platforms. However, maintaining group awareness between team members using diverging devices is difficult, not least because common ground diminishes. A person using head-mounted VR cannot physically see a user on a desktop computer even while co-located, and the desktop user cannot easily relate to the VR user’s 3D workspace. But what if we can?",
+        "image": "eyes-and-shoes.png",
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/vrxd/vrxd.pdf",
+        "video": "https://iframe.videodelivery.net/eyJraWQiOiI3YjgzNTg3NDZlNWJmNDM0MjY5YzEwZTYwMDg0ZjViYiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4ZmI5YWIxODVhZjJhYzVjNTVmOTg5ZWVlNzk1ZTJhZiIsImV4cCI6MTcwMDczMTc0NSwia2lkIjoiN2I4MzU4NzQ2ZTViZjQzNDI2OWMxMGU2MDA4NGY1YmIifQ.zjJ_wVlWCcgA4EYHGQ_1kZzThmMyptJGq60Cnpxd5Rr3buRZJ-zb1Pnv_87xw9VhELU9nd4UdjokKJdm9Fmzy_aCH3YAmQYntPxKUIs1OeCMvna51EWegkYLEA3nZjQGDBvpfKndMDpfAKNqy8SEWhxIwqtBSsUglhmhjFIU7u8i5UfzJnedblqAFYNghDWNPMaujlcfWW17O_qS6H4hKu59F5mdGG1n6UlheZIWVBkeYBtXimg7SoA4SWDQQuJCD2ych-D9iSl6HvZ8TC68LFrqxSzF7bTlXTB12r_luwptcqbwMmMjHG-w6-ZzMA3bKlYbR6UD3BGYHNHqpW0zEw"
+    },
+    {
+        "title": "The Reality of the Situation: A Survey of Situated Analytics",
+        "description": "The advent of low-cost, accessible, and high-performance augmented reality (AR) has shed light on a situated form of analytics where in-situ visualizations embedded in the real world can facilitate sensemaking based on the user’s physical location. However, what is the current state-of-the-art in this emerging field of situated analytics?",
+        "image": "sota.png",
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/sa-survey/sa-survey.pdf"
+    },
+    {
+        "title": "Lodestar: Supporting Rapid Prototyping of Data Science Workflows Through Data-Driven Analysis Recommendations",
+        "description": "Keeping abreast of current trends, technologies, and best practices in visualization and data analysis is becoming increasingly difficult, especially for fledgling data scientists. What if there was an interactive computational notebook that allowed users to quickly explore and construct new data science workflows by selecting from a list of automated analysis recommendations?",
+        "image": "lodestar.png",
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/lodestar/lodestar.pdf"
+    },
+    {
+        "title": "DataSite: Proactive Visual Data Exploration with Computation of Insight-based Recommendations",
+        "description": "Effective data analysis ideally requires the analyst to have high expertise as well as high knowledge of the data. Even with such familiarity, manually pursuing all potential hypotheses and exploring all possible views is impractical. What if, a visual analytics system was proactive in taking the burden of selecting and executing appropriate server-side computations?",
+        "image": "datasite.png",
+        "pdf": "https://users.umiacs.umd.edu/~elm/projects/datasite/datasite.pdf",
+        "video": "https://www.youtube.com/watch?v=EsK5uOOPO7o"
     }
 ]

@@ -28,7 +28,7 @@
     <link rel="me" href="mailto:elm@cs.au.dk">
     
     <style>
-      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003e75;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}}main{margin:auto;padding:.25rem;padding-bottom:0;max-width:120em}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}.grid-container{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:10px}.grid-item{flex:1 1 300px;max-width:calc(50% - 20px);border-radius:.5rem;box-sizing:border-box;text-align:center;background-color:#003d73;box-shadow:0 5.1px 5.3px rgba(0,0,0,.008),0 17px 17.9px rgba(0,0,0,.012),0 76px 80px rgba(0,0,0,.02);color:#fff}.grid-item>img{border-top-left-radius:.5rem;border-top-right-radius:.5rem;margin-bottom:-10px}@media (max-width:600px){.grid-item{max-width:calc(100% - 20px)}}</style>
+      :root{--publication-length:0;--grid-maxWidth:120rem;--grid-gutter:3rem;--font-size:1rem;--line-height:1.55;--font-family-sans:system-ui,--apple-system,sans-serif;--font-family-mono:monaco,"Consolas","Lucida Console",monospace}@media only screen and (min-width:768px){div.plyr{border-radius:.5rem!important}}body{font-family:var(--font-family-sans);font-size:var(--font-size);line-height:var(--line-height);margin:0;padding:0}a{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#003e75;transition:all .25s}a.secondary{font-weight:700;text-underline-offset:3px;text-decoration-color:hsla(199,98%,33%,.229);color:#0273a8;transition:all .25s}a.secondary:hover{color:rgba(2,115,168,.705)}a:hover{color:hsla(208,100%,23%,.705)}code,pre{font-family:var(--font-family-mono)}.container{max-width:var(--grid-maxWidth);margin:0 auto;width:96%;padding:0 calc(var(--grid-gutter)/ 2)}.row{display:flex;flex-flow:row wrap;justify-content:flex-start;margin-left:calc(var(--grid-gutter)/ -2);margin-right:calc(var(--grid-gutter)/ -2)}.row.reverse{flex-direction:row-reverse}.col{flex:1}.col,[class*=" col-"],[class^=col-]{margin:0 calc(var(--grid-gutter)/ 2) calc(var(--grid-gutter)/ 2)}.col-1{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}@media screen and (max-width:599px){.container{width:100%}.col,[class*=col-],[class^=col-]{flex:0 1 100%;max-width:100%}}@media screen and (min-width:900px){.col-1-md{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-md{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-md{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-md{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-md{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-md{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-md{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-md{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-md{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-md{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-md{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-md{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}@media screen and (min-width:1200px){.col-1-lg{flex:0 0 calc((100% / (12/1)) - var(--grid-gutter));max-width:calc((100% / (12/1)) - var(--grid-gutter))}.col-2-lg{flex:0 0 calc((100% / (12/2)) - var(--grid-gutter));max-width:calc((100% / (12/2)) - var(--grid-gutter))}.col-3-lg{flex:0 0 calc((100% / (12/3)) - var(--grid-gutter));max-width:calc((100% / (12/3)) - var(--grid-gutter))}.col-4-lg{flex:0 0 calc((100% / (12/4)) - var(--grid-gutter));max-width:calc((100% / (12/4)) - var(--grid-gutter))}.col-5-lg{flex:0 0 calc((100% / (12/5)) - var(--grid-gutter));max-width:calc((100% / (12/5)) - var(--grid-gutter))}.col-6-lg{flex:0 0 calc((100% / (12/6)) - var(--grid-gutter));max-width:calc((100% / (12/6)) - var(--grid-gutter))}.col-7-lg{flex:0 0 calc((100% / (12/7)) - var(--grid-gutter));max-width:calc((100% / (12/7)) - var(--grid-gutter))}.col-8-lg{flex:0 0 calc((100% / (12/8)) - var(--grid-gutter));max-width:calc((100% / (12/8)) - var(--grid-gutter))}.col-9-lg{flex:0 0 calc((100% / (12/9)) - var(--grid-gutter));max-width:calc((100% / (12/9)) - var(--grid-gutter))}.col-10-lg{flex:0 0 calc((100% / (12/10)) - var(--grid-gutter));max-width:calc((100% / (12/10)) - var(--grid-gutter))}.col-11-lg{flex:0 0 calc((100% / (12/11)) - var(--grid-gutter));max-width:calc((100% / (12/11)) - var(--grid-gutter))}.col-12-lg{flex:0 0 calc((100% / (12/12)) - var(--grid-gutter));max-width:calc((100% / (12/12)) - var(--grid-gutter))}}ul{list-style:none;padding-left:0}summary{cursor:pointer;user-select:none;-moz-user-select:none;-webkit-user-select:none}details>summary{list-style:none}summary::-webkit-details-marker{display:none}details>summary::before{content:'→';font-size:.79rem;padding-right:5.25px;cursor:pointer}details[open]>summary::before{font-size:.79rem;padding-right:5px;content:'↓'}.small{width:80px;height:80px}.clickable.badge,a.badge{font-size:.8rem;background-color:hsla(208,67%,74%,.478);border:solid 1px hsla(208,67%,74%,.741);padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.clickable.badge:active,.clickable.badge:focus,.clickable.badge:hover,a.badge:hover{color:#fff;background-color:#075eab;border-color:#003d73}.inverted.clickable.badge{font-size:.75rem;color:#fff;background-color:#075eab;border-color:#003d73;padding:.3rem;padding-left:.7rem;padding-right:.7rem;border-radius:.25rem;text-decoration:none;transition:all .25s ease-in-out}.inverted.clickable.badge:active,.inverted.clickable.badge:focus,.inverted.clickable.badge:hover{color:#fff;background-color:#003e75}.badge{cursor:pointer;font-size:.8rem;background-color:#f4f4f4;border:solid 1px #ddd;padding:.25rem;padding-left:.4rem;padding-right:.4rem;border-radius:.25rem}div.avatar{background-color:#003d73;color:#fff;text-align:center;vertical-align:center;margin-right:20px;border-radius:.5rem}.text-avatar{color:#fff;display:flex;align-items:center;justify-content:center}div.avatar>span{font-size:1.8rem}.person-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));grid-gap:20px;padding:0;padding-top:.8rem}.person-member{display:flex;align-items:start!important;margin-bottom:5px;padding-bottom:20px}img{object-fit:cover;background-color:hsla(208,100%,23%,.366)}.person-member img{width:150px;height:150px;border:solid 1px hsla(208,100%,23%,.242);border-radius:.5rem;margin-right:20px;object-fit:cover;transition:all .25s ease-in-out}.person-member img:hover{width:150px;height:150px;margin-right:20px;object-fit:cover}.person-info h4{margin:0 0 5px 0}.person-info p{margin:0;color:#666}header{display:flex;position:fixed;zIndex:2000;padding-left:1rem;align-items:center;top:0;width:100%;height:42px;background-color:#003d73;z-index:1000}.flexible-space{display:flex;flex-grow:1}.brand-text{color:#fff;font-size:smaller;font-weight:600}nav{display:flex;gap:1rem;padding-right:2rem}nav>a{display:flex;font-size:.8rem;font-weight:600;color:rgba(255,255,255,.5)}a:active,a:focus,nav>a:hover{color:#fff}.hamburger-menu{display:none;flex-direction:column;cursor:pointer;padding-right:2rem}.hamburger-menu .line{width:15px;height:2px;background-color:#fff;margin:2px 0}@media screen and (min-width:769px){#navbar{display:flex}}@media screen and (max-width:768px){#navbar{display:none}.hamburger-menu{display:flex}nav{z-index:2000;position:absolute;top:42px;left:0;right:10px;padding-left:1rem;padding-bottom:1rem;background-color:#003d73;flex-direction:column;width:100%}nav a{width:100%;text-align:center}}main{margin:auto;padding:.25rem;padding-bottom:0;max-width:120em}.hero-jumbotron{margin-top:.8rem;display:flex;flex-direction:row;justify-content:center}.hero-logo{display:flex;flex-direction:column;width:150px;padding:1rem;padding-bottom:0}.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:3.5rem;padding-bottom:20px;font-weight:700;color:#003d73}.hero-description-detail{text-align:center;font-size:2rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}@media screen and (min-width:769px){.hero-description{padding-left:20%;padding-right:20%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600}.hero-description-detail{text-align:center;font-size:1.5rem;font-weight:300;line-height:1.5}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:1rem;font-weight:300;line-height:1.5}}@media screen and (max-width:768px){.hero-description{padding-left:5%;padding-right:5%}.hero-description-title{text-align:center;font-size:2.5rem;padding-bottom:20px;font-weight:600;line-height:1.25}.hero-description-detail{text-align:center;font-size:1.125rem;line-height:1.75;font-weight:300}.hero-description-detail-funding{padding-top:20px;padding-bottom:20px;text-align:center;font-size:.8rem;line-height:1.5;font-weight:300}}.grid-container{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:10px}.grid-item{flex:1 1 300px;max-width:calc(50% - 20px);border-radius:.5rem;box-sizing:border-box;text-align:center;background-color:#003d73;box-shadow:0 .8px 10px rgba(0,0,0,.025),0 6px 80px rgba(0,0,0,.05);color:#fff}.grid-item>img{border-top-left-radius:.5rem;border-top-right-radius:.5rem;margin-bottom:-10px}@media (max-width:600px){.grid-item{max-width:calc(100% - 20px)}}.card-container:nth-of-type(odd){display:flex;flex-direction:row;width:100%;flex-wrap:wrap;justify-content:space-around;align-items:flex-start;align-content:flex-start;border:solid 1px rgba(0,0,0,.17);border-radius:.5rem;margin-bottom:10px;background-color:rgba(255,255,255,.5);box-shadow:0 .8px 10px rgba(0,0,0,.025),0 6px 80px rgba(0,0,0,.05)}.card-container:nth-of-type(even){display:flex;flex-direction:row-reverse;width:100%;flex-wrap:wrap;justify-content:space-around;align-items:flex-start;align-content:flex-start;border:solid 1px rgba(0,0,0,.17);border-radius:.5rem;margin-bottom:10px;background-color:rgba(255,255,255,.5);box-shadow:0 .8px 10px rgba(0,0,0,.025),0 6px 80px rgba(0,0,0,.05)}.card-container-image{width:50%;min-width:600px;flex-grow:1;align-self:flex-start}.card-container-detail{width:50%;flex-grow:1;align-self:flex-start}.card-detail-layout{padding-left:20px}.card-detail-content{margin-left:0}.card-content-title{padding-right:20px}.card-content-description{font-size:1.25rem;padding-right:20px}</style>
   </head>
   <body>
     <header>
@@ -120,7 +120,7 @@
 <section>
     <div style="padding: 1rem;">
         <h4 style="text-align: center; color: hsl(208, 100%, 23%); text-transform: uppercase; letter-spacing: 1px;">Our Research</h4>
-        <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">Contributing knowledge, pillar by pillar.</h1> 
+        <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">Contributing knowledge. Pillar by Pillar.</h1> 
         <h3 style="text-align: center; font-weight: 400; font-size: 1.25rem;">The primary research conducted under the auspices of this Center will broadly focus on the following <b>four</b> key pillars.</h3>
         <div class="grid-container">
             <div class="grid-item">
@@ -141,8 +141,8 @@
             </div>
         </div>
         <h4 style="text-align: center; color: hsl(208, 100%, 23%); text-transform: uppercase; letter-spacing: 1px; padding-top: 35px;">Our Focus</h4>
-        <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">Explore Everywhere, Discover Always.</h1>
-        <h3 style="text-align: center; font-weight: 400; font-size: 1.25rem;">And these pillars of research will be strengthened by employing them in the context of the following <b>three</b> testbeds.</h3>
+        <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">Explore Everywhere. Discover Always.</h1>
+        <h3 style="text-align: center; font-weight: 400; font-size: 1.25rem;">And these pillars of research will be strengthened by exploring them in the context of the following <b>three</b> testbeds.</h3>
         <div class="grid-container">
             <div class="grid-item">
                 <img src='/assets/tb1.jpg' style="width: 100%; max-height: 400px;" />
@@ -159,9 +159,159 @@
         </div>
         <h4 style="text-align: center; color: hsl(208, 100%, 23%); text-transform: uppercase; letter-spacing: 1px; padding-top: 35px;">Featured Projects</h4>
         <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">Innovation at its peak.</h1>
+        <div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/wizualization.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">Wizualization: A “Hard Magic” Visualization System for Immersive and Ubiquitous Analytics</h2>
+                                    <p class="card-content-description">What if magic could be used as an effective metaphor to perform data visualization and analysis using speech and gestures while mobile and on-the-go?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/wizualization/wizualization.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                            <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://www.youtube.com/watch?v=a5cKFPINHXs" target="_blank">🎞️ Watch the film&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/relive.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">ReLive: Bridging In-Situ and Ex-Situ Visual Analytics for Analyzing Mixed Reality User Studies</h2>
+                                    <p class="card-content-description">Immersive analytics tools have recently emerged to support such analysis in situ, yet the complexity of the data also warrants an ex-situ analysis using more traditional non-immersive visual analytics setups. What if we can bridge these approaches?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/relive/relive.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                            <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://www.youtube.com/watch?v=BaNZ02QkZ_k" target="_blank">🎞️ Watch the film&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/eyes-and-shoes.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">Through Their Eyes and In Their Shoes: Providing Group Awareness During Collaboration Across Virtual Reality and Desktop Platforms</h2>
+                                    <p class="card-content-description">Many collaborative data analysis situations benefit from collaborators utilizing different platforms. However, maintaining group awareness between team members using diverging devices is difficult, not least because common ground diminishes. A person using head-mounted VR cannot physically see a user on a desktop computer even while co-located, and the desktop user cannot easily relate to the VR user’s 3D workspace. But what if we can?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/vrxd/vrxd.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                            <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://iframe.videodelivery.net/eyJraWQiOiI3YjgzNTg3NDZlNWJmNDM0MjY5YzEwZTYwMDg0ZjViYiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4ZmI5YWIxODVhZjJhYzVjNTVmOTg5ZWVlNzk1ZTJhZiIsImV4cCI6MTcwMDczMTc0NSwia2lkIjoiN2I4MzU4NzQ2ZTViZjQzNDI2OWMxMGU2MDA4NGY1YmIifQ.zjJ_wVlWCcgA4EYHGQ_1kZzThmMyptJGq60Cnpxd5Rr3buRZJ-zb1Pnv_87xw9VhELU9nd4UdjokKJdm9Fmzy_aCH3YAmQYntPxKUIs1OeCMvna51EWegkYLEA3nZjQGDBvpfKndMDpfAKNqy8SEWhxIwqtBSsUglhmhjFIU7u8i5UfzJnedblqAFYNghDWNPMaujlcfWW17O_qS6H4hKu59F5mdGG1n6UlheZIWVBkeYBtXimg7SoA4SWDQQuJCD2ych-D9iSl6HvZ8TC68LFrqxSzF7bTlXTB12r_luwptcqbwMmMjHG-w6-ZzMA3bKlYbR6UD3BGYHNHqpW0zEw" target="_blank">🎞️ Watch the film&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/sota.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">The Reality of the Situation: A Survey of Situated Analytics</h2>
+                                    <p class="card-content-description">The advent of low-cost, accessible, and high-performance augmented reality (AR) has shed light on a situated form of analytics where in-situ visualizations embedded in the real world can facilitate sensemaking based on the user’s physical location. However, what is the current state-of-the-art in this emerging field of situated analytics?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/sa-survey/sa-survey.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/lodestar.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">Lodestar: Supporting Rapid Prototyping of Data Science Workflows Through Data-Driven Analysis Recommendations</h2>
+                                    <p class="card-content-description">Keeping abreast of current trends, technologies, and best practices in visualization and data analysis is becoming increasingly difficult, especially for fledgling data scientists. What if there was an interactive computational notebook that allowed users to quickly explore and construct new data science workflows by selecting from a list of automated analysis recommendations?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/lodestar/lodestar.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card-container">
+                        <div style="padding: 0.5rem">
+                            <div class="card-container-image">
+                                <div style="background-image: url('/assets/datasite.png'); min-height: 300px; background-size: cover; border-radius: 0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="card-container-detail">
+                            <div class="card-detail-layout">
+                                <div class="card-detail-content">
+                                    <h2 class="card-content-title">DataSite: Proactive Visual Data Exploration with Computation of Insight-based Recommendations</h2>
+                                    <p class="card-content-description">Effective data analysis ideally requires the analyst to have high expertise as well as high knowledge of the data. Even with such familiarity, manually pursuing all potential hypotheses and exploring all possible views is impractical. What if, a visual analytics system was proactive in taking the burden of selecting and executing appropriate server-side computations?</p>
+                                    <div style="padding-bottom: 1.5rem;">
+                                        <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://users.umiacs.umd.edu/~elm/projects/datasite/datasite.pdf" target="_blank">📄 Read the paper&nbsp;<sup>↗</sup></a>
+                                        
+                                            <a class="badge" style="font-size: 1.1rem; padding: 0.5rem;" href="https://www.youtube.com/watch?v=EsK5uOOPO7o" target="_blank">🎞️ Watch the film&nbsp;<sup>↗</sup></a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+        </div>
     </div>
+    <a href="/publications"><h2 style="text-align: center; color: hsl(208, 100%, 23%); margin-top: -15px">Yet there's more to speak.</h2></a>
 </section>
-
+<!--section>
+    <h4 style="text-align: center; color: hsl(208, 100%, 23%); text-transform: uppercase; letter-spacing: 1px;">Our Members</h4>
+    <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -15px">People that move mountains.</h1> 
+    <div class="grid-container">
+            <div class="grid-item">
+                <img src='/assets/members/niklas.jpg' style="width: 100%; max-height: 300px;" />
+                <h2>Director</h2>
+            </div>
+            <div class="grid-item">
+                <h2>Current Members</h2>
+            </div>
+            <div class="grid-item">
+                <h2>Alumni</h2>
+            </div>
+            <div class="grid-item">
+                <h2>External Collaborators</h2>
+            </div>
+        </div>
+</section-->
     </main>
     
     <script>const copy=e=>{var t=document.getElementById(`bibtex-button-${e}`),n=document.getElementById(`bibtex-${e}`).textContent.trim();navigator.clipboard.writeText(n).then((()=>{t.innerText="✔ Copied BibTeX",setInterval((()=>{t.innerText="✚ Copy BibTeX"}),1e3)})).catch((e=>{console.error("Failed to copy: ",e)}))};function toggleMenu(){var e=document.getElementById("navbar");"none"===e.style.display||""===e.style.display?e.style.display="flex":e.style.display="none"}</script>
