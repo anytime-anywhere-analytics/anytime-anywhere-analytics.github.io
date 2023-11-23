@@ -1,5 +1,3 @@
-
-
 const copy = (recordId) => {
   var button = document.getElementById(`bibtex-button-${recordId}`);
   var content = document.getElementById(`bibtex-${recordId}`).textContent.trim();

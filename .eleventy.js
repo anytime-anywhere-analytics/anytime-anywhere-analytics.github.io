@@ -2,6 +2,11 @@ const CleanCSS = require("clean-css");
 const { minify } = require("terser");
 const { readFileSync } = require("fs");
 module.exports = function (config) {
+  config.addFilter('filterByKeyValue', function(arr, key, value) {
+    return arr.filter(function(item) {
+        return item[key] === value;
+    });
+});
   config.addCollection("allPublications", (collectionApi) => {
     const dataName = "publications";
     return collectionApi.getAll()[0].data[dataName];
