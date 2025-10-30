@@ -1,6 +1,34 @@
 [
     {
         "group": "members",
+        "name": "Anton Wolter",
+        "now_role": "Ph.D. Student in Computer Science",
+        "now_at": "Aarhus University",
+        "since": "Fall 2025"
+    },
+    {
+        "group": "members",
+        "name": "Hugo Andersson",
+        "now_role": "Ph.D. Student in Computer Science",
+        "now_at": "Aarhus University",
+        "since": "Fall 2025"
+    },
+    {
+        "group": "members",
+        "name": "Sebastian Hubenschmid",
+        "now_role": "Postdoctoral Researcher at CA3",
+        "now_at": "Aarhus University",
+        "since": "Fall 2025"
+    },
+    {
+        "group": "members",
+        "name": "Vaishali Dhanoa",
+        "now_role": "Postdoctoral Researcher at CA3",
+        "now_at": "Aarhus University",
+        "since": "Fall 2025"
+    },
+    {
+        "group": "members",
         "name": "Arvind Srinivasan",
         "now_role": "Ph.D. Student in Computer Science",
         "now_at": "Aarhus University",
@@ -8,6 +36,13 @@
         "photo": "arvind.png",
         "url": "https://arvind.one/",
         "phone": "+1-240-726-8257"
+    },
+    {
+        "group": "members",
+        "name": "Johannes Ellemose",
+        "now_role": "Ph.D Student in Computer Science",
+        "now_at": "Aarhus University",
+        "since": "Feb 2024"
     },
     {
         "group": "members",
@@ -40,14 +75,15 @@
     {
         "group": "members",
         "name": "Sungbok Shin",
-        "now_role": "Ph.D Student in Computer Science",
-        "now_at": "University of Maryland College Park",
+        "now_role": "Postdoctoral Researcher at CA3",
+        "now_at": "Aarhus University",
+        "since": "Fall 2025",
         "photo": "sungbok.jpg",
         "url": "https://sites.google.com/view/sungbokshin",
         "phone": "+1-301-204-1990"
     },
     {
-        "group": "members",
+        "group": "alumni",
         "name": "Pramod Chundury",
         "now_role": "Ph.D Student in the College of Information Studies",
         "now_at": "University of Maryland College Park",
@@ -55,7 +91,7 @@
         "url": "https://scholar.google.com/citations?user=tfT5Jw4AAAAJ&hl=en"
     },
     {
-        "group": "members",
+        "group": "alumni",
         "name": "Md Naimul Hoque",
         "now_role": "Ph.D Student in the College of Information Studies",
         "now_at": "University of Maryland College Park",
@@ -63,7 +99,7 @@
         "url": "https://naimulh0que.github.io"
     },
     {
-        "group": "alumni",
+        "group": "members",
         "name": "Vaishali Dhanoa",
         "then_at": "Johannes Kepler University, Linz, Austria",
         "photo": "dhanoa.jpg",
