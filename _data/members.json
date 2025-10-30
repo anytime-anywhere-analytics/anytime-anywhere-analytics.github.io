@@ -472,6 +472,15 @@
         "url": "https://yijisoo.github.io/about/",
         "now_role": "Vice President of CX Insight Group",
         "now_at": "Samsung Electronics"
+    },
+    {
+        "group": "members",
+        "name": "Gabriela Molina León",
+        "now_role": "Postdoctoral Researcher at CA3",
+        "now_at": "Aarhus University",
+        "since": "Octoboer 2024",
+        "photo": "gaby.jpg",
+        "url": "https://gmleon.github.io/"
     }
 
 ]
