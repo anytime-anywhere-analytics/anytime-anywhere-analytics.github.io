@@ -517,6 +517,14 @@
         "since": "October 2024",
         "photo": "gaby.jpg",
         "url": "https://gmleon.github.io/"
+    },
+    {
+        "group": "members",
+        "name": "Sebastian Hubenschmid",
+        "now_role": "Postdoctoral Researcher at CA3",
+        "now_at": "Aarhus University",
+        "since": "June 2025",
+        "photo": "sebastian.jpg",
+        "url": "https://sebi.sh/"
     }
-
 ]
