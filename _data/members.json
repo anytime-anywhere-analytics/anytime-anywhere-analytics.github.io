@@ -39,6 +39,15 @@
     },
     {
         "group": "members",
+        "name": "Anton Wolter",
+        "now_role": "Ph.D Student in Computer Science",
+        "now_at": "Aarhus University",
+        "since": "October 2024",
+        "photo": "anton.png",
+        "url": "https://www.antonwolter.de"
+    },
+    {
+        "group": "members",
         "name": "Sungbok Shin",
         "now_role": "Ph.D Student in Computer Science",
         "now_at": "University of Maryland College Park",
