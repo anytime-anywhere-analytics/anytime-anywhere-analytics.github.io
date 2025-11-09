@@ -14,9 +14,7 @@ permalink: /publications/
                       <div style="display: flex; font-weight: 600">
                         {% if record.type === "inproceedings" %}Conference Paper{% else %}Journal Paper{% endif %}
                       </div>
-                      <div style="display: flex; font-weight: 600">
-                      #{{record._type_counter}}&nbsp;
-                      </div>
+                      
                                           <button style="cursor:copy; border-radius: 2rem; font-size: 0.68rem; width: fit-content;" class="clickable badge inverted" id="bibtex-button-{{record.id}}" onClick="copy('{{record.id}}')">
                       Copy BibTeX
                     </button>

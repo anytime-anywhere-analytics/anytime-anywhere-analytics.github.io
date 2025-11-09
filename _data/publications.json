@@ -2,10 +2,11 @@
     {
         "type": "article",
         "id": "elmqvist2023DataAnalyticsAnywhere",
-        "title": "{Data Analytics Anywhere and Everywhere}",
+        "title": "Data Analytics Anywhere and Everywhere",
         "author": [
             "Niklas Elmqvist"
         ],
+        "abstract": "Mobile, ubiquitous, and immersive computing appear poised to transform visualization, data science, and data-driven decision making.",
         "url": "https://doi.org/10.1145/3584858",
         "_url_type": "doi",
         "year": 2023,
@@ -25,13 +26,13 @@
     {
         "type": "inproceedings",
         "id": "berger2024ScientistsCodeProgramming",
-        "title": "{Scientists and Code: Programming as a Tool}",
+        "title": "Scientists and Code: Programming as a Tool",
         "author": [
-            "Berger, Caroline Palma",
-            "Lutze, Matthew Christian Demuth",
+            "Caroline Berger",
+            "Matthew Christian Demuth Lutze",
             "Niklas Elmqvist",
             "Magnus Madsen",
-            "Klokmose, Clemens Nylandsted"
+            "Clemens Nylandsted Klokmose"
         ],
         "year": 2024,
         "date": "2024-01-19T00:00:00.000Z",
@@ -51,12 +52,12 @@
     {
         "type": "article",
         "id": "shin2024RealitySituationSurvey",
-        "title": "{The Reality of the Situation: A Survey of Situated Analytics}",
+        "title": "The Reality of the Situation: A Survey of Situated Analytics",
         "author": [
             "Sungbok Shin",
             "Andrea Batch",
-            "Butcher, Peter William Scott",
-            "Ritsos, Panagiotis D.",
+            "Peter W. S. Butcher",
+            "Panagiotis D. Ritsos",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/TVCG.2023.3285546",
@@ -85,7 +86,7 @@
     {
         "type": "article",
         "id": "kim2024TowardsVisualizationThumbnail",
-        "title": "{Towards Visualization Thumbnail Designs That Entice Reading Data-Driven Articles}",
+        "title": "Towards Visualization Thumbnail Designs That Entice Reading Data-Driven Articles",
         "author": [
             "Hwiyeon Kim",
             "Joohee Kim",
@@ -124,9 +125,9 @@
     {
         "type": "article",
         "id": "hoque2024DataopsyScalableFluid",
-        "title": "{Dataopsy: Scalable and Fluid Visual Exploration using Aggregate Query Sculpting}",
+        "title": "Dataopsy: Scalable and Fluid Visual Exploration using Aggregate Query Sculpting",
         "author": [
-            "Hoque, Md Naimul",
+            "Md Naimul Hoque",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/TVCG.2023.3326594",
@@ -154,14 +155,14 @@
     {
         "type": "article",
         "id": "raghunandan2024LodestarSupportingRapid",
-        "title": "{Lodestar: Supporting Rapid Prototyping of Data Science Workflows through Data-Driven Analysis Recommendations}",
+        "title": "Lodestar: Supporting Rapid Prototyping of Data Science Workflows through Data-Driven Analysis Recommendations",
         "author": [
             "Deepthi Raghunandan",
             "Zhe Cui",
             "Kartik Krishnan",
             "Segen Tirfe",
             "Shenzhi Shi",
-            "Shrestha, Tejaswi Darshan",
+            "Tejaswi Darshan Shrestha",
             "Leilani Battle",
             "Niklas Elmqvist"
         ],
@@ -191,7 +192,7 @@
     {
         "type": "article",
         "id": "devalk2024RiversideDesignStudy",
-        "title": "{Riverside: A Design Study on Visualization for Situation Awareness in Cybersecurity}",
+        "title": "Riverside: A Design Study on Visualization for Situation Awareness in Cybersecurity",
         "author": [
             "Kaitlyn DeValk",
             "Niklas Elmqvist"
@@ -220,7 +221,7 @@
     {
         "type": "article",
         "id": "chundury2024TactualPlotSpatializingData",
-        "title": "{TactualPlot: Spatializing Data as Sound Using Sensory Substitution for Touchscreen Accessibility}",
+        "title": "TactualPlot: Spatializing Data as Sound Using Sensory Substitution for Touchscreen Accessibility",
         "author": [
             "Pramod Chundury",
             "Yasmin Reyazuddin",
@@ -254,7 +255,7 @@
     {
         "type": "article",
         "id": "newburger2024VisualizationAccordingStatisticians",
-        "title": "{Visualization According to Statisticians: An Interview Study on the Role of Visualization for Inferential Statistics}",
+        "title": "Visualization According to Statisticians: An Interview Study on the Role of Visualization for Inferential Statistics",
         "author": [
             "Eric Newburger",
             "Niklas Elmqvist"
@@ -284,11 +285,11 @@
     {
         "type": "article",
         "id": "batch2024WizualizationHardMagic",
-        "title": "{Wizualization: A 'Hard Magic' Visualization System for Immersive and Ubiquitous Analytics}",
+        "title": "Wizualization: A 'Hard Magic' Visualization System for Immersive and Ubiquitous Analytics",
         "author": [
             "Andrea Batch",
-            "Butcher, Peter W. S.",
-            "Ritsos, Panagiotis D.",
+            "Peter W. S. Butcher",
+            "Panagiotis D. Ritsos",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/TVCG.2023.3326580",
@@ -317,14 +318,14 @@
     {
         "type": "article",
         "id": "butcher2024IsNativeNaive",
-        "title": "{Is Native Na\\\"{\\i}ve? Comparing Native Game Engines and WebXR as Immersive Analytics Development Platforms}",
+        "title": "Is Native Naive? Comparing Native Game Engines and WebXR as Immersive Analytics Development Platforms",
         "author": [
-            "Butcher, Peter W. S.",
+            "Peter W. S. Butcher",
             "Andrea Batch",
             "David Saffo",
             "Blair Macintyre",
             "Niklas Elmqvist",
-            "Ritsos, Panagiotis D."
+            "Panagiotis D. Ritsos"
         ],
         "url": "https://doi.org/10.1109/MCG.2024.3367422",
         "_url_type": "doi",
@@ -352,7 +353,7 @@
     {
         "type": "inproceedings",
         "id": "hoque2024HaLLMarkEffect",
-        "title": "{The HaLLMark Effect: Supporting Provenance and Transparent Use of Large Language Models in Writing with Interactive Visualization}",
+        "title": "The HaLLMark Effect: Supporting Provenance and Transparent Use of Large Language Models in Writing with Interactive Visualization",
         "author": [
             "Hoque, Md Naimul",
             "Tasfa Mashiat",
@@ -389,7 +390,7 @@
     {
         "type": "inproceedings",
         "id": "patnaik2024VisTorch",
-        "title": "{VisTorch: Interacting with Situated Visualizations using Handheld Projectors}",
+        "title": "VisTorch: Interacting with Situated Visualizations using Handheld Projectors",
         "author": [
             "Biswaksen Patnaik",
             "Huaishu Peng",
@@ -421,7 +422,7 @@
     {
         "type": "article",
         "id": "batch2024uxSense",
-        "title": "{uxSense: Supporting User Experience Analysis with Visualization and Computer Vision}",
+        "title": "uxSense: Supporting User Experience Analysis with Visualization and Computer Vision",
         "author": [
             "Andrea Batch",
             "Yipeng Ji",
@@ -457,7 +458,7 @@
     {
         "type": "inproceedings",
         "id": "chundury2024UnderstandingVisualization",
-        "title": "{Understanding the Visualization and Analytics Needs of Blind and Low-Vision Professionals}",
+        "title": "Understanding the Visualization and Analytics Needs of Blind and Low-Vision Professionals",
         "author": [
             "Pramod Chundury",
             "Urja Thakkar",
@@ -491,7 +492,7 @@
     {
         "type": "article",
         "id": "mane2024WichitaCombatFlight",
-        "title": "{``Wichita 1-1, Fox Three''---The Role of 3D Telemetry Analysis in Combat Flight Simulation}",
+        "title": "``Wichita 1-1, Fox Three''---The Role of 3D Telemetry Analysis in Combat Flight Simulation",
         "author": [
             "Mane, Sourabh V.",
             "Niklas Elmqvist"
@@ -524,11 +525,11 @@
     {
         "type": "article",
         "id": "ondov2024VisualizingMultilayer",
-        "title": "{Visualizing Multilayer Spatiotemporal Epidemiological Data with Animated Geocircles}",
+        "title": "Visualizing Multilayer Spatiotemporal Epidemiological Data with Animated Geocircles",
         "author": [
             "Brian Ondov",
-            "Patel, Harsh B.",
-            "Kuo, Ai Te",
+            "Harsh B. Patel",
+            "Ai Te Kuo",
             "John Kastner",
             "Yunheng Han",
             "Hong Wei",
@@ -560,12 +561,12 @@
     {
         "type": "article",
         "id": "dhanoa2025AgenticVisualization",
-        "title": "{Agentic Visualization: Extracting Agent-based Design Patterns from Visualization Systems}",
+        "title": "Agentic Visualization: Extracting Agent-based Design Patterns from Visualization Systems",
         "author": [
             "Vaishali Dhanoa",
-            "Wolter, Anton Sutje",
-            "Molina Le{\\'o}n, Gabriela",
-            "Hans-J{\\\"o}rg Schulz",
+            "Anton Sutje Wolter",
+            "Gabriela Molina León",
+            "Hans-Jörg Schulz",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/MCG.2025.3012345",
@@ -592,14 +593,14 @@
     {
         "type": "article",
         "id": "borowski2025DashSpace",
-        "title": "{DashSpace: A Live Collaborative Platform for Immersive and Ubiquitous Analytics}",
+        "title": "DashSpace: A Live Collaborative Platform for Immersive and Ubiquitous Analytics",
         "author": [
             "Marcel Borowski",
-            "Butcher, Peter W. S.",
+            "Peter W. S. Butcher",
             "Kristensen, Janus Bager",
-            "Petersen, Jonas Oxenb{\\o}ll",
-            "Ritsos, Panagiotis D.",
-            "Klokmose, Clemens Nylandsted",
+            "Jonas Oxenboll Petersen",
+            "Panagiotis D. Ritsos",
+            "Clemens Nylandsted Klokmose",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/TVCG.2025.3537679",
@@ -629,7 +630,7 @@
     {
         "type": "article",
         "id": "shin2025Drillboards",
-        "title": "{Drillboards: Adaptive Visualization Dashboards for Dynamic Personalization of Visualization Experiences}",
+        "title": "Drillboards: Adaptive Visualization Dashboards for Dynamic Personalization of Visualization Experiences",
         "author": [
             "Sungbok Shin",
             "Inyoup Na",
@@ -662,7 +663,7 @@
     {
         "type": "article",
         "id": "shin2025Visualizationary",
-        "title": "{Visualizationary: Automating Design Feedback for Visualization Designers Using Large Language Models}",
+        "title": "Visualizationary: Automating Design Feedback for Visualization Designers Using Large Language Models",
         "author": [
             "Sungbok Shin",
             "Sanghyun Hong",
@@ -694,12 +695,12 @@
     {
         "type": "article",
         "id": "srinivasan2025AttentionAware",
-        "title": "{Attention-Aware Visualization: Tracking and Responding to User Perception Over Time}",
+        "title": "Attention-Aware Visualization: Tracking and Responding to User Perception Over Time",
         "author": [
             "Arvind Srinivasan",
             "Johannes Ellemose",
-            "Butcher, Peter W. S.",
-            "Ritsos, Panagiotis D.",
+            "Peter W. S. Butcher",
+            "Panagiotis D. Ritsos",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1109/TVCG.2024.3456300",
@@ -728,7 +729,7 @@
     {
         "type": "article",
         "id": "kim2025DGComics",
-        "title": "{DG Comics: Semi-Automatically Authoring Graph Comics for Dynamic Graphs}",
+        "title": "DG Comics: Semi-Automatically Authoring Graph Comics for Dynamic Graphs",
         "author": [
             "Joohee Kim",
             "Hyunwook Lee",
@@ -763,13 +764,13 @@
     {
         "type": "article",
         "id": "dhanoa2025DTour",
-        "title": "{D-Tour: Semi-Automatic Generation of Interactive Guided Tours for Visualization Dashboard Onboarding}",
+        "title": "D-Tour: Semi-Automatic Generation of Interactive Guided Tours for Visualization Dashboard Onboarding",
         "author": [
             "Vaishali Dhanoa",
             "Andreas Hinterreiter",
             "Vanessa Fediuk",
             "Niklas Elmqvist",
-            "Eduard Gr{\\\"o}ller",
+            "Eduard Gröller",
             "Marc Streit"
         ],
         "url": "https://doi.org/10.1109/TVCG.2024.3456347",
@@ -785,7 +786,7 @@
         "doi": "10.1109/TVCG.2024.3456347",
         "issn": "1077-2626",
         "abstract": "Onboarding a user to a visualization dashboard entails explaining its various components, including the chart types used, the data loaded, and the interactions available. Authoring such an onboarding experience is time-consuming and requires significant knowledge and little guidance on how best to complete this task. Depending on their levels of expertise, end users being onboarded to a new dashboard can be either confused and overwhelmed or disinterested and disengaged. We propose interactive dashboard tours (D-Tours) as semi-automated onboarding experiences that preserve the agency of users with various levels of expertise to keep them interested and engaged. Our interactive tours concept draws from open-world game design to give the user freedom in choosing their path through onboarding. We have implemented the concept in a tool called D-TOUR PROTOTYPE, which allows authors to craft custom interactive dashboard tours from scratch or using automatic templates. Automatically generated tours can still be customized to use different media (e.g., video, audio, and highlighting) or new narratives to produce an onboarding experience tailored to an individual user. We demonstrate the usefulness of interactive dashboard tours through use cases and expert interviews. Our evaluation shows that authors found the automation in the D-Tour Prototype helpful and time-saving, and users found the created tours engaging and intuitive.",
-        "note": "Supplemental materials: \\url{https://osf.io/6fbjp/}",
+        "note": "Supplemental materials: https://osf.io/6fbjp/",
         "language": "English",
         "keywords": [
             "dashboards",
@@ -800,12 +801,12 @@
     {
         "type": "inproceedings",
         "id": "patnaik2025Datamancer",
-        "title": "{Datamancer: Bimanual Gesture Interaction in Multi-Display Ubiquitous Analytics Environments}",
+        "title": "Datamancer: Bimanual Gesture Interaction in Multi-Display Ubiquitous Analytics Environments",
         "author": [
             "Biswaksen Patnaik",
             "Marcel Borowski",
             "Huaishu Peng",
-            "Klokmose, Clemens Nylandsted",
+            "Clemens Nylandsted Klokmose",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1145/3706598.3713123",
@@ -836,54 +837,54 @@
     {
         "type": "misc",
         "id": "elmqvist2025ParticipatoryAI",
-        "title": "{Participatory AI: A Scandinavian Approach to Human-Centered AI}",
+        "title": "Participatory AI: A Scandinavian Approach to Human-Centered AI",
         "author": [
             "Niklas Elmqvist",
             "Eve Hoggan",
-            "Hans-J{\\\"o}rg Schulz",
-            "Petersen, Marianne Graves",
+            "Hans-Jörg Schulz",
+            "Marianne Graves Petersen",
             "Peter Dalsgaard",
             "Ira Assent",
-            "Bertelsen, Olav W.",
+            "Olav W. Bertelsen",
             "Akhil Arora",
-            "Kaj Gr{\\o}nb{\\ae}k",
-            "Susanne B{\\o}dker",
-            "Klokmose, Clemens Nylandsted",
-            "Smith, Rachel Charlotte",
+            "Kaj Gronbaek",
+            "Susanne Bodker",
+            "Clemens Nylandsted Klokmose",
+            "Rachel Charlotte Smith",
             "Sebastian Hubenschmid",
-            "Johns, Christoph A.",
-            "Le{\\'o}n, Gabriela Molina",
+            "Christoph A. Johns",
+            "Gabriela Molina León",
             "Anton Wolter",
             "Johannes Ellemose",
             "Vaishali Dhanoa",
-            "Enni, Simon Aagaard",
-            "Lunding, Mille Skovhus",
-            "Bilstrup, Karl-Emil Kj{\\ae}r",
-            "Esquivel, Juan S{\\'a}nchez",
+            "Simon Aagaard Enni",  
+            "Mille Skovhus Lunding",
+            "Karl-Emil Kjaer Bilstrup",
+            "Juan Sánchez Esquivel",
             "Luke Connelly",
-            "Sarabia, Rafael Pablos",
+            "Rafael Pablos Sarabia",
             "Morten Birk",
             "Joachim Nyborg",
             "Stefanie Zollmann",
             "Tobias Langlotz",
-            "Chou, Meredith Siang-Yun",
-            "Gr{\\o}nb{\\ae}k, Jens Emil Sloth",
+            "Meredith Chou",
+            "Jens Emil Gronbaek",
             "Michael Wessely",
             "Yijing Jiang",
             "Caroline Berger",
             "Duosi Dai",
-            "Biskjaer, Michael Mose",
-            "Germ{\\'a}n Leiva",
+            "Michael Mose Biskjaer",
+            "Germán Leiva",
             "Jonas Frich",
             "Eva Eriksson",
             "Kim Halskov",
-            "Thorbj{\\o}rn Mikkelsen",
+            "Thorbjorn Mikkelsen",
             "Nearchos Potamitis",
             "Michel Yildirim",
             "Arvind Srinivasan",
             "Jeanette Falk",
             "Nanna Inie",
-            "Iversen, Ole Sejer",
+            "Ole Sejer Iversen",
             "Hugo Andersson"
         ],
         "url": "https://arxiv.org/abs/2505.19101",
@@ -907,13 +908,13 @@
     {
         "type": "inproceedings",
         "id": "borowski2025Spatialstrates",
-        "title": "{Spatialstrates: Cross-Reality Collaboration through Spatial Hypermedia}",
+        "title": "Spatialstrates: Cross-Reality Collaboration through Spatial Hypermedia",
         "author": [
             "Marcel Borowski",
-            "Gr{\\o}nb{\\ae}k, Jens Emil",
-            "Butcher, Peter W. S.",
-            "Ritsos, Panagiotis D.",
-            "Klokmose, Clemens Nylandsted",
+            "Jens Emil Gronbaek",
+            "Peter W. S. Butcher",
+            "Panagiotis D. Ritsos",
+            "Clemens Nylandsted Klokmose",
             "Niklas Elmqvist"
         ],
         "url": "https://doi.org/10.1145/3746059.3747708",
