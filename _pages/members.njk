@@ -52,7 +52,7 @@ permalink: /members/
                     {% if member.photo %}
                         {% memberImage member.photo, member.name %}
                     {% else %}
-                        <div class="small avatar">
+                        <div class="small avatar text-avatar">
                             <span>{{ member.name | string | initials }}</span>
                         </div>
                     {% endif %}
@@ -159,7 +159,7 @@ permalink: /members/
                     {% if member.photo %}
                         {% memberImage member.photo, member.name %}
                     {% else %}
-                        <div class="small avatar">
+                        <div class="small avatar text-avatar">
                             <span>{{ member.name | string | initials }}</span>
                         </div>
                     {% endif %}
