@@ -21,7 +21,7 @@
     <meta name="twitter:site" content="@{{ metadata.social }}">
     <meta name="twitter:dnt" content="on">
     <title>{{ metadata.title }}</title>
-    <link rel="icon" type="image/png" href="{{ metadata.favicon }}">
+  <link rel="icon" type="image/png" href="{{ metadata.favicon | url }}">
     <link rel="dns-prefetch" href="{{ metadata.url }}">
     <link rel="preconnect" href="{{ metadata.url }}">
     <link rel="me" href="{{ metadata.url }}" type="text/html">
@@ -37,7 +37,7 @@
   <body>
     <header>
       <div class="brand-text">
-        <a href="/" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
+  <a href="{{ '/' | url }}" style="text-decoration: none; color: white;">Center for Anytime Anywhere Analytics</a>
       </div>
       <div class="flexible-space"></div>
       <div class="hamburger-menu" onclick="toggleMenu()">
@@ -46,10 +46,10 @@
           <div class="line"></div>
       </div>
       <nav id="navbar">
-          <a href="/">Home</a>
-          <a href="/members">Members</a>
-          <a href="/publications">Publications</a>
-          <a href="/open-positions">Open positions</a>
+          <a href="{{ '/' | url }}">Home</a>
+          <a href="{{ '/members/' | url }}">Members</a>
+          <a href="{{ '/publications/' | url }}">Publications</a>
+          <a href="{{ '/open-positions/' | url }}">Open positions</a>
           <a href="https://github.com/orgs/anytime-anywhere-analytics/" target="_blank">Github <sup>&nbsp;↗</sup></a>
       </nav>
     </header>

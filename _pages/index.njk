@@ -271,8 +271,8 @@ permalink: /
         <div class="flexible-space"></div>
         <div style="display: flex; flex-direction: column; align-items: left;">
             <a href="https://www.cs.au.dk/" target="_blank">
-                <img style="margin-top: 15px; width: 150px;" src="/assets/au.webp"></a>
-                <img style="width: 140px; margin-top: 15px" src="/assets/villium-fonden.webp"></div>
+                <img style="margin-top: 15px; width: 150px;" src="{{ '/assets/au.webp' | url }}" alt="Aarhus University logo"></a>
+                <img style="width: 140px; margin-top: 15px" src="{{ '/assets/villium-fonden.webp' | url }}" alt="Villium Fonden logo"></div>
             </div>
             <div class="hero-description">
                 <div class="hero-description-title">
@@ -317,19 +317,19 @@ permalink: /
                     key pillars.</h3>
                 <div class="grid-container">
                     <div class="grid-item">
-                        <img src='/assets/rp1.jpg' style="width: 100%; max-height: 300px;"/>
+                        <img src='{{ '/assets/rp1.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
                         <h2>Data Infrastructures</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='/assets/rp2.jpg' style="width: 100%; max-height: 300px;"/>
+                        <img src='{{ '/assets/rp2.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
                         <h2>Flexible Visual Representations</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='/assets/rp3.jpg' style="width: 100%; max-height: 300px;"/>
+                        <img src='{{ '/assets/rp3.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
                         <h2>Sensing and Interaction</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='/assets/rp4.jpg' style="width: 100%; max-height: 300px;"/>
+                        <img src='{{ '/assets/rp4.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
                         <h2>Human Centered AI</h2>
                     </div>
                 </div>
@@ -342,15 +342,15 @@ permalink: /
                         testbeds.</h3>
                     <div class="grid-container">
                         <div class="grid-item">
-                            <img src='/assets/tb1.jpg' style="width: 100%; max-height: 400px;"/>
+                            <img src='{{ '/assets/tb1.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
                             <h2>Scientific Inquiry</h2>
                         </div>
                         <div class="grid-item">
-                            <img src='/assets/tb2.jpg' style="width: 100%; max-height: 400px;"/>
+                            <img src='{{ '/assets/tb2.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
                             <h2>Manufacturing</h2>
                         </div>
                         <div class="grid-item">
-                            <img src='/assets/tb3.jpg' style="width: 100%; max-height: 400px;"/>
+                            <img src='{{ '/assets/tb3.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
                             <h2>Higher Education</h2>
                         </div>
                     </div>
@@ -362,7 +362,7 @@ permalink: /
                             <div class="card-container">
                                 <div class="card-container-image">
                                     <div style="">
-                                        <img src='/assets/{{ project.image }}' alt='{{ project.image }}' style="width: 100%; object-fit: cover;"/>
+                                        <img src='{{ ('/assets/' ~ project.image) | url }}' alt='{{ project.image }}' style="width: 100%; object-fit: cover;"/>
                                     </div>
                                 </div>
                                 <div class="card-container-detail">
@@ -389,7 +389,7 @@ permalink: /
                         {% endfor %}
                     </div>
                 </div>
-                <a href="/publications">
+                <a href="{{ '/publications/' | url }}">
                     <h2 style="text-align: center; color: hsl(208, 100%, 23%); margin-top: -15px; padding-bottom: 25px;">Yet there's more to
                         speak →</h2>
                 </a>
@@ -398,7 +398,7 @@ permalink: /
                 <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -5px">Our Team</h1>
                 <div class="grid-container">
                     <div class="grid-item">
-                        <img src='/assets/members/niklas.jpg' style="width: 100%; max-height: 300px;"/>
+                        <img src='{{ '/assets/members/niklas.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
                         <h2>Director</h2>
                     </div>
                     <div class="grid-item">
@@ -414,11 +414,11 @@ permalink: /
                         <h2>External Collaborators</h2>
                     </div>
                 </div>
-                <a href="/members">
+                <a href="{{ '/members/' | url }}">
                     <h2 style="text-align: center; color: hsl(208, 100%, 23%); margin-top: 5px">Know more about them →</h2>
                 </a>
                 <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem;">
                     If you are interested in joining us,
-                    <a href="/open-positions">find more about our open positions here →
+                    <a href="{{ '/open-positions/' | url }}">find more about our open positions here →
                     </p>
                 </section>

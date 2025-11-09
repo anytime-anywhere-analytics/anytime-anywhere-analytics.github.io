@@ -6,6 +6,7 @@ permalink: /publications/
 <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
 <ul>
     {% for record in collections.allPublications %}
+          {% set venue = record.journal or record.booktitle or record.venue or record.publisher %}
         <li style="display: flex; margin-bottom: 1rem;">
                 <div>
                   <div style="padding: 0.5rem; display: flex; flex-direction: column; color: black">
@@ -24,17 +25,26 @@ permalink: /publications/
                     </div>
 
                   </div>
-                    <small><a class="secondary" style="font-weight: 500" href="/publications/venue/{{ record.journal | replace("&","and") | slugify }}">{{ record.journal }} • <a class="secondary" style="font-weight: 500" href="/publications/year/{{record.year}}">{{ record.year }}</a></small>
+                      <small>
+                        {% if venue %}
+                          <a class="secondary" style="font-weight: 500" href="{{ ('/publications/venue/' ~ (venue | replace('&','and') | slugify) ~ '/') | url }}">{{ venue }}</a>
+                          &nbsp;•&nbsp;
+                        {% endif %}
+                        <a class="secondary" style="font-weight: 500" href="{{ ('/publications/year/' ~ record.year ~ '/') | url }}">{{ record.year }}</a>
+                      </small>
                   </div>
                   <a href="{{ record.url }}" style="display: inline-flex; flex-direction: row;">
-                    <h3 style="margin: 0.15rem; margin-bottom: 0.3rem"><span style="text-decoration-color: transparent; font-size: 0.8rem; padding: 4px; padding-left: 8px; padding-right: 4px; border-radius: 4px; background-color: {% if record._url_type === "pdf" %} #F40F02 {% else %} #FCB425 {% endif %}; color: {% if record._url_type === "pdf" %} white {% else %} black {% endif %};">{{record._url_type}}&nbsp;</span> {{ record.title | trim }}<sup style="opacity: 0.5">&nbsp;↗</sup></h3>
+                    <h3 style="margin:0.15rem; margin-bottom:0.3rem">
+                      <span class="badge" style="font-size:0.8rem;">{{record._url_type}}&nbsp;</span>
+                      {{ record.title | trim }}<sup style="opacity:0.5">&nbsp;↗</sup>
+                    </h3>
                   </a>
                   <div style="margin: 0.15rem; line-height: 1.3; display: flex; gap: 6px; flex-wrap: wrap;">
                     {% for author in record.author %}
                       {% if author === person or  collections.publicationsByAuthor[author].length < 1 %}
                         <div class="badge" style="display: flex; font-weight: 500;">{{author}}</div>
                       {% else %}
-                        <div><a class="badge" style="display: flex; font-weight: 500" href="/publications/members/{{ author | slugify }}/">{{author}}</span></a></div>
+                          <div><a class="badge" style="display: flex; font-weight: 500" href="{{ ('/publications/members/' ~ (author | slugify) ~ '/') | url }}">{{author}}</span></a></div>
                       {% endif %}
                     {% endfor %}
                   </div>

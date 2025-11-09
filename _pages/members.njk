@@ -9,7 +9,7 @@ permalink: /members/
     {% for member in members %}
         {% if member.group === "faculty" %}
         <div class="person-member" style="margin-top: 0.8rem;">
-            <img style="width: 80px; height: 80px" src="/assets/members/{{ member.photo }}" alt="{{ member.name }}">
+            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
             <div class="person-info">
                 {% if member.url %}
                     <h3 style="margin-bottom: 0px; margin-top: 0px"><a href="{{ member.url }}" target="_blank">{{member.name}} <sup style="opacity: 0.5">↗</sup></a></h3>
@@ -18,7 +18,7 @@ permalink: /members/
                     {% set name %}{{ member.name | trim }}{% endset %}
                     {% if collections.publicationsByAuthor[name].length > 0 %}
                         <p style="margin-bottom: 0.45rem;">Contributed to 
-                            <a href="/publications/members/{{ member.name | slugify }}/">{{collections.publicationsByAuthor[name].length}}
+                            <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
                                 {% if collections.publicationsByAuthor[name].length > 1 %}
                                     publications <span style="opacity: 0.5">→</span> 
                                 {% else %}
@@ -41,7 +41,7 @@ permalink: /members/
     {% if member.group === "members" %}
       <div class="person-member">
         {% if member.photo %}
-            <img style="width: 80px; height: 80px" src="/assets/members/{{ member.photo }}" alt="{{ member.name }}">
+            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
         {% else %}
             <div class="small avatar"><span>{{ member.name | string | initials }}</span></div>
         {% endif %}
@@ -55,7 +55,7 @@ permalink: /members/
                 {% set name %}{{ member.name | trim }}{% endset %}
                 {% if collections.publicationsByAuthor[name].length > 0 %}
                     <p style="margin-bottom: 0.45rem;">Contributed to 
-                        <a href="/publications/members/{{ member.name | slugify }}/">{{collections.publicationsByAuthor[name].length}}
+                        <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
                             {% if collections.publicationsByAuthor[name].length > 1 %}
                                 publications <span style="opacity: 0.5">→</span>
                             {% else %}
@@ -82,7 +82,7 @@ permalink: /members/
     {% if member.group === "alumni" %}
       <div class="person-member">
         {% if member.photo %}
-            <img style="width: 80px; height: 80px" src="/assets/members/{{ member.photo }}" alt="{{ member.name }}">
+            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
         {% else %}
             <div class="small avatar text-avatar"><span>{{ member.name | string | initials }}</span></div>
         {% endif %}
@@ -96,7 +96,7 @@ permalink: /members/
                 {% set name %}{{ member.name | trim }}{% endset %}
                 {% if collections.publicationsByAuthor[name].length > 0 %}
                     <p style="margin-bottom: 0.45rem;">Contributed to 
-                        <a href="/publications/members/{{ member.name | slugify }}/">{{collections.publicationsByAuthor[name].length}}
+                        <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
                             {% if collections.publicationsByAuthor[name].length > 1 %}
                                 publications <span style="opacity: 0.5">→</span>
                             {% else %}

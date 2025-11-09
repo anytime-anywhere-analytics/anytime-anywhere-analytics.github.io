@@ -2,6 +2,13 @@ const CleanCSS = require("clean-css");
 const { minify } = require("terser");
 const { readFileSync } = require("fs");
 module.exports = function (config) {
+  // Helper to safely derive a venue name for a publication
+  const getVenue = (item) => {
+    const v = item && (item.journal || item.booktitle || item.venue || item.publisher);
+    if (!v) return null;
+    // Ensure string and normalize '&' to 'and' to keep URL slugs stable
+    return String(v).replace('&', 'and');
+  };
   config.addFilter('filterByKeyValue', function(arr, key, value) {
     return arr.filter(function(item) {
         return item[key] === value;
@@ -12,42 +19,47 @@ module.exports = function (config) {
     return collectionApi.getAll()[0].data[dataName];
   });
   config.addCollection("publicationYears", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
-    return [...new Set(allPublications.map(item => item.year))];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    return [...new Set(allPublications.map(item => item?.year).filter(y => y !== undefined && y !== null))];
   });
   config.addCollection("publicationsByYear", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
     let byYear = {};
-    const years = [...new Set(allPublications.map(item => item.year))];
+    const years = [...new Set(allPublications.map(item => item?.year).filter(y => y !== undefined && y !== null))];
     for (const year of years) {
-      byYear[year] = allPublications.filter(item => item['year'] === year);
+      byYear[year] = allPublications.filter(item => item && item.year === year);
     }
     return byYear;
   });
   config.addCollection("publicationVenues", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
-    return [...new Set(allPublications.map(item => item.journal.replace('&', 'and')))];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    return [...new Set(allPublications.map(getVenue).filter(Boolean))];
   });
   config.addCollection("publicationsByVenue", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
     let byVenue = {};
-    const venues = [...new Set(allPublications.map(item => item.journal.replace('&', 'and')))];
+    const venues = [...new Set(allPublications.map(getVenue).filter(Boolean))];
     for (const venue of venues) {
-      byVenue[venue] = allPublications.filter(item => item['journal'].replace('&', 'and') === venue);
+      byVenue[venue] = allPublications.filter(item => getVenue(item) === venue);
     }
     return byVenue;
   });
   config.addCollection("publicationAuthors", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
-    const authors = [...new Set([...new Set(allPublications.flatMap(item => item.author))].map(x => x.trim()))];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const raw = allPublications.flatMap(item => Array.isArray(item?.author) ? item.author : (item?.author ? [item.author] : []));
+    const authors = [...new Set(raw.map(x => (typeof x === 'string' ? x.trim() : String(x).trim())).filter(Boolean))];
     return authors;
   });
   config.addCollection("publicationsByAuthor", (collectionApi) => {
-    const allPublications = collectionApi.getAll()[0].data.publications;
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const raw = allPublications.flatMap(item => Array.isArray(item?.author) ? item.author : (item?.author ? [item.author] : []));
+    const authors = [...new Set(raw.map(x => (typeof x === 'string' ? x.trim() : String(x).trim())).filter(Boolean))];
     let byAuthor = {};
-    const authors = [...new Set([...new Set(allPublications.flatMap(item => item.author))].map(x => x.trim()))];
     for (const author of authors) {
-      byAuthor[author] = allPublications.filter(item => item['author'].includes(author));
+      byAuthor[author] = allPublications.filter(item => {
+        const arr = Array.isArray(item?.author) ? item.author : (item?.author ? [item.author] : []);
+        return arr.some(a => (typeof a === 'string' ? a.trim() : String(a).trim()) === author);
+      });
     }
     return byAuthor;
   });
@@ -106,4 +118,8 @@ module.exports = function (config) {
       callback(null, code);
     }
   });
+  // Return Eleventy configuration to support pathPrefix for GitHub Pages
+  return {
+    pathPrefix: process.env.PATH_PREFIX || "/"
+  };
 }
