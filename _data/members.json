@@ -1,13 +1,6 @@
 [
     {
         "group": "members",
-        "name": "Anton Wolter",
-        "now_role": "Ph.D. Student in Computer Science",
-        "now_at": "Aarhus University",
-        "since": "Fall 2025"
-    },
-    {
-        "group": "members",
         "name": "Hugo Andersson",
         "now_role": "Ph.D. Student in Computer Science",
         "now_at": "Aarhus University",
@@ -18,7 +11,8 @@
         "name": "Vaishali Dhanoa",
         "now_role": "Postdoctoral Researcher at CA3",
         "now_at": "Aarhus University",
-        "since": "Fall 2025"
+        "since": "Fall 2025",
+        "photo": "dhanoa.jpg"
     },
     {
         "group": "members",
@@ -99,13 +93,6 @@
         "now_at": "University of Maryland College Park",
         "photo": "naimul.jpeg",
         "url": "https://naimulh0que.github.io"
-    },
-    {
-        "group": "members",
-        "name": "Vaishali Dhanoa",
-        "then_at": "Johannes Kepler University, Linz, Austria",
-        "photo": "dhanoa.jpg",
-        "url": "https://jku-vds-lab.at/persons/dhanoa/"
     },
     {
         "group": "alumni",

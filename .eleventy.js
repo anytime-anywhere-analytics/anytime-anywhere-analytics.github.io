@@ -1,6 +1,9 @@
 const CleanCSS = require("clean-css");
 const { minify } = require("terser");
 const { readFileSync } = require("fs");
+const path = require("path");
+const Image = require("@11ty/eleventy-img");
+
 module.exports = function (config) {
   // Helper to safely derive a venue name for a publication
   const getVenue = (item) => {
@@ -105,6 +108,36 @@ module.exports = function (config) {
     return data.toString('utf8');
   }
   config.addShortcode("svg", getSvgContent);
+
+  // Member thumbnail image processing
+  config.addNunjucksAsyncShortcode("memberImage", async function (src, alt, sizes = "80px") {
+    if (!src) {
+      return "";
+    }
+
+    let metadata = await Image(`./assets/members/${src}`, {
+      widths: [80, 160], // 1x and 2x for retina displays
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/assets/members/optimized/",
+      urlPath: "/assets/members/optimized/",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}w.${format}`;
+      }
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+      style: "width: 80px; height: 80px; object-fit: cover;"
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
   config.addPassthroughCopy("assets");
   config.addNunjucksAsyncFilter("jsmin", async function (
     code,

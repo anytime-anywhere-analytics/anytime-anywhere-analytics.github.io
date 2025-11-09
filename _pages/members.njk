@@ -9,7 +9,9 @@ permalink: /members/
     {% for member in members %}
         {% if member.group === "faculty" %}
         <div class="person-member" style="margin-top: 0.8rem;">
-            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
+            {% if member.photo %}
+            {% memberImage member.photo, member.name %}
+            {% endif %}
             <div class="person-info">
                 {% if member.url %}
                     <h3 style="margin-bottom: 0px; margin-top: 0px"><a href="{{ member.url }}" target="_blank">{{member.name}} <sup style="opacity: 0.5">↗</sup></a></h3>
@@ -41,7 +43,7 @@ permalink: /members/
     {% if member.group === "members" %}
       <div class="person-member">
         {% if member.photo %}
-            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
+            {% memberImage member.photo, member.name %}
         {% else %}
             <div class="small avatar"><span>{{ member.name | string | initials }}</span></div>
         {% endif %}
@@ -82,7 +84,7 @@ permalink: /members/
     {% if member.group === "alumni" %}
       <div class="person-member">
         {% if member.photo %}
-            <img style="width: 80px; height: 80px" src="{{ ('/assets/members/' ~ member.photo) | url }}" alt="{{ member.name }}">
+            {% memberImage member.photo, member.name %}
         {% else %}
             <div class="small avatar text-avatar"><span>{{ member.name | string | initials }}</span></div>
         {% endif %}
@@ -130,7 +132,7 @@ permalink: /members/
     {% if member.group === "collaborators" %}
       <div class="person-member">
         {% if member.photo %}
-            <img style="width: 80px; height: 80px" src="/assets/members/{{ member.photo }}" alt="{{ member.name }}">
+            {% memberImage member.photo, member.name %}
         {% else %}
             <div class="small avatar"><span>{{ member.name | string | initials }}</span></div>
         {% endif %}
