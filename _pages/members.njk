@@ -3,176 +3,209 @@ layout: base.njk
 title: Members
 permalink: /members/
 ---
+
 <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
-<h3>Faculty</h3>
-<div>
-    {% for member in members %}
-        {% if member.group === "faculty" %}
-        <div class="person-member" style="margin-top: 0.8rem;">
-            {% if member.photo %}
-            {% memberImage member.photo, member.name %}
+    <h3>Faculty</h3>
+    <div>
+        {% for member in members %}
+            {% if member.group === "faculty" %}
+                <div class="person-member" style="margin-top: 0.8rem;">
+                    {% if member.photo %}
+                        {% memberImage member.photo, member.name %}
+                    {% endif %}
+                    <div class="person-info">
+                        {% if member.url %}
+                            <h3 style="margin-bottom: 0px; margin-top: 0px">
+                                <a href="{{ member.url }}" target="_blank">{{ member.name }}
+                                    <sup style="opacity: 0.5">↗</sup>
+                                </a>
+                            </h3>
+                        {% endif %}
+                        <small>
+                            {% set name %}{{ member.name | trim }}{% endset %}
+                            {% if collections.publicationsByAuthor[name].length > 0 %}
+                                <p style="margin-bottom: 0.45rem;">Contributed to
+                                    <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{ collections.publicationsByAuthor[name].length }}
+                                        {% if collections.publicationsByAuthor[name].length > 1 %}
+                                            publications
+                                            <span style="opacity: 0.5">→</span>
+                                        {% else %}
+                                            publication
+                                            <span style="opacity: 0.5">→</span>
+                                        {% endif %}
+                                    </a>
+                                </p>
+                            {% endif %}
+                            <p style="font-weight: 500">{{ member.now_role }}</p>
+                            <p>{{ member.now_at }}</p>
+                        </small>
+                    </div>
+                </div>
             {% endif %}
-            <div class="person-info">
-                {% if member.url %}
-                    <h3 style="margin-bottom: 0px; margin-top: 0px"><a href="{{ member.url }}" target="_blank">{{member.name}} <sup style="opacity: 0.5">↗</sup></a></h3>
-                {% endif %}
-                <small>
-                    {% set name %}{{ member.name | trim }}{% endset %}
-                    {% if collections.publicationsByAuthor[name].length > 0 %}
-                        <p style="margin-bottom: 0.45rem;">Contributed to 
-                            <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
-                                {% if collections.publicationsByAuthor[name].length > 1 %}
-                                    publications <span style="opacity: 0.5">→</span> 
+        {% endfor %}
+    </div>
+    <h3>Current Members</h3>
+    <div class="person-container">
+        {% for member in members %}
+            {% if member.group === "members" %}
+                <div class="person-member">
+                    {% if member.photo %}
+                        {% memberImage member.photo, member.name %}
+                    {% else %}
+                        <div class="small avatar">
+                            <span>{{ member.name | string | initials }}</span>
+                        </div>
+                    {% endif %}
+                    <div class="person-info">
+                        {% if member.url %}
+                            <h4>
+                                <a href="{{ member.url }}" target="_blank">{{ member.name }}
+                                    <sup style="opacity: 0.5">↗</sup>
+                                </a>
+                            </h4>
+                        {% else %}
+                            <h4>{{ member.name }}</h4>
+                        {% endif %}
+                        <small>
+                            {% set name %}{{ member.name | trim }}{% endset %}
+                            {% if collections.publicationsByAuthor[name].length > 0 %}
+                                <p style="margin-bottom: 0.45rem;">Contributed to
+                                    <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{ collections.publicationsByAuthor[name].length }}
+                                        {% if collections.publicationsByAuthor[name].length > 1 %}
+                                            publications
+                                            <span style="opacity: 0.5">→</span>
+                                        {% else %}
+                                            publication
+                                            <span style="opacity: 0.5">→</span>
+                                        {% endif %}
+                                    </a>
+                                </p>
+                            {% endif %}
+                            <p style="font-weight: 500">{{ member.now_role }}</p>
+                            <p>{{ member.now_at }}</p>
+                            <p>{{ member.office }}</p>
+                            {% if member.since %}
+                                <p>
+                                    <em>{{ member.since }}</em>
+                                </p>
+                            {% endif %}
+                        </small>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <h3>Alumni</h3>
+    <div class="person-container">
+        {% for member in members %}
+            {% if member.group === "alumni" %}
+                <div class="person-member">
+                    {% if member.photo %}
+                        {% memberImage member.photo, member.name %}
+                    {% else %}
+                        <div class="small avatar text-avatar">
+                            <span>{{ member.name | string | initials }}</span>
+                        </div>
+                    {% endif %}
+                    <div class="person-info">
+                        {% if member.url %}
+                            <h4>
+                                <a href="{{ member.url }}" target="_blank">{{ member.name }}
+                                    <sup style="opacity: 0.5">↗</sup>
+                                </a>
+                            </h4>
+                        {% else %}
+                            <h4>{{ member.name }}</h4>
+                        {% endif %}
+                        <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                            {% set name %}{{ member.name | trim }}{% endset %}
+                            {% if collections.publicationsByAuthor[name].length > 0 %}
+                                <p style="margin-bottom: 0.45rem;">Contributed to
+                                    <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{ collections.publicationsByAuthor[name].length }}
+                                        {% if collections.publicationsByAuthor[name].length > 1 %}
+                                            publications
+                                            <span style="opacity: 0.5">→</span>
+                                        {% else %}
+                                            publication
+                                            <span style="opacity: 0.5">→</span>
+                                        {% endif %}
+                                    </a>
+                                </p>
+                            {% endif %}
+                            {% if member.then_role %}
+                                {% if member.then_year %}
+                                    <span style="font-weight: 600; color: #0273A8">Role as of {{ member.then_year }} ⤵</span>
                                 {% else %}
-                                    publication <span style="opacity: 0.5">→</span>
+                                    <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
                                 {% endif %}
-                            </a>
-                        </p>
-                    {% endif %}
-                    <p style="font-weight: 500">{{ member.now_role }}</p>
-                    <p>{{ member.now_at }}</p>
-                </small>
-            </div>
-        </div>
-        {% endif %}
-    {% endfor %}
-</div>
-<h3>Current Members</h3>
-<div class="person-container">
-{% for member in members %}
-    {% if member.group === "members" %}
-      <div class="person-member">
-        {% if member.photo %}
-            {% memberImage member.photo, member.name %}
-        {% else %}
-            <div class="small avatar"><span>{{ member.name | string | initials }}</span></div>
-        {% endif %}
-        <div class="person-info">
-            {% if member.url %}
-            <h4><a href="{{ member.url }}" target="_blank">{{ member.name }} <sup style="opacity: 0.5">↗</sup></a></h4>
-            {% else %}
-            <h4>{{ member.name }}</h4>
-            {% endif %}
-            <small>
-                {% set name %}{{ member.name | trim }}{% endset %}
-                {% if collections.publicationsByAuthor[name].length > 0 %}
-                    <p style="margin-bottom: 0.45rem;">Contributed to 
-                        <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
-                            {% if collections.publicationsByAuthor[name].length > 1 %}
-                                publications <span style="opacity: 0.5">→</span>
-                            {% else %}
-                                publication <span style="opacity: 0.5">→</span>
                             {% endif %}
-                        </a>
-                    </p>
-                {% endif %}
-                <p style="font-weight: 500">{{ member.now_role }}</p>
-                <p>{{ member.now_at }}</p>
-                <p>{{ member.office }}</p>
-                {% if member.since %}
-                    <p><em>{{ member.since }}</em></p>
-                {% endif %}
-            </small>
-        </div>
+                            <p style="margin-bottom: 0.4rem">{{ member.then_at }}</p>
+                            {% if member.now_role and member.now_at %}
+                                <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                                <p style="font-weight: 500">{{ member.now_role }}</p>
+                                <p>{{ member.now_at }}</p>
+                            {% endif %}
+                        </small>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
-    {% endif %}
-{% endfor %}
-</div>
-<h3>Alumni</h3>
-<div class="person-container">
-{% for member in members %}
-    {% if member.group === "alumni" %}
-      <div class="person-member">
-        {% if member.photo %}
-            {% memberImage member.photo, member.name %}
-        {% else %}
-            <div class="small avatar text-avatar"><span>{{ member.name | string | initials }}</span></div>
-        {% endif %}
-        <div class="person-info">
-            {% if member.url %}
-            <h4><a href="{{ member.url }}" target="_blank">{{ member.name }} <sup style="opacity: 0.5">↗</sup></a></h4>
-            {% else %}
-            <h4>{{ member.name }}</h4>
-            {% endif %}
-            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
-                {% set name %}{{ member.name | trim }}{% endset %}
-                {% if collections.publicationsByAuthor[name].length > 0 %}
-                    <p style="margin-bottom: 0.45rem;">Contributed to 
-                        <a href="{{ ('/publications/members/' ~ (member.name | slugify) ~ '/') | url }}">{{collections.publicationsByAuthor[name].length}}
-                            {% if collections.publicationsByAuthor[name].length > 1 %}
-                                publications <span style="opacity: 0.5">→</span>
-                            {% else %}
-                                publication <span style="opacity: 0.5">→</span>
-                            {% endif %}
-                        </a>
-                    </p>
-                {% endif %}
-                {% if member.then_role %}
-                    {% if member.then_year %}
-                        <span style="font-weight: 600; color: #0273A8">Role as of {{ member.then_year }} ⤵</span>
+    <h3>External Collaborators</h3>
+    <div class="person-container">
+        {% for member in members %}
+            {% if member.group === "collaborators" %}
+                <div class="person-member">
+                    {% if member.photo %}
+                        {% memberImage member.photo, member.name %}
                     {% else %}
-                        <span style="font-weight: 600; color: #0273A8">Then role ⤵</span>
+                        <div class="small avatar">
+                            <span>{{ member.name | string | initials }}</span>
+                        </div>
                     {% endif %}
-                {% endif%}
-                <p style="margin-bottom: 0.4rem">{{ member.then_at }}</p>
-                {% if member.now_role and member.now_at %}
-                    <span style="font-weight: 600; color: #0273A8">Current Role ⤵</span>
-                    <p style="font-weight: 500">{{ member.now_role }}</p>
-                    <p>{{ member.now_at }}</p>
-                {% endif %}
-            </small>
-        </div>
-    </div>
-    {% endif %}
-{% endfor %}
-</div>
-<h3>External Collaborators</h3>
-<div class="person-container">
-{% for member in members %}
-    {% if member.group === "collaborators" %}
-      <div class="person-member">
-        {% if member.photo %}
-            {% memberImage member.photo, member.name %}
-        {% else %}
-            <div class="small avatar"><span>{{ member.name | string | initials }}</span></div>
-        {% endif %}
-        <div class="person-info">
-            {% if member.url %}
-            <h4><a href="{{ member.url }}" target="_blank">{{ member.name }} <sup style="opacity: 0.5">↗</sup></a></h4>
-            {% else %}
-            <h4>{{ member.name }}</h4>
-            {% endif %}
-            <small style="display: flex; flex-direction: column; gap: 0.125rem;">
-                {% set name %}{{ member.name | trim }}{% endset %}
-                {% if collections.publicationsByAuthor[name].length > 0 %}
-                    <p style="margin-bottom: 0.45rem;">Contributed to 
-                        <a href="/publications/members/{{ member.name | slugify }}/">{{collections.publicationsByAuthor[name].length}}
-                            {% if collections.publicationsByAuthor[name].length > 1 %}
-                                publications <span style="opacity: 0.5">→</span>
-                            {% else %}
-                                publication <span style="opacity: 0.5">→</span>
+                    <div class="person-info">
+                        {% if member.url %}
+                            <h4>
+                                <a href="{{ member.url }}" target="_blank">{{ member.name }}
+                                    <sup style="opacity: 0.5">↗</sup>
+                                </a>
+                            </h4>
+                        {% else %}
+                            <h4>{{ member.name }}</h4>
+                        {% endif %}
+                        <small style="display: flex; flex-direction: column; gap: 0.125rem;">
+                            {% set name %}{{ member.name | trim }}{% endset %}
+                            {% if collections.publicationsByAuthor[name].length > 0 %}
+                                <p style="margin-bottom: 0.45rem;">Contributed to
+                                    <a href="/publications/members/{{ member.name | slugify }}/">{{ collections.publicationsByAuthor[name].length }}
+                                        {% if collections.publicationsByAuthor[name].length > 1 %}
+                                            publications
+                                            <span style="opacity: 0.5">→</span>
+                                        {% else %}
+                                            publication
+                                            <span style="opacity: 0.5">→</span>
+                                        {% endif %}
+                                    </a>
+                                </p>
                             {% endif %}
-                        </a>
-                    </p>
-                {% endif %}
-                {% if member.then_role and member.then_at %}
-                    {% if member.then_year %}
-                        <span style="opacity: 80%; font-weight: 600; color: #0273A8">Role as of {{ member.then_year }} ⤵</span>
-                    {% else %}
-                        <span style="opacity: 80%; font-weight: 600; color: #0273A8">Then role ⤵</span>
-                    {% endif %}
-                <p style="font-weight: 500;">{{ member.then_role }}</p>
-                <p style="margin-bottom: 0.4rem">{{ member.then_at }}</p>
-                {% endif %}
-                {% if member.now_role and member.now_at %}
-                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
-                    <p style="font-weight: 500">{{ member.now_role }}</p>
-                    <p>{{ member.now_at }}</p>
-                {% endif %}
-            </small>
-        </div>
+                            {% if member.then_role and member.then_at %}
+                                {% if member.then_year %}
+                                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Role as of {{ member.then_year }} ⤵</span>
+                                {% else %}
+                                    <span style="opacity: 80%; font-weight: 600; color: #0273A8">Then role ⤵</span>
+                                {% endif %}
+                                <p style="font-weight: 500;">{{ member.then_role }}</p>
+                                <p style="margin-bottom: 0.4rem">{{ member.then_at }}</p>
+                            {% endif %}
+                            {% if member.now_role and member.now_at %}
+                                <span style="opacity: 80%; font-weight: 600; color: #0273A8">Current Role ⤵</span>
+                                <p style="font-weight: 500">{{ member.now_role }}</p>
+                                <p>{{ member.now_at }}</p>
+                            {% endif %}
+                        </small>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
-    {% endif %}
-{% endfor %}
-</div>
 </div>
