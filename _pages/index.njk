@@ -317,19 +317,19 @@ permalink: /
                     key pillars.</h3>
                 <div class="grid-container">
                     <div class="grid-item">
-                        <img src='{{ '/assets/rp1.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
+                        {% responsiveImage 'rp1.jpg', 'Data Infrastructures research pillar', '(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 300px; object-fit: cover;' %}
                         <h2>Data Infrastructures</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='{{ '/assets/rp2.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
+                        {% responsiveImage 'rp2.jpg', 'Flexible Visual Representations research pillar', '(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 300px; object-fit: cover;' %}
                         <h2>Flexible Visual Representations</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='{{ '/assets/rp3.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
+                        {% responsiveImage 'rp3.jpg', 'Sensing and Interaction research pillar', '(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 300px; object-fit: cover;' %}
                         <h2>Sensing and Interaction</h2>
                     </div>
                     <div class="grid-item">
-                        <img src='{{ '/assets/rp4.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
+                        {% responsiveImage 'rp4.jpg', 'Human Centered AI research pillar', '(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 300px; object-fit: cover;' %}
                         <h2>Human Centered AI</h2>
                     </div>
                 </div>
@@ -342,15 +342,15 @@ permalink: /
                         testbeds.</h3>
                     <div class="grid-container">
                         <div class="grid-item">
-                            <img src='{{ '/assets/tb1.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
+                            {% responsiveImage 'tb1.jpg', 'Scientific Inquiry testbed', '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 400px; object-fit: cover;' %}
                             <h2>Scientific Inquiry</h2>
                         </div>
                         <div class="grid-item">
-                            <img src='{{ '/assets/tb2.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
+                            {% responsiveImage 'tb2.jpg', 'Manufacturing testbed', '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 400px; object-fit: cover;' %}
                             <h2>Manufacturing</h2>
                         </div>
                         <div class="grid-item">
-                            <img src='{{ '/assets/tb3.jpg' | url }}' style="width: 100%; max-height: 400px;"/>
+                            {% responsiveImage 'tb3.jpg', 'Higher Education testbed', '(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw', 'width: 100%; max-height: 400px; object-fit: cover;' %}
                             <h2>Higher Education</h2>
                         </div>
                     </div>
@@ -362,7 +362,7 @@ permalink: /
                             <div class="card-container">
                                 <div class="card-container-image">
                                     <div style="">
-                                        <img src='{{ ('/assets/' ~ project.image) | url }}' alt='{{ project.image }}' style="width: 100%; object-fit: cover;"/>
+                                        {% responsiveImage project.image, project.title, '(min-width: 768px) 50vw, 100vw', 'width: 100%; object-fit: cover;' %}
                                     </div>
                                 </div>
                                 <div class="card-container-detail">
@@ -398,7 +398,7 @@ permalink: /
                 <h1 style="text-align: center; color: hsl(208, 100%, 23%); font-size: 32px; margin-top: -5px">Our Team</h1>
                 <div class="grid-container">
                     <div class="grid-item">
-                        <img src='{{ '/assets/members/niklas.jpg' | url }}' style="width: 100%; max-height: 300px;"/>
+                        {% directorImage 'niklas.jpg', 'Niklas Elmqvist - Director' %}
                         <h2>Director</h2>
                     </div>
                     <div class="grid-item">

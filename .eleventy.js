@@ -138,6 +138,67 @@ module.exports = function (config) {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
+  // Responsive image processing for larger images
+  config.addNunjucksAsyncShortcode("responsiveImage", async function (src, alt, sizes = "100vw", customStyle = "") {
+    if (!src) {
+      return "";
+    }
+
+    let metadata = await Image(`./assets/${src}`, {
+      widths: [300, 600, 900, 1200], // Multiple sizes for responsive images
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/assets/optimized/",
+      urlPath: "/assets/optimized/",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}w.${format}`;
+      }
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async"
+    };
+
+    if (customStyle) {
+      imageAttributes.style = customStyle;
+    }
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  // Director/larger member image processing
+  config.addNunjucksAsyncShortcode("directorImage", async function (src, alt, sizes = "(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw") {
+    if (!src) {
+      return "";
+    }
+
+    let metadata = await Image(`./assets/members/${src}`, {
+      widths: [300, 600], // Larger sizes for director image
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/assets/members/optimized/",
+      urlPath: "/assets/members/optimized/",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}w.${format}`;
+      }
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+      style: "width: 100%; max-height: 300px; object-fit: cover;"
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
   config.addPassthroughCopy("assets");
   config.addNunjucksAsyncFilter("jsmin", async function (
     code,
