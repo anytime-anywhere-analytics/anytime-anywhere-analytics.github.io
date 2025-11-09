@@ -6,10 +6,10 @@ permalink: /members/
 
 <div style="margin:auto; padding:1rem; padding-top: 0px; max-width:120em;">
     <h3>Faculty</h3>
-    <div>
+    <div class="person-container" style="grid-template-columns: 1fr;">
         {% for member in members %}
             {% if member.group === "faculty" %}
-                <div class="person-member" style="margin-top: 0.8rem;">
+                <div class="person-member">
                     {% if member.photo %}
                         {% memberImage member.photo, member.name %}
                     {% endif %}
