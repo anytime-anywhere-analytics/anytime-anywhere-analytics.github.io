@@ -16,14 +16,14 @@ module.exports = function (config) {
 });
   config.addCollection("allPublications", (collectionApi) => {
     const dataName = "publications";
-    return collectionApi.getAll()[0].data[dataName];
+    return collectionApi.getAll()[0].data[dataName].sort((a, b) => b.year - a.year);
   });
   config.addCollection("publicationYears", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     return [...new Set(allPublications.map(item => item?.year).filter(y => y !== undefined && y !== null))];
   });
   config.addCollection("publicationsByYear", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     let byYear = {};
     const years = [...new Set(allPublications.map(item => item?.year).filter(y => y !== undefined && y !== null))];
     for (const year of years) {
@@ -32,11 +32,11 @@ module.exports = function (config) {
     return byYear;
   });
   config.addCollection("publicationVenues", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     return [...new Set(allPublications.map(getVenue).filter(Boolean))];
   });
   config.addCollection("publicationsByVenue", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     let byVenue = {};
     const venues = [...new Set(allPublications.map(getVenue).filter(Boolean))];
     for (const venue of venues) {
@@ -45,13 +45,13 @@ module.exports = function (config) {
     return byVenue;
   });
   config.addCollection("publicationAuthors", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     const raw = allPublications.flatMap(item => Array.isArray(item?.author) ? item.author : (item?.author ? [item.author] : []));
     const authors = [...new Set(raw.map(x => (typeof x === 'string' ? x.trim() : String(x).trim())).filter(Boolean))];
     return authors;
   });
   config.addCollection("publicationsByAuthor", (collectionApi) => {
-    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications || [];
+    const allPublications = (collectionApi.getAll()[0] || {}).data?.publications.sort((a, b) => b.year - a.year) || [];
     const raw = allPublications.flatMap(item => Array.isArray(item?.author) ? item.author : (item?.author ? [item.author] : []));
     const authors = [...new Set(raw.map(x => (typeof x === 'string' ? x.trim() : String(x).trim())).filter(Boolean))];
     let byAuthor = {};
