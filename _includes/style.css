@@ -415,6 +415,11 @@ img {
   margin-right: 20px;
   object-fit: cover;
   transition: all 0.25s ease-in-out;
+  background: radial-gradient(
+    circle,
+    rgba(0, 61, 115, 0.7) 0%,
+    rgba(32, 90, 140, 0.3) 100%
+  );
 }
 .person-member img:hover {
   width: 150px;
