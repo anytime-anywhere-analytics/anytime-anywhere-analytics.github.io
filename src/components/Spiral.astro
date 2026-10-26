@@ -1,0 +1,15 @@
+---
+/* helix of portraits; motion lives in /js/site.js */
+import { initials } from "../lib/data";
+const { items, cardWidth = 104, cardHeight = 104, cardRadius = 16 } = Astro.props;
+---
+<div class="spiral" data-spiral style={`perspective:1000px;--sp-w:${cardWidth}px;--sp-h:${cardHeight}px;--sp-r:${cardRadius}px`}>
+  <div class="stage" role="list" aria-label="People">
+    {items.map((it: any) => (
+      <a class="sitem" href={it.href} role="listitem" aria-label={it.label}>
+        {it.image ? <img src={it.image} alt="" draggable="false" /> : <span class="ini">{initials(it.label)}</span>}
+        <span class="nm">{it.label}</span>
+      </a>
+    ))}
+  </div>
+</div>

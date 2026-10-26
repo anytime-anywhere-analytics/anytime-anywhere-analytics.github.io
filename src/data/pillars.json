@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ubiquitous",
+    "num": "01",
+    "title": "Ubiquitous Analytics",
+    "body": "Data analysis on ever-present mobile devices — bringing analytical capability into the everyday contexts where decisions actually happen.",
+    "long": "Analysis still assumes a desk, a large screen, and an uninterrupted hour. Ubiquitous analytics asks what the same work looks like when it happens on a phone in a corridor, on a watch mid-shift, or on a shared display in a lab. The research problems are interface problems — small viewports, divided attention, handover between devices — and infrastructure problems: keeping an analysis coherent as it moves.",
+    "image": "/assets/img/rp1.png"
+  },
+  {
+    "id": "immersive",
+    "num": "02",
+    "title": "Immersive Analytics",
+    "body": "Using virtual, augmented, and mixed reality to embed visual representations directly into physical and spatial workspaces.",
+    "long": "When a visual representation can be placed in the room, the room becomes part of the representation. We study spatial encodings, embodied interaction, and the practical question of what deserves to be three-dimensional — most data does not.",
+    "image": "/assets/img/rp2.png"
+  },
+  {
+    "id": "sensing",
+    "num": "03",
+    "title": "Sensing & Interaction",
+    "body": "Novel sensors and interaction modalities — speech, gesture, touch, gaze — that let humans negotiate with data fluidly.",
+    "long": "Interaction is the bottleneck in mobile and immersive analysis. We build and evaluate input techniques that survive real conditions: hands full, noise, gloves, low light, and a body that is standing rather than seated. This pillar also holds our work on accessible and power-free representations.",
+    "image": "/assets/img/rp3.png"
+  },
+  {
+    "id": "hcai",
+    "num": "04",
+    "title": "Human-Centered AI",
+    "body": "Computational intelligence designed to augment, not replace, human judgement throughout the sensemaking loop.",
+    "long": "Automated analysis is good at proposing and bad at deciding. We design systems where the machine runs the wide search and the analyst keeps the judgement, and we measure whether the division actually holds under time pressure.",
+    "image": "/assets/img/rp4.png"
+  }
+]

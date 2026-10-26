@@ -1,0 +1,15 @@
+---
+const { current = "", overHero = false } = Astro.props;
+const NAV = [["Publications", "/publications/"], ["People", "/people/"], ["News", "/news/"]];
+---
+<header class={"hdr" + (overHero ? " over" : "")} data-over-hero={overHero ? "true" : undefined}>
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">CA</span> CA³ <em>Anytime Anywhere Analytics</em></a>
+    <nav>{NAV.map(([label, href]) => <a href={href} aria-current={current === href ? "page" : undefined}>{label}</a>)}</nav>
+    <button class="searchfield" data-search-open aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 21 21"></path></svg>
+      <span>Search</span><kbd>⌘K</kbd>
+    </button>
+    <a class="joinbtn" href="/news/?tag=Hiring">Join us</a>
+  </div>
+</header>

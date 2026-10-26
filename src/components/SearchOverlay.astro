@@ -1,0 +1,23 @@
+---
+/* Static shell; wired up by /js/site.js against the Pagefind index built after `astro build`. */
+const SUGGESTED = ["Immersive analytics", "Wizualization", "Situated analytics", "Ph.D. positions", "Sensing & Interaction"];
+---
+<div class="searchover" hidden data-search-overlay>
+  <div class="sbar">
+    <div class="wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 21 21"></path></svg>
+      <input type="search" placeholder="Search the centre" aria-label="Search" spellcheck="false" data-search-input />
+      <button class="esc" data-search-close>Esc</button>
+    </div>
+  </div>
+  <div class="sbody">
+    <div class="wrap">
+      <div class="sgroup" data-search-suggested>
+        <h4>Suggested</h4>
+        <div class="sugg">{SUGGESTED.map((s) => <button class="chip" data-search-suggest={s}>{s}</button>)}</div>
+      </div>
+      <div data-search-results></div>
+      <div style="height:80px"></div>
+    </div>
+  </div>
+</div>

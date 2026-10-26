@@ -1,0 +1,17 @@
+---
+/* layered backdrop dissolve */
+const { position = "bottom", height = "6rem", strength = 2, layers = 5, opacity = 1 } = Astro.props;
+const inc = 100 / layers;
+const dir = position === "top" ? "to top" : "to bottom";
+const divs = Array.from({ length: layers }, (_, i) => {
+  const n = i + 1;
+  const p = Math.pow(n / layers, 1.4);
+  const blur = (0.0625 * (p * layers + 1) * strength).toFixed(3);
+  const stops = [`transparent ${(inc * n - inc).toFixed(1)}%`, `black ${(inc * n).toFixed(1)}%`];
+  if (inc * n + inc <= 100) stops.push(`black ${(inc * n + inc).toFixed(1)}%`);
+  if (inc * n + inc * 2 <= 100) stops.push(`transparent ${(inc * n + inc * 2).toFixed(1)}%`);
+  const mask = `linear-gradient(${dir}, ${stops.join(", ")})`;
+  return `mask-image:${mask};-webkit-mask-image:${mask};backdrop-filter:blur(${blur}rem);-webkit-backdrop-filter:blur(${blur}rem);opacity:${opacity}`;
+});
+---
+<div class={"gblur " + position} style={`height:${height}`}>{divs.map((s) => <i style={s}></i>)}</div>

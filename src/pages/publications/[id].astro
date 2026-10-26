@@ -1,0 +1,93 @@
+---
+import Base from "../../layouts/Base.astro";
+import Cover from "../../components/Cover.astro";
+import JoinCard from "../../components/JoinCard.astro";
+import Authors from "../../components/Authors.astro";
+import PubRows from "../../components/PubRows.astro";
+import { publications } from "../../lib/data";
+
+export function getStaticPaths() {
+  return publications.map((p: any) => ({ params: { id: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const related = publications.filter((x: any) => x.pillar === p.pillar && x.id !== p.id).slice(0, 3);
+/* vidstack source id for a YouTube or Vimeo link; other hosts fall back to a plain link */
+const videoSrc = (() => {
+  const u = p.video || "";
+  const yt = u.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
+  if (yt) return "youtube/" + yt[1];
+  const vm = u.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (vm) return "vimeo/" + vm[1];
+  return null;
+})();
+---
+<Base title={p.title + " · CA³"} description={p.hook || (p.abstract && p.abstract[0]) || `${(p.authors || []).join(", ")}. ${p.venue} ${p.year}.`} image={p.image} current="/publications/">
+  <div data-pagefind-meta={`kind:Publication,title:${p.title},meta:${p.venue} ${p.year}`}></div>
+  <div class="wrap read">
+    <div class="crumbs"><a href="/">Home</a><span>›</span><a href="/publications/">Publications</a><span>›</span><span>{p.year}</span></div>
+    <h1 style="font-size:clamp(30px,3.6vw,50px)">{p.title}</h1>
+    <div style="margin-top:18px;font-size:15px"><Authors names={p.authors} /></div>
+    <div class="small" style="margin-top:6px">{p.venue} · {p.year}</div>
+    <div style="display:flex;gap:10px;margin-top:28px;flex-wrap:wrap">
+      {p.pdf && <a class="btn dark sm" href={p.pdf} target="_blank" rel="noreferrer">Read the paper ↗</a>}
+      {p.video && (videoSrc
+        ? <button class="btn dark sm" data-dialog-open="pub-video">Watch the video ▶</button>
+        : <a class="btn dark sm" href={p.video} target="_blank" rel="noreferrer">Watch the video ↗</a>)}
+      {p.portal && <a class="btn dark sm" href={p.portal}>Research portal ↗</a>}
+      {p.doi && <a class="btn dark sm" href={p.doi}>DOI ↗</a>}
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:72px">
+    <div class="split">
+      <h2>Abstract</h2>
+      <div style="display:grid;gap:20px;max-width:72ch">
+        {(p.abstract && p.abstract.length ? p.abstract : [p.hook]).filter(Boolean).map((t: string) => <p style="color:var(--ink-80)">{t}</p>)}
+      </div>
+    </div>
+    {p.image && (
+      <div style="margin:64px 0">
+        <Cover label={`Teaser figure — ${p.title}`} src={p.image} parallax="26" caption="Teaser figure from the paper." />
+      </div>
+    )}
+    {(p.pillar || p.testbed) && (
+      <div class="split" style="padding-bottom:24px">
+        <h2>Research areas</h2>
+        <div class="arealist">
+          {p.pillar && <a class="arearow" href={`/publications/?pillar=${encodeURIComponent(p.pillar)}`}>{p.pillar} <span>›</span></a>}
+          {p.testbed && <a class="arearow" href={`/publications/?testbed=${encodeURIComponent(p.testbed)}`}>{p.testbed} <span>›</span></a>}
+        </div>
+      </div>
+    )}
+    {related.length > 0 && (
+      <div class="split" style="padding-top:56px">
+        <h2>Related</h2>
+        <div><PubRows rows={related} /></div>
+      </div>
+    )}
+  </div>
+  <JoinCard />
+  {videoSrc && (
+    <dialog class="modal" id="pub-video">
+      <div class="sheet video">
+        <button class="iconbtn close" data-dialog-close aria-label="Close">✕</button>
+        <media-player class="film-player" title={p.title} src={videoSrc} load="visible" playsinline>
+          <media-provider></media-provider>
+          <media-video-layout></media-video-layout>
+        </media-player>
+      </div>
+    </dialog>
+  )}
+</Base>
+
+<script>
+  /* video modal player; the script is hoisted per page so it just no-ops without a dialog */
+  import "vidstack/player/styles/default/theme.css";
+  import "vidstack/player/styles/default/layouts/video.css";
+  import "vidstack/player";
+  import "vidstack/player/layouts/default";
+  import "vidstack/player/ui";
+  import type { MediaPlayerElement } from "vidstack/elements";
+  const dlg = document.getElementById("pub-video") as HTMLDialogElement | null;
+  const player = dlg?.querySelector<MediaPlayerElement>("media-player");
+  dlg?.addEventListener("close", () => player?.pause());
+</script>

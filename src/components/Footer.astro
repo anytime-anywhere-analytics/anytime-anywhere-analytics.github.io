@@ -1,0 +1,33 @@
+---
+import { site } from "../lib/data";
+---
+<footer class="sitefoot">
+  <ca3-grainient class="fbg" color1="#000000" color2="#3B82F6" color3="#001f52" time-speed="0.25" grain-amount="0.1" grain-scale="2" grain-animated contrast="1.5" zoom="0.9"></ca3-grainient>
+  <div class="fin">
+    <div class="wrap">
+      <div class="footcols">
+        <div>
+          <div class="flogo"><span class="mark">CA</span> CA³</div>
+          <div class="big">{site.tagline}</div>
+          <div class="funders">{site.funders.map((f: any) => <img src={f.src} alt={f.alt} />)}</div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address>{site.contact.map((l: string) => (<>{/@/.test(l) ? <a href={"mailto:" + l} style="display:inline">{l}</a> : l}<br /></>))}</address>
+          <div class="social">{site.social.map(([l, h]: [string, string]) => <a href={h}>{l}</a>)}</div>
+        </div>
+        <div>
+          <h4>Centre</h4>
+          <a href="/publications/">Publications</a>
+          <a href="/people/">People</a>
+          <a href="/news/">News &amp; updates</a>
+          <a href="/news/?tag=Hiring">Join us</a>
+        </div>
+      </div>
+      <div class="footlegal">
+        <span>{site.domain}</span><span>{site.grant}</span>
+        <a href="/">Privacy</a><a href="/">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>

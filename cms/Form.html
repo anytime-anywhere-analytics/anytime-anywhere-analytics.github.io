@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<base target="_top">
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #111; background: #fff; }
+  form { padding: 16px 20px 84px; }
+  .f { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; align-items: start; padding: 8px 0; border-bottom: 1px solid #eee; }
+  .f:last-of-type { border-bottom: 0; }
+  label { font-weight: 600; padding-top: 6px; }
+  label small { display: block; font-weight: 400; color: #777; font-size: 12px; }
+  .req::after { content: " *"; color: #c00; }
+  input[type=text], input[type=number], input[type=date], textarea, select {
+    width: 100%; box-sizing: border-box; font: inherit; padding: 6px 8px; border: 1px solid #ccc; border-radius: 6px; background: #fff;
+  }
+  textarea { min-height: 64px; resize: vertical; }
+  textarea.tall { min-height: 160px; }
+  .help { color: #777; font-size: 12px; margin-top: 3px; }
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; display: flex; gap: 10px; align-items: center; padding: 12px 20px; background: #fafafa; border-top: 1px solid #e5e5e5; }
+  .bar .msg { flex: 1; font-size: 13px; white-space: pre-wrap; }
+  .bar .msg.err { color: #b00020; }
+  .bar .msg.ok { color: #1a7f37; }
+  button { font: inherit; padding: 8px 16px; border-radius: 8px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+  button.primary { background: #111; color: #fff; border-color: #111; }
+  button:disabled { opacity: .5; cursor: default; }
+  .other { margin-top: 6px; display: none; }
+</style>
+</head>
+<body>
+<form id="form" onsubmit="return false"></form>
+<div class="bar">
+  <div class="msg" id="msg"></div>
+  <button type="button" onclick="google.script.host.close()">Cancel</button>
+  <button type="button" class="primary" id="save">Save</button>
+</div>
+<script>
+  const P = <?!= payload ?>;
+  const form = document.getElementById("form");
+  const msg = document.getElementById("msg");
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  const control = (f, v) => {
+    const id = "f_" + f.key.replace(/\W/g, "_");
+    switch (f.type) {
+      case "long": case "paras": return `<textarea id="${id}" class="${f.type === "paras" ? "tall" : ""}">${esc(v)}</textarea>`;
+      case "list": case "pairs": return `<textarea id="${id}">${esc(v)}</textarea>`;
+      case "number": return `<input type="number" id="${id}" value="${esc(v)}" step="1">`;
+      case "bool": return `<input type="checkbox" id="${id}" ${v === true || v === "true" ? "checked" : ""}>`;
+      case "date": return `<input type="date" id="${id}" value="${esc(v)}">`;
+      case "select": {
+        const opts = P.options[f.key] || [];
+        const known = opts.includes(v);
+        const other = f.allowOther ? `<option value="__other__" ${v && !known ? "selected" : ""}>Other…</option>` : "";
+        return `<select id="${id}" data-other="${f.allowOther ? 1 : 0}"><option value="">—</option>${opts.map((o) => `<option ${o === v ? "selected" : ""}>${esc(o)}</option>`).join("")}${other}</select>
+                <input type="text" class="other" id="${id}_other" value="${v && !known ? esc(v) : ""}" placeholder="Type a value">`;
+      }
+      default: return `<input type="text" id="${id}" value="${esc(v)}">`;
+    }
+  };
+
+  const hint = (f) => ({ list: "one per line", paras: "paragraphs separated by a blank line", pairs: "a | b, one per line" }[f.type] || "");
+
+  form.innerHTML = P.fields.map((f) => `
+    <div class="f">
+      <label for="f_${f.key.replace(/\W/g, "_")}" class="${f.required ? "req" : ""}">${esc(f.key)}<small>${esc(f.type)}</small></label>
+      <div>${control(f, P.values[f.key])}${f.help || hint(f) ? `<div class="help">${esc([f.help, hint(f)].filter(Boolean).join(" — "))}</div>` : ""}</div>
+    </div>`).join("");
+
+  form.querySelectorAll("select[data-other='1']").forEach((sel) => {
+    const other = document.getElementById(sel.id + "_other");
+    const sync = () => { other.style.display = sel.value === "__other__" ? "block" : "none"; };
+    sel.addEventListener("change", sync); sync();
+  });
+
+  const read = () => {
+    const out = {};
+    for (const f of P.fields) {
+      const el = document.getElementById("f_" + f.key.replace(/\W/g, "_"));
+      if (f.type === "bool") out[f.key] = el.checked;
+      else if (f.type === "select" && el.value === "__other__") out[f.key] = document.getElementById(el.id + "_other").value.trim();
+      else out[f.key] = el.value;
+    }
+    return out;
+  };
+
+  document.getElementById("save").addEventListener("click", () => {
+    const btn = document.getElementById("save"); btn.disabled = true;
+    msg.className = "msg"; msg.textContent = "Saving…";
+    google.script.run
+      .withSuccessHandler((r) => { msg.className = "msg ok"; msg.textContent = `Saved row ${r.rowNum} (${r.id})`; setTimeout(() => google.script.host.close(), 600); })
+      .withFailureHandler((e) => { btn.disabled = false; msg.className = "msg err"; msg.textContent = e.message; })
+      .saveRow(P.tab, P.rowNum, read());
+  });
+  const first = form.querySelector("input,textarea,select"); if (first) first.focus();
+</script>
+</body>
+</html>
