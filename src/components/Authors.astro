@@ -1,0 +1,10 @@
+---
+import { memberIdByName } from "../lib/data";
+const { names } = Astro.props;
+---
+<div class="authors">{names.map((n: string, i: number) => (
+  <>
+    {i > 0 && <span class="sep">·</span>}
+    {memberIdByName[n] ? <a href={"/people/" + memberIdByName[n] + "/"}>{n}</a> : <span>{n}</span>}
+  </>
+))}</div>

@@ -1,0 +1,168 @@
+---
+import Base from "../layouts/Base.astro";
+import TopicRail from "../components/TopicRail.astro";
+import NewsList from "../components/NewsList.astro";
+import DomeGallery from "../components/DomeGallery.astro";
+import Cover from "../components/Cover.astro";
+import GBlur from "../components/GBlur.astro";
+import JoinCard from "../components/JoinCard.astro";
+import Authors from "../components/Authors.astro";
+import { site, pillars, testbeds, members, posts, publications, stats, featured, byDate, initials } from "../lib/data";
+
+const feat = featured();
+const director = members.find((m: any) => m.id === "niklas-elmqvist");
+const [big, ...rest] = feat;
+const domePeople = [
+  ...members.filter((m: any) => m.group === "faculty" || m.group === "current"),
+  ...members.filter((m: any) => m.group === "alumni" || m.group === "external"),
+];
+---
+<Base title="CA³ · Center for Anytime Anywhere Analytics" description="We research ubiquitous and immersive analytics — how data analysis behaves once it leaves the desk and enters the contexts where decisions are actually made." current="/" overHero={true}>
+  <section class="hero">
+    <ca3-prismatic animation-type="hover" intensity="2.5" speed="0.5" distort="1" hover-dampness="0.25" ray-count="0" mix-blend-mode="lighten" colors="#006aff,#0028c7,#0086ff"></ca3-prismatic>
+    <div class="scrim"></div>
+    <div class="inner wrap">
+      <h1 style="margin-top:20px">Data just got<br />situated.</h1>
+      <p class="sub">We research ubiquitous and immersive analytics — how data analysis behaves once it leaves the desk and enters the contexts where decisions are actually made.</p>
+      <div style="justify-content:center;display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+        <a class="btn" href="#pillars">Our research</a>
+        <a class="btn ghost" href="/publications/" style="color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)">Publications</a>
+      </div>
+      <div class="logos">{site.funders.map((f: any) => <img src={f.src} alt={f.alt} />)}</div>
+    </div>
+  </section>
+
+  <section class="tile">
+    <div class="wrap split">
+      <h2>Augmenting human cognition</h2>
+      <div>
+        <p class="lead">The Center for Anytime Anywhere Analytics researches ubiquitous and immersive analytics at the Department of Computer Science, Aarhus University.</p>
+        <p style="margin-top:20px;color:var(--ink-80);max-width:62ch">We explore ways in which data analysis can be embedded into the contexts and devices people already use — leveraging ever-present mobile devices and immersive technologies to augment human cognition and drive faster, better-informed decisions in testbeds across science, manufacturing, and education.</p>
+        <p class="small" style="margin-top:20px">{site.grant}</p>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:48px">
+      <div class="film">
+        <media-player class="film-player" title="CA³ — the film" src={"vimeo/" + site.film.vimeoId} poster={site.film.still} load="play" playsinline>
+          <media-provider></media-provider>
+          <media-video-layout></media-video-layout>
+        </media-player>
+      </div>
+      <div class="cap">A three-minute film on what the centre does, and why the desk is the wrong place for it.</div>
+    </div>
+  </section>
+
+  <section class="tile dark">
+    <div class="wrap">
+      <blockquote style="margin:0;max-width:26ch;font:600 clamp(28px,4vw,56px)/1.1 var(--display);letter-spacing:-.03em">“The work we do is about how everywhere data collection can let people understand their world anywhere, and anytime.”</blockquote>
+      <div style="display:flex;gap:14px;align-items:center;margin-top:40px">
+        <div class="avatar">{director && director.photo ? <img src={director.photo} alt="" /> : initials("Niklas Elmqvist")}</div>
+        <div>
+          <a href="/people/niklas-elmqvist/" style="font:600 15px/1.3 var(--text)">Niklas Elmqvist</a>
+          <div class="small">Director · Villum Investigator · Professor of Computer Science</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tile dark" id="pillars">
+    <div class="wrap">
+      <div class="sechead">
+        <div><div class="eyebrow">Four pillars</div><h2 style="margin-top:12px">Our research pillars</h2></div>
+        <a href="/publications/" class="nowrap">All publications →</a>
+      </div>
+      <TopicRail items={pillars} kind="Pillar" />
+    </div>
+  </section>
+
+  <section class="tile parchment">
+    <div class="wrap">
+      <div class="sechead">
+        <div><div class="eyebrow">Three testbeds</div><h2 style="margin-top:12px">Where we deploy</h2></div>
+        <a href="/publications/" class="nowrap">All publications →</a>
+      </div>
+      <TopicRail items={testbeds} kind="Testbed" />
+    </div>
+  </section>
+
+  <section class="tile">
+    <div class="wrap">
+      <div class="sechead"><h2>Featured publications</h2><a href="/publications/" class="nowrap">See all →</a></div>
+      <div class="featbig">
+        <div class="card">
+          {big.image && <a class="thumb" href={"/publications/" + big.id + "/"}><div class="ph has" data-parallax="28"><img src={big.image} alt="" loading="lazy" decoding="async" /></div></a>}
+          <div class="tag">{big.venue} {big.year}</div>
+          <a href={"/publications/" + big.id + "/"}><h3 style="font-size:clamp(22px,2vw,30px)">{big.title}</h3></a>
+          <p class="small" style="max-width:54ch">{big.hook}</p>
+          <Authors names={big.authors} />
+        </div>
+        <div class="featlist">
+          {rest.map((p: any) => (
+            <div class="fl">
+              <div>
+                <div class="tag">{p.venue} {p.year}</div>
+                <a href={"/publications/" + p.id + "/"}><h3 style="font-size:19px;margin-top:8px">{p.title}</h3></a>
+                <p class="small" style="margin-top:8px">{p.hook}</p>
+                <Authors names={p.authors} />
+              </div>
+              {p.image && <a href={"/publications/" + p.id + "/"}><div class="ph has"><img src={p.image} alt="" loading="lazy" decoding="async" /></div></a>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tile dark" style="padding-bottom:clamp(40px,5vw,72px);background-color:#252525;">
+    <div class="wrap">
+      <div class="sechead">
+        <div><div class="eyebrow">The centre</div><h2 style="margin-top:12px">The people doing it</h2></div>
+        <a href="/people/" class="nowrap">Meet everyone →</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <DomeGallery people={domePeople} />
+      <GBlur position="bottom" height="5rem" strength={2} layers={5} />
+    </div>
+    <div class="wrap" style="margin-top:40px">
+      <div class="stats">{stats.map((s: any) => <div class="stat"><div class="n">{s.l === "Publications" ? publications.length : s.n}</div><div class="l">{s.l}</div></div>)}</div>
+    </div>
+  </section>
+
+  <section class="tile">
+    <div class="wrap">
+      <div class="sechead">
+        <div><div class="eyebrow">Latest</div><h2 style="margin-top:12px">News &amp; updates</h2></div>
+        <a href="/news/" class="nowrap">All updates →</a>
+      </div>
+      <NewsList posts={byDate(posts).slice(0, 6)} />
+    </div>
+  </section>
+
+  <JoinCard />
+</Base>
+
+<script>
+  import "vidstack/player/styles/default/theme.css";
+  import "vidstack/player/styles/default/layouts/video.css";
+  import "vidstack/player";
+  import "vidstack/player/layouts/default";
+  import "vidstack/player/ui";
+  import { isVimeoProvider } from "vidstack";
+  import type { MediaPlayerElement } from "vidstack/elements";
+
+  // Vidstack 1.15 sends `h=null` to player.vimeo.com for videos without an
+  // unlisted hash, which Vimeo rejects. Drop the param before the iframe loads.
+  document.querySelectorAll<MediaPlayerElement>("media-player").forEach((player) => {
+    player.addEventListener("provider-change", (e) => {
+      const provider = e.detail;
+      if (!isVimeoProvider(provider)) return;
+      const buildParams = provider.buildParams.bind(provider);
+      provider.buildParams = () => {
+        const params = buildParams() as Record<string, unknown>;
+        if (params.h == null) delete params.h;
+        return params as ReturnType<typeof buildParams>;
+      };
+    });
+  });
+</script>

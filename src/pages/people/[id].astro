@@ -1,0 +1,52 @@
+---
+import Base from "../../layouts/Base.astro";
+import JoinCard from "../../components/JoinCard.astro";
+import PubRows from "../../components/PubRows.astro";
+import NewsList from "../../components/NewsList.astro";
+import { members, pubsByAuthor, postsBy, initials } from "../../lib/data";
+
+export function getStaticPaths() {
+  return members.map((m: any) => ({ params: { id: m.id }, props: { m } }));
+}
+const { m } = Astro.props;
+const pubs = pubsByAuthor(m.name);
+const written = postsBy(m.name);
+---
+<Base title={m.name + " · CA³"} description={m.bio || [m.role, m.org].filter(Boolean).join(", ") + " — Center for Anytime Anywhere Analytics."} image={m.photo} current="/people/">
+  <div data-pagefind-meta={`kind:Person,title:${m.name},meta:${m.role}`}></div>
+  <div class="wrap">
+    <div class="crumbs"><a href="/">Home</a><span>›</span><a href="/people/">People</a><span>›</span><span>{m.name}</span></div>
+    <div style="display:grid;grid-template-columns:132px minmax(0,1fr);gap:32px;align-items:start">
+      <div class="avatar lg">{m.photo ? <img src={m.photo} alt="" /> : initials(m.name)}</div>
+      <div>
+        <h1 style="font-size:clamp(34px,4.4vw,64px)">{m.name}</h1>
+        <div class="small" style="margin-top:10px">{m.role} · {m.org}{m.since ? " · since " + m.since : ""}</div>
+        <p style="margin-top:20px;max-width:62ch;color:var(--ink-80)">{m.bio}</p>
+        {(m.links || []).length > 0 && (
+          <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap">
+            {m.links.map(([l, h]: [string, string]) => <a class="btn ghost sm" href={h}>{l} ↗</a>)}
+          </div>
+        )}
+      </div>
+    </div>
+    {(m.areas || []).length > 0 && (
+      <div class="split" style="padding-top:72px">
+        <h2>Research areas</h2>
+        <div class="arealist">
+          {m.areas.map((a: string) => <a class="arearow" href={`/publications/?pillar=${encodeURIComponent(a)}&author=${encodeURIComponent(m.name)}`}>{a} <span>›</span></a>)}
+        </div>
+      </div>
+    )}
+    <div class="split" style="padding:72px 0 0">
+      <h2>Authored publications</h2>
+      <div>{pubs.length ? <PubRows rows={pubs} /> : <p class="small">No publications recorded for this profile yet.</p>}</div>
+    </div>
+    {written.length > 0 && (
+      <div class="split" style="padding:64px 0 0">
+        <h2>Posts</h2>
+        <NewsList posts={written} />
+      </div>
+    )}
+  </div>
+  <JoinCard />
+</Base>

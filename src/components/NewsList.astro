@@ -1,0 +1,55 @@
+---
+/* Short updates open in a blurred modal sheet (the page still exists as a fallback);
+   long reads go to their own page. The hover icon tells the two apart. */
+import { shortDate, fmtDate, members, linkify } from "../lib/data";
+const { posts } = Astro.props;
+const shorts = posts.filter((p: any) => p.kind === "short");
+const authorId = (name: string) => members.find((m: any) => m.name === name)?.id;
+---
+<div class="newslist">
+  {posts.map((p: any) => (
+    <a class="nrow" data-kind={p.kind} data-row data-tag={p.tag} data-text={p.title + " " + p.dek + " " + p.by} href={"/news/" + p.id + "/"} data-post-modal={p.kind === "short" ? "post-" + p.id : undefined}>
+      <div class="ncol">
+        <div class="d">{shortDate(p.date)}</div>
+        {p.image && <div class="nthumb"><img src={p.image} alt="" loading="lazy" /></div>}
+      </div>
+      <div class="ncopy">
+        <h3>{p.title}</h3>
+        {p.dek && <p>{p.dek}</p>}
+        <div class="meta"><span class="tag">{p.tag}</span><span>·</span><span>{p.by}</span></div>
+      </div>
+      <span class="go" aria-hidden="true">
+        {p.kind === "short"
+          ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
+          : <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"></path></svg>}
+      </span>
+    </a>
+  ))}
+</div>
+{shorts.map((p: any) => (
+  <dialog class="modal" id={"post-" + p.id}>
+    <div class="sheet" data-sheet>
+      <i class="sheetprog" aria-hidden="true"></i>
+      <div class="sheettop">
+        <span class="subttl">{p.title}</span>
+        <button class="iconbtn close" data-dialog-close aria-label="Close">✕</button>
+      </div>
+      {p.image && <div class="mhead"><img src={p.image} alt="" loading="lazy" /></div>}
+      <div class="mbody">
+        <div class="eyebrow">{p.tag} · {fmtDate(p.date)}</div>
+        <h2>{p.title}</h2>
+        <div class="small" style="margin-top:12px">{authorId(p.by) ? <a href={"/people/" + authorId(p.by) + "/"}>{p.by}</a> : p.by}</div>
+        <div class="mtext">
+          {p.body.map((t: string) => <p set:html={linkify(t)} />)}
+        </div>
+        {(p.images || []).length > 0 && <div class="mgrid">{p.images.map((src: string) => <img src={src} alt="" loading="lazy" />)}</div>}
+        {(p.article || p.link) && (
+          <div class="mactions">
+            {p.article && <a class="btn dark sm" href={p.article.href} target="_blank" rel="noreferrer">{p.article.title ? "Read: " + p.article.title.slice(0, 48) : "Linked article"} ↗</a>}
+            {p.link && <a class="btn ghost sm" href={p.link} target="_blank" rel="noreferrer">View on LinkedIn ↗</a>}
+          </div>
+        )}
+      </div>
+    </div>
+  </dialog>
+))}

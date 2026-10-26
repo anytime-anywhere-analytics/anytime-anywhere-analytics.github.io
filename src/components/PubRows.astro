@@ -1,0 +1,15 @@
+---
+import Authors from "./Authors.astro";
+import RowThumb from "./RowThumb.astro";
+const { rows } = Astro.props;
+---
+{rows.map((p: any) => (
+  <div class="pubrow">
+    <div class="pbody">
+      <a class="t" href={"/publications/" + p.id + "/"}>{p.title}</a>
+      <Authors names={p.authors} />
+      <div class="small">{p.venue} · {p.year}{p.pillar ? " · " + p.pillar : ""}</div>
+    </div>
+    <RowThumb src={p.image} href={"/publications/" + p.id + "/"} />
+  </div>
+))}

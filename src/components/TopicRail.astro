@@ -1,0 +1,64 @@
+---
+import Authors from "./Authors.astro";
+import RowThumb from "./RowThumb.astro";
+import { publications } from "../lib/data";
+const { items, kind } = Astro.props;
+const key = kind === "Pillar" ? "pillar" : "testbed";
+const qs = kind === "Pillar" ? "pillar" : "testbed";
+---
+<div class="carousel" data-carousel>
+  {items.map((item: any) => (
+    <button class="ccard" data-dialog-open={"topic-" + item.id}>
+      <div class="cbg" data-parallax="56"><div class={"ph dk" + (item.image ? " has" : "")} style="position:absolute;inset:0">{item.image ? <img src={item.image} alt="" loading="lazy" decoding="async" /> : <span>{kind} image — {item.title}</span>}</div></div>
+      <div class="cscrim"></div>
+      <span class="num">{item.num}</span>
+      <span class="plus">+</span>
+      <div class="ctext"><h3>{item.title}</h3><p>{item.body}</p></div>
+    </button>
+  ))}
+</div>
+<div class="railnav">
+  <button class="iconbtn" data-rail="-1" aria-label="Scroll left">‹</button>
+  <button class="iconbtn" data-rail="1" aria-label="Scroll right">›</button>
+  <div class="railprog"><i></i></div>
+</div>
+{items.map((item: any) => {
+  const work = publications.filter((p: any) => p[key] === item.title);
+  const all = `/publications/?${qs}=${encodeURIComponent(item.title)}`;
+  return (
+    <dialog class="modal" id={"topic-" + item.id}>
+      <div class="sheet" data-sheet>
+        <i class="sheetprog" aria-hidden="true"></i>
+        <div class="sheettop">
+          <span class="subttl">{kind} {item.num} · {item.title}</span>
+          <button class="iconbtn close" data-dialog-close aria-label="Close">✕</button>
+        </div>
+        {item.image && <div class="mhead"><img src={item.image} alt="" loading="lazy" /></div>}
+        <div class="mbody">
+          <div class="eyebrow">{kind} {item.num}</div>
+          <h2>{item.title}</h2>
+          <p class="lead">{item.body}</p>
+          <div class="mtext"><p>{item.long}</p></div>
+          <div class="mactions">
+            <a class="btn dark sm" href={all}>All {work.length} publications →</a>
+          </div>
+          {work.length > 0 && (
+            <div class="mrelated">
+              <div class="eyebrow">Selected work</div>
+              {work.slice(0, 4).map((p: any) => (
+                <div class="pubrow">
+                  <div class="pbody">
+                    <a class="t" href={"/publications/" + p.id + "/"}>{p.title}</a>
+                    <Authors names={p.authors} />
+                    <div class="small">{p.venue} · {p.year}</div>
+                  </div>
+                  <RowThumb src={p.image} href={"/publications/" + p.id + "/"} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </dialog>
+  );
+})}

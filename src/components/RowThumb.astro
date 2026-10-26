@@ -1,0 +1,9 @@
+---
+/* thumbnail for a list row; with no image it degrades to a quiet arrow, not a link */
+const { src, href } = Astro.props;
+const Tag = src && href ? "a" : "span";
+---
+<Tag class={"rowthumb" + (src ? "" : " empty")} href={src ? href : undefined} aria-hidden="true" tabindex={src && href ? "-1" : undefined}>
+  {src && <img src={src} alt="" loading="lazy" decoding="async" />}
+  <span class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"></path></svg></span>
+</Tag>

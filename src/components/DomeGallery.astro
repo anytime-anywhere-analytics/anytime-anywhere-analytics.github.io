@@ -1,0 +1,26 @@
+---
+import { initials } from "../lib/data";
+const { people, segments = 22 } = Astro.props;
+const evenY = [-3, -1, 1, 3], oddY = [-2, 0, 2, 4];
+const tiles: { x: number; y: number; p: any }[] = [];
+for (let c = 0; c < segments; c++) (c % 2 === 0 ? evenY : oddY).forEach((y) => tiles.push({ x: c * 2, y, p: null as any }));
+tiles.forEach((t, i) => { t.p = people[i % people.length]; });
+---
+<div class="dome" data-dome data-segments={segments}>
+  <div class="stage">
+    <div class="sphere">
+      {tiles.map((t) => (
+        <div class="dtile" style={`--ox:${t.x};--oy:${t.y}`}>
+          <a class="face" href={"/people/" + t.p.id + "/"} title={t.p.name}>
+            {t.p.photo ? <img src={t.p.photo} alt="" draggable="false" /> : <span class="ini">{initials(t.p.name)}</span>}
+            <span class="nm">{t.p.name}</span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="vig"></div>
+  <div class="fade t"></div>
+  <div class="fade b"></div>
+  <div class="hintbar">Drag to turn · click a face to open their page</div>
+</div>

@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import Cover from "../../components/Cover.astro";
+import NewsList from "../../components/NewsList.astro";
+import JoinCard from "../../components/JoinCard.astro";
+import { posts, members, byDate, fmtDate, linkify } from "../../lib/data";
+
+export function getStaticPaths() {
+  return posts.map((p: any) => ({ params: { id: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const author = members.find((m: any) => m.name === p.by);
+const more = byDate(posts.filter((x: any) => x.id !== p.id)).slice(0, 4);
+---
+<Base title={p.title + " · CA³"} description={p.dek || (p.body && p.body[0])} image={p.image || (p.images && p.images[0])} current="/news/">
+  <div data-pagefind-meta={`kind:News,title:${p.title},meta:${fmtDate(p.date)}`}></div>
+  <div class="wrap read">
+    <div class="crumbs"><a href="/">Home</a><span>›</span><a href="/news/">News &amp; updates</a><span>›</span><span>{p.tag}</span></div>
+    <div class="tag" style="color:var(--primary)">{p.tag}</div>
+    <h1 style="font-size:clamp(30px,3.6vw,52px);margin-top:14px">{p.title}</h1>
+    <div class="small" style="margin-top:14px">{fmtDate(p.date)} · {author ? <a href={"/people/" + author.id + "/"}>{p.by}</a> : p.by}</div>
+    <p class="lead" style="margin-top:24px">{p.dek}</p>
+  </div>
+  {p.image && (
+    <div class="wrap" style="padding-top:48px">
+      <Cover label={`Post image — ${p.title}`} src={p.image} parallax="26" />
+    </div>
+  )}
+  <div class="wrap read" style="padding-top:48px;display:grid;gap:20px">
+    {p.body.map((t: string) => <p style="color:var(--ink-80)" set:html={linkify(t)} />)}
+    {(p.images || []).length > 0 && <div class="mgrid">{p.images.map((src: string) => <img src={src} alt="" loading="lazy" />)}</div>}
+    {(p.article || p.link) && (
+      <div class="mactions" style="margin-top:12px">
+        {p.article && <a class="btn dark sm" href={p.article.href} target="_blank" rel="noreferrer">{p.article.title ? "Read: " + p.article.title.slice(0, 48) : "Linked article"} ↗</a>}
+        {p.link && <a class="btn ghost sm" href={p.link} target="_blank" rel="noreferrer">View on LinkedIn ↗</a>}
+      </div>
+    )}
+  </div>
+  <div class="wrap" style="padding-top:80px">
+    <div class="sechead"><h2>More updates</h2><a href="/news/">See all →</a></div>
+    <NewsList posts={more} />
+  </div>
+  <JoinCard />
+</Base>

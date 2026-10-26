@@ -1,0 +1,26 @@
+[
+  {
+    "id": "science",
+    "num": "T1",
+    "title": "Scientific Inquiry",
+    "body": "Genomic, biomedical, and bench-science workflows.",
+    "long": "Wet labs are hostile to conventional analysis: hands are occupied, the data is generated in place, and records must be kept as work happens. Our science testbed partners with bench researchers to deploy situated analytics where the sample is.",
+    "image": "/assets/img/tb1.png"
+  },
+  {
+    "id": "manufacturing",
+    "num": "T2",
+    "title": "Manufacturing",
+    "body": "Factory-floor decisioning and operations analytics.",
+    "long": "On a production line, the cost of a late decision is measurable to the minute. We work with industrial partners on interfaces for operators and line managers who read process data while moving.",
+    "image": "/assets/img/tb2.png"
+  },
+  {
+    "id": "education",
+    "num": "T3",
+    "title": "Higher Education",
+    "body": "Classroom, lab, and collaborative learning environments.",
+    "long": "Teaching is our most accessible deployment context and our most ethically loaded one. We study how instrumented classrooms support group learning, and what happens to the students inside the instrument.",
+    "image": "/assets/img/tb3.png"
+  }
+]

@@ -1,0 +1,51 @@
+---
+import "../styles/site.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SearchOverlay from "../components/SearchOverlay.astro";
+const { title, description, image, current = "", overHero = false, noindex = false } = Astro.props;
+// Search and link previews show ~160 characters; cut long abstracts/bios at a word.
+const clip = (s: string, n = 160) => (s.length <= n ? s : s.slice(0, s.lastIndexOf(" ", n - 1)).replace(/[\s,.;:–—-]+$/, "") + "…");
+const desc = clip((description || "The Center for Anytime Anywhere Analytics (CA³) at Aarhus University researches ubiquitous and immersive analytics: data analysis away from the desk, where decisions are made.").replace(/\s+/g, " ").trim());
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(image || "/assets/img/share-image.jpg", Astro.site).href;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<title>{title}</title>
+<meta name="description" content={desc} />
+{noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CA³ · Center for Anytime Anywhere Analytics" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={desc} />
+{!noindex && <meta property="og:url" content={canonical} />}
+<meta property="og:image" content={ogImage} />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap" />
+</head>
+<body>
+<div class="sprog idle" aria-hidden="true"></div>
+<div class="shell">
+  <Header current={current} overHero={overHero} />
+  <main {...(noindex ? {} : { "data-pagefind-body": "" })}><slot /></main>
+  <div style="height:1px"></div>
+</div>
+<div class="revealspace" aria-hidden="true"></div>
+<Footer />
+<SearchOverlay />
+<script src="/js/ca3-grainient.js" is:inline></script>
+<script src="/js/ca3-prismatic.js" is:inline></script>
+<script src="/js/site.js" is:inline></script>
+</body>
+</html>

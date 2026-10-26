@@ -1,0 +1,47 @@
+{
+  "name": "Center for Anytime Anywhere Analytics",
+  "short": "CA³",
+  "domain": "ca3.au.dk",
+  "host": "Aarhus University",
+  "grant": "Villum Investigator Grant No. 54492 · September 2023",
+  "tagline": "Data just got situated.",
+  "contact": [
+    "Department of Computer Science",
+    "Aarhus University, Åbogade 34",
+    "8200 Aarhus N, Denmark",
+    "ca3@cs.au.dk"
+  ],
+  "funders": [
+    {
+      "alt": "Aarhus University",
+      "src": "/assets/au.webp"
+    },
+    {
+      "alt": "Villum Fonden",
+      "src": "/assets/villum-fonden.webp"
+    }
+  ],
+  "social": [
+    [
+      "X",
+      "#/news"
+    ],
+    [
+      "LinkedIn",
+      "#/news"
+    ],
+    [
+      "GitHub",
+      "#/news"
+    ],
+    [
+      "RSS",
+      "#/news"
+    ]
+  ],
+  "film": {
+    "still": "/assets/img/hero-image.jpg",
+    "url": "https://vimeo.com/868469583",
+    "vimeoId": "868469583"
+  }
+}

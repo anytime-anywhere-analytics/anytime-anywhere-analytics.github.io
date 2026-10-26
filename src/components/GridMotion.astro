@@ -1,0 +1,22 @@
+---
+/* rotated rows of figures that slide with the pointer; motion lives in /js/site.js */
+const { tiles, rows = 4, cols = 7, tilt = -15 } = Astro.props;
+const n = rows * cols;
+const items = Array.from({ length: n }, (_, i) => tiles[i % Math.max(tiles.length, 1)] || { label: "" });
+---
+<div class="gmotion" data-gmotion aria-hidden="true">
+  <div class="gmgrid" style={`grid-template-rows:repeat(${rows},1fr);transform:rotate(${tilt}deg)`}>
+    {Array.from({ length: rows }, (_, r) => (
+      <div class="gmrow" data-gmrow style={`grid-template-columns:repeat(${cols},1fr)`}>
+        {Array.from({ length: cols }, (_, k) => {
+          const it = items[r * cols + k];
+          return (
+            <div class="gmitem"><div class="gmin">
+              {it.image ? <img src={it.image} alt="" loading="lazy" /> : <span class="ph dk"><span>{it.label}</span></span>}
+            </div></div>
+          );
+        })}
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+---
+/* sidebar on desktop, collapsible headroom bar on small screens */
+---
+<aside class="filters" data-filters>
+  <button class="ftoggle" data-filters-toggle aria-expanded="false">
+    <span>Filters</span><span class="n" data-filters-count>All</span><span class="caret">⌄</span>
+  </button>
+  <div class="fpanel">
+    <div class="eyebrow" style="margin-bottom:12px;display:flex;justify-content:space-between">
+      <span>Filter by</span><button style="font:inherit;color:var(--primary)" data-clear>Clear</button>
+    </div>
+    <slot />
+  </div>
+</aside>

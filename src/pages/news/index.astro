@@ -1,0 +1,37 @@
+---
+import Base from "../../layouts/Base.astro";
+import NewsList from "../../components/NewsList.astro";
+import JoinCard from "../../components/JoinCard.astro";
+import { posts, byDate, counts } from "../../lib/data";
+
+const tags = counts(posts, (p: any) => p.tag);
+const rows = byDate(posts);
+---
+<Base title="News & updates · CA³" description="News from the Center for Anytime Anywhere Analytics: papers, talks, awards, visitors and open positions." current="/news/">
+  <div class="wrap">
+    <div class="pagehero">
+      <div>
+        <h1>News &amp; updates</h1>
+        <p class="lead" style="margin-top:20px;max-width:46ch">Announcements, press, releases, and field notes — written by anyone in the centre. Short updates open in place; long reads get a page of their own.</p>
+      </div>
+    </div>
+    <div data-list data-per="8" data-noun="updates">
+      <div class="listtop" style="padding-bottom:14px">
+        {tags.map((t) => (
+          <label class="chip"><input type="checkbox" data-facet="tag" value={t.k} style="accent-color:var(--accent)" /> {t.k} <span class="ct" style="opacity:.6">{t.n}</span></label>
+        ))}
+        <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+          <label class="chip"><input type="checkbox" data-facet="kind" value="short" /> Short updates</label>
+          <label class="chip"><input type="checkbox" data-facet="kind" value="long" /> Long reads</label>
+          <span class="count" data-count></span>
+        </span>
+      </div>
+      <div style="padding-top:10px">
+        <NewsList posts={rows} rowAttrs />
+      </div>
+      <div class="pager" data-pager></div>
+    </div>
+  </div>
+  <JoinCard />
+  <script src="/js/list.js" is:inline></script>
+</Base>
