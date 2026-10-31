@@ -8,11 +8,34 @@
   },
   {
     "group": "members",
+    "name": "Duosi Dai",
+    "now_role": "Ph.D. Student in Computer Science",
+    "now_at": "Aarhus University",
+    "since": "Fall 2025"
+  },
+  {
+    "group": "members",
+    "name": "Dieinison",
+    "now_role": "Visiting Ph.D. Student from Brazil",
+    "now_at": "Aarhus University",
+    "since": "Fall 2025",
+    "photo": "dieinison.jpg"
+  },
+  {
+    "group": "members",
     "name": "Vaishali Dhanoa",
     "now_role": "Postdoctoral Researcher at CA3",
     "now_at": "Aarhus University",
     "since": "Fall 2025",
     "photo": "dhanoa.jpg"
+  },
+  {
+    "group": "members",
+    "name": "Hyeon Jeon",
+    "now_role": "Postdoctoral Researcher at CA3",
+    "now_at": "Aarhus University",
+    "since": "Fall 2026",
+    "photo": "hyeon.jpg"
   },
   {
     "group": "members",
@@ -34,6 +57,22 @@
   },
   {
     "group": "members",
+    "name": "Emeric",
+    "now_role": "Ph.D Student in Computer Science",
+    "now_at": "Aarhus University",
+    "photo": "emeric.jpg",
+    "since": "2026"
+  },
+  {
+    "group": "members",
+    "name": "Benjamin",
+    "now_role": "Ph.D Student in Computer Science",
+    "now_at": "Aarhus University",
+    "photo": "benjamin.jpg",
+    "since": "2026/2027"
+  },
+  {
+    "group": "alumni",
     "name": "Marcel Borowski",
     "now_role": "Postdoctoral Researcher at CA3",
     "now_at": "Aarhus University",
